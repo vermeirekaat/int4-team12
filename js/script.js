@@ -1,5 +1,7 @@
 
 {
+  
+
     let canvas = document.querySelector('.canvas'),
         context = canvas.getContext('2d');
 
@@ -10,7 +12,7 @@
             }
             let xprediction = data.x; //these x coordinates are relative to the viewport
             let yprediction = data.y; //these y coordinates are relative to the viewport
-            console.log(elapsedTime); //elapsed time is based on time since begin was called
+            //console.log(elapsedTime); //elapsed time is based on time since begin was called
         }).begin();
     }
 
@@ -27,7 +29,7 @@
 
 
     function drawStuff() {
-        // do your drawing stuff here
+
     }
 
 const init = () => {
