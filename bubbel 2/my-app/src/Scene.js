@@ -20,11 +20,10 @@ export default function Scene({ setBg }) {
 
 
     // Make the bubble float and follow the mouse
-    // This is frame-based animation, useFrame subscribes the component to the render-loop
     useFrame((state) => {
         if (sphere.current) {
-            sphere.current.rotation.y = THREE.MathUtils.lerp(sphere.current.rotation.y, (state.mouse.x * Math.PI) / 20, 0.05)
-            sphere.current.rotation.x = THREE.MathUtils.lerp(sphere.current.rotation.x, (state.mouse.y * Math.PI) / 20, 0.05)
+            sphere.current.position.y = THREE.MathUtils.lerp(sphere.current.position.y, (state.mouse.x * Math.PI) / 4, 0.05)
+            sphere.current.position.x = THREE.MathUtils.lerp(sphere.current.position.x, (state.mouse.y * Math.PI) / 4, 0.05)
         }
     })
 
@@ -45,7 +44,6 @@ export default function Scene({ setBg }) {
         [mode, hovered, down]
     )
 
-
     // Change cursor on hovered state
     useEffect(() => {
         document.body.style.cursor = hovered
@@ -61,6 +59,7 @@ export default function Scene({ setBg }) {
                 <a.ambientLight intensity={ambient} />
             </PerspectiveCamera>
             <Suspense fallback={null}>
+                {/*bol maken*/}
                 <a.mesh
                     ref={sphere}
                     scale={wobble}
@@ -79,8 +78,9 @@ export default function Scene({ setBg }) {
                         setMode(!mode)
                         setBg({ background: !mode ? '#202020' : '#f0f0f0', })
                     }}>
-                    <sphereBufferGeometry args={[1, 64, 64]} />
-                    <AnimatedMaterial color={color} envMapIntensity={env} clearcoat={coat} clearcoatRoughness={0} metalness={0.4} />
+                        {/*eerste element is om bol groter te maken, twee volgende is om de pointiness aan te passen*/}
+                    <sphereBufferGeometry args={[1, 50, 50]} />
+                    <AnimatedMaterial distort={0.3} color={color} envMapIntensity={env} clearcoat={coat} clearcoatRoughness={0} metalness={0.4} />
                 </a.mesh>
                 {/*zorgt voor het 3D effect sunset, dawn, night, warehouse, forest, apartment, studio, city, park, lobby*/}
                 <Environment preset="warehouse" />
