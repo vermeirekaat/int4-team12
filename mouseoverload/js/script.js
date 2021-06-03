@@ -21,10 +21,7 @@
             let number = index * 2
             mouses[number].style.display = "none";
         }
-        const thirdMouse = document.querySelectorAll(".mouse")[2];
-        console.log(firstMouse)
-        firstMouse.style.display = "none";
-        thirdMouse.style.display = "none";
+       //firstMouse.style.display = "none";
     }
 
     const init = () => {
