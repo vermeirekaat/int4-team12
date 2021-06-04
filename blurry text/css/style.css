@@ -1,0 +1,10 @@
+.text {
+    width: 29rem;
+    margin:0 auto;
+    font-size: 4rem;
+}
+
+.blurry {
+    color: transparent;
+    text-shadow: 0 0 10px #000;
+}
