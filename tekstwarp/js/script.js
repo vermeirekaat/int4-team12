@@ -8,6 +8,9 @@
     renderer.autoResize = true;
     document.body.appendChild(renderer.view);
 
+    renderer.view.style.width = width + 'px';
+    renderer.view.style.height = height + 'px';
+
     const displacementSprite = PIXI.Sprite.fromImage('./assets/displacement-circle.png');
     displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
     displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.MIRRORED_REPEAT;
@@ -19,6 +22,7 @@
     displacementFilter.scale.x = 10;
     displacementFilter.scale.y = 10;
 
+    //eventueel lib + auteur
     const TrackPointer = (callback) => {
 
         let frame;
