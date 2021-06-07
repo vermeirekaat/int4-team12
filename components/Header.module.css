@@ -1,0 +1,37 @@
+@value values: "../styles/vars.module.css";
+@value facebookBlue, facebookGray, facebookTypo from values;
+
+.header {
+    width: 100vw;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+
+    background-color: white;
+    padding: .5rem;
+    box-shadow: 0rem .05rem 2rem .5rem facebookGray;
+}
+
+.user {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userPicture > div {
+    border-radius: 10rem;
+}
+
+.userName {
+    color: facebookBlue; 
+    font-family: facebookTypo;
+    margin-left: 1rem;
+}
+
+.name span {
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: .5rem;
+    color: facebookBlue;
+}
