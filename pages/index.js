@@ -9,7 +9,8 @@ export default function Home() {
 
       <div className={styles.feed}>
         <Article/> 
-
+        <Article/> 
+        <Article/> 
       </div>
 
     </div>

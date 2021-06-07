@@ -10,6 +10,9 @@
     background-color: white;
     padding: .5rem;
     box-shadow: 0rem .05rem .5rem .05rem facebookGray;
+    position: fixed;
+    top: 0; 
+    z-index: 2;
 }
 
 .user {

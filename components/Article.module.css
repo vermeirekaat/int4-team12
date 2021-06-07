@@ -2,7 +2,7 @@
 @value facebookBlue, facebookGray, facebookTypo from values;
 
 .article {
-    margin: 10vw;
+    margin: 1.5rem 10vw;
     box-shadow: .05rem .05rem .7rem .03rem facebookGray;
     border-radius: .7rem;
     font-family: facebookTypo;
