@@ -11,6 +11,11 @@ export default function Home() {
       <div className={styles.feed}>
         <Article/> 
         <Advertisement/> 
+        <Article/> 
+        <Article/> 
+        <Article/> 
+        <Advertisement/>
+        <Article/> 
       </div>
 
     </div>
