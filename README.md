@@ -1,13 +1,15 @@
-# Interactive Maze 
+# STEMTEST - UNFILTERED
 
-Een interactief doolhof (= filter bubble) met doel om uit de filter bubble te geraken. Doodlopende eindes zijn deuren naar de echo chamber. Wanneer de gebruiker op een kruispunt terecht komt, beantwoordt de gebruiker een vraag met links of rechts. Het doolhof is eindeloos, de bedoeling is dat de gebruiker de 'hints' op de muren leest om te weten hoe die uit het doolhof kan geraken. 
-De gebruiker moet fysiek een ballon kapot prikken (pop the filter bubble) om uit het doolhof te ontsnappen.
+## Concept
+De gebruiker wordt erin geluisd om een - op het eerste zicht - normaal formulier over zijn of haar stemkeuze in te vullen, maar geleidelijk aan begint de computer a.d.h.v. eerder ingevulde input meer en meer zelf de bovenhand te nemen. Hierdoor wordt de gebruiker (onbewust) geduwd in een bepaalde extreme politieke richting. Dit is om aan te tonen dat dit op sociale media ook gebeurd. 
+Op het einde van de hele ervaring, komt er een melding dat het geen legitieme stemtest is maar een campagne over de filter bubble. De gebruiker wordt hier doorgestuurd naar de campagnewebsite met meer informatie. 
 
 ## Technical Stack 
-De bedoeling is om het doolhof in een 3D omgeving te simuleren, dit kan a.d.h.v. Three.js. 
-De gebruiker kan navigeren doorheen het doolhof door verschillende vragen te beantwoorden, dit zijn telkens dilemma's. Het antwoord is de optie waar de gebruiker het dichts bij staat (links of rechts). Dit kunnen we meten door gebruik te maken van proximity-sensoren uit een Arduino-pakket. 
-Het spel is gedaan wanneer de gebruiker een fysieke ballon doorprikt. Om te zien of deze actie is voltooid, gebruiken we ook een toggle uit een Arduino-pakket waarmee we een signaal terug kunnen sturen naar de computer indien dit wel/ niet gelukt is. 
+De applicatie maken we a.d.h.v. Next.js. Hier hebben we voor gekozen omdat het een sterk middel is voor server side rendering en static side generation. Daarnaast is het gemakkelijk in gebruik omdat je components kan (her)gebruiken. 
+Aangezien we werken met een API om nieuwsartikels op te halen, is Next ook een goede keuze. 
+Ons digitaal product zal veel interacties en animaties bevatten, hiervoor gebruiken we o.a. Pixi JS en Framer Motion. 
 
-- Three.js
-- Proximity-sensoren van Arduino 
-- Toggle van Arduino 
+- Next JS
+- News API
+- Framer Motion API
+- Pixi JS
