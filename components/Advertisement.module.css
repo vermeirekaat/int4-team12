@@ -1,0 +1,78 @@
+@value values: "../styles/vars.module.css";
+@value facebookBlue, facebookGray, facebookTypo from values;
+
+.advertisement {
+    margin: 1.5rem 10vw;
+    box-shadow: .05rem .05rem .7rem .03rem facebookGray;
+    border-radius: .7rem;
+    font-family: facebookTypo;
+}
+
+.profile {
+    display: flex; 
+    flex-direction: row;
+    margin-bottom: .5rem; 
+    padding: 1rem;
+}
+
+.information {
+    margin-left: 1.5rem;
+    padding: .5rem 0rem;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+.profileName {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.time {
+    font-weight: 100;
+}
+
+.articleTitle {
+    font-weight: 700; 
+    font-size: 1.3rem;
+    padding: 1rem; 
+    background-color: facebookGray;
+}
+
+.articleImage {
+    min-width: 80vw; 
+    min-height: 20vh;
+    background-color: lightgray;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.play {
+    width: 2rem;
+    height: 2rem;
+    background-color: facebookBlue;
+    padding: 2rem; 
+    border-radius: 100%;
+}
+
+.play span {
+    font-size: 3rem;
+    color: lightgray;
+    position: relative;
+    left: -1rem;
+    top: -1.5rem;
+}
+
+.interactions {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly;
+    margin: 2rem 0rem;
+    padding-bottom: 1.5rem;
+}
+
+.input:hover {
+    color: facebookBlue;
+}

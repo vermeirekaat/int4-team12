@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Article from "../components/Article";
+import Advertisement from "../components/Advertisement";
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -9,8 +10,7 @@ export default function Home() {
 
       <div className={styles.feed}>
         <Article/> 
-        <Article/> 
-        <Article/> 
+        <Advertisement/> 
       </div>
 
     </div>
