@@ -29,7 +29,12 @@ export default function Advertisement () {
                 />*/}
                 <p className={styles.play}> <span>&#9654;</span></p>
             </div>
-            <h2 className={styles.articleTitle}>Verkiezingen 2024</h2>
+            <div className={styles.tagline}>
+                <h2 className={styles.articleTitle}>Verkiezingen 2024</h2>
+                {/* button */}
+                <p className={styles.button}>Doe de test</p>
+            </div>
+            
         </section>
 
         <div className={styles.reaction}>
