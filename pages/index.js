@@ -14,12 +14,6 @@ export default function Home({ data }) {
   
   mapItems(data);
 
-
-
-  console.log(articles);
-
-
-
   return (
     <div className={styles.container}>
       <Header/>
@@ -27,11 +21,11 @@ export default function Home({ data }) {
       <div className={styles.feed}>
         <Article article={articles[1]}/> 
         <Advertisement/> 
-        {/* <Article/> 
-        <Article/> 
-        <Article/> 
+        <Article article={articles[2]}/> 
+        <Article article={articles[3]}/> 
+        <Article article={articles[4]}/> 
         <Advertisement/>
-        <Article/> */}
+        <Article article={articles[5]}/>
       </div>
 
     </div>
@@ -39,7 +33,7 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const result = await fetch (`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=30a0127e58ec47d3bb8bb12e997b277b`); 
+  const result = await fetch (`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEXT_PUBLIC_NEWS_API}`); 
   const data = await result.json();
 
   if (data) {

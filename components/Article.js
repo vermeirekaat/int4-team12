@@ -2,14 +2,14 @@ import Image from "next/image";
 import styles from "./Article.module.css";
 
 export default function Article ({ article }) {
-    console.log(article);
+    // console.log(article);
 
     return (
         <article className={styles.article}>
             <section className={styles.profile}>
                 <div className={styles.profileImage}>
                     <Image
-                        src="/assets/ine.png"
+                        src="/assets/bbc.png"
                         alt="Profile picture - Ine"
                         width={70}
                         height={70}
