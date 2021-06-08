@@ -2,7 +2,6 @@ import Image from "next/image";
 import styles from "./Article.module.css";
 
 export default function Article ({ article }) {
-    // console.log(article);
 
     return (
         <article className={styles.article}>

@@ -22,7 +22,11 @@ export default function Advertisement () {
 
         <section className={styles.content}>
             <div className={styles.articleImage}>
-                {/* <Image/> */}
+                {/* <Image
+                    src="/assets/stemtest.png"
+                    width={500}
+                    height={300}
+                />*/}
                 <p className={styles.play}> <span>&#9654;</span></p>
             </div>
             <h2 className={styles.articleTitle}>Verkiezingen 2024</h2>

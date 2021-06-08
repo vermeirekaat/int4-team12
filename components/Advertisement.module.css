@@ -42,7 +42,8 @@
 .articleImage {
     min-width: 80vw; 
     min-height: 20vh;
-    background-color: lightgray;
+    background-image: url('../public/assets/stemtest.png');
+    background-size: cover;
     display: flex; 
     flex-direction: column;
     justify-content: center;
@@ -52,14 +53,14 @@
 .play {
     width: 2rem;
     height: 2rem;
-    background-color: facebookBlue;
+    background-color: white;
     padding: 2rem; 
     border-radius: 100%;
 }
 
 .play span {
     font-size: 3rem;
-    color: lightgray;
+    color: facebookBlue;
     position: relative;
     left: -1rem;
     top: -1.5rem;
