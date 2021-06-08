@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "./Article.module.css";
 
-export default function Article () {
+export default function Article ({ article }) {
+    console.log(article);
 
     return (
         <article className={styles.article}>
@@ -15,16 +16,20 @@ export default function Article () {
                     />
                 </div>
                 <div className={styles.information}>
-                    <h3 className={styles.profileName}>Ignorant Inge</h3>
+                    <h3 className={styles.profileName}>{article.author}</h3>
                     <p className={styles.time}>23min.</p>
                 </div>
             </section>
 
             <section className={styles.content}>
                 <div className={styles.articleImage}>
-                    {/* <Image/> */}
+                    <Image
+                        src={article.urlToImage}
+                        width={500}
+                        height={300} 
+                    />
                 </div>
-                <h2 className={styles.articleTitle}>Fake News Headline</h2>
+                <h2 className={styles.articleTitle}>{article.title}</h2>
             </section>
 
             <div className={styles.reaction}>
