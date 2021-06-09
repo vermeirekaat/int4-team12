@@ -1,4 +1,30 @@
-.feed {
-    margin-top: 7.5rem;
+@value values: "../styles/vars.module.css";
+@value facebookTypo, breakpoint from values;
+
+
+.container {
+     display: grid;
+     grid-template-columns: repeat(3, auto);
 }
 
+.feed {
+    margin-top: 7.5rem;
+    grid-column: 2;
+}
+
+
+.names {
+    margin-top: 7.5rem;
+    grid-column: 3;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: facebookTypo;
+}
+
+@media screen and (max-width: breakpoint) {
+    .names{
+        display: none;
+    }
+}

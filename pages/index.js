@@ -2,13 +2,11 @@ import Header from "../components/Header";
 import Article from "../components/Article";
 import Advertisement from "../components/Advertisement";
 import styles from '../styles/Home.module.css'
-import Contacts from '../components/Contacts'
+import User from '../components/User'
 
 export default function Home({ data, persons }) {
   const articles = [];
   const personsArray = [];
-
-  console.log(data)
 
   const mapItems = (element1, array) => {
     element1.map((article) => {
@@ -18,11 +16,7 @@ export default function Home({ data, persons }) {
 
 
   mapItems(data.articles, articles);
-  mapItems(persons, personsArray);
-
-
-
-
+  mapItems(persons.results, personsArray);
 
   return (
     <div className={styles.container}>
@@ -37,7 +31,15 @@ export default function Home({ data, persons }) {
         <Advertisement />
         <Article article={articles[5]} />
       </section>
-      <Contacts persons={personsArray} />
+      <section className={styles.names}>
+        <h1 className={styles.title}>Contacts</h1>
+        <User user={personsArray[0]} />
+        <User user={personsArray[1]} />
+        <User user={personsArray[2]} />
+        <User user={personsArray[3]} />
+        <User user={personsArray[4]} />
+        <User user={personsArray[5]} />
+      </section>
 
     </div>
   )
@@ -46,7 +48,7 @@ export default function Home({ data, persons }) {
 export async function getStaticProps() {
   const result = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEXT_PUBLIC_NEWS_API}`);
   const data = await result.json();
-  const resultTwo = await fetch(`http://fakeapi.jsonparseronline.com/users`);
+  const resultTwo = await fetch(`https://randomuser.me/api/?results=50`);
   const persons = await resultTwo.json();
 
   if (data) {
