@@ -66,4 +66,8 @@
       width: 31.28rem;
       margin: 0 auto;
   }
+
+  .articleImage {
+    min-width: 31.28rem;
+  }
 }
