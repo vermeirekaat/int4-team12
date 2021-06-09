@@ -13,3 +13,4 @@ Ons digitaal product zal veel interacties en animaties bevatten, hiervoor gebrui
 - News API
 - Framer Motion API
 - Pixi JS
+- Random user API
