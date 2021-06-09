@@ -4,6 +4,7 @@ import Advertisement from "../components/Advertisement";
 import styles from '../styles/Home.module.css';
 import Contact from '../components/Contact';
 import { useState } from "react";
+import Image from "next/image";
 
 
 export default function Home({ data, persons }) {
@@ -58,7 +59,7 @@ export default function Home({ data, persons }) {
 
   return (
     <>
-      <Header user={persona} onClick={handleClick} />
+      <Header user={persona} onClicked={handleClick} />
       <div className={styles.container}>
 
         <section className={styles.feed}>
@@ -80,19 +81,19 @@ export default function Home({ data, persons }) {
           <Contact user={personsArray[5]} />
         </section>
         <section className={styles.side_elements}>
-          <Contact user={persona} />
-          <ul>
-            <li>
-              Friends
+          <Contact user={persona} onClicked={handleClick} />
+          <ul className={styles.element_list}>
+            <li className={styles.list_item}>
+              <Image className={styles.profile_picture} src="/assets/friends.png" width={50} height={45} /> <span className={styles.element_word}>Friends</span>
+            </li >
+            <li className={styles.list_item}>
+              <Image className={styles.profile_picture} src="/assets/groups.png" width={50} height={45} />  <span className={styles.element_word}>Groups</span>
             </li>
-            <li>
-              Groups
+            <li className={styles.list_item}>
+              <Image className={styles.profile_picture} src="/assets/evenementen.png" width={50} height={45} /> <span className={styles.element_word}>Events</span>
             </li>
-            <li>
-              Events
-            </li>
-            <li>
-              Pages
+            <li className={styles.list_item }>
+              <Image className={styles.profile_picture} src="/assets/pages.png" width={60} height={55} /> <span className={styles.element_word}>Pages</span>
             </li>
           </ul>
         </section>

@@ -1,5 +1,5 @@
 @value values: "../styles/vars.module.css";
-@value facebookTypo, breakpointTwo from values;
+@value facebookTypo, breakpointTwo, facebookGray from values;
 
 
 .container {
@@ -29,6 +29,27 @@
     margin-top: 7.5rem;
     grid-column: 1;
     grid-row: 1;
+    margin-left: 4vw;
+    width: 13rem;
+}
+
+.element_list {
+    padding-left: 5rem;
+    padding-top: 3rem;
+}
+
+.list_item {
+    margin-bottom: 5rem;
+    font-family: facebookTypo;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    color: facebookGray;
+}
+
+.element_word {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 @media screen and (max-width: breakpointTwo) {
@@ -42,7 +63,6 @@
 
      .container {
      display: block;
-
 }
 }
 

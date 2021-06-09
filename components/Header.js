@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./Header.module.css";
 import Contact from "./Contact"
 
-export default function Header({ user, onClick}) {
+export default function Header({ user, onClicked}) {
 
     return (
         <>
@@ -13,7 +13,7 @@ export default function Header({ user, onClick}) {
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
-            <div className={styles.header} onClick={onClick}>
+            <div className={styles.header} onClick={onClicked}>
             <div className={styles.headerImage}>
                <Image
                     src="/assets/facebook-logo.svg"
