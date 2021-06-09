@@ -1,5 +1,5 @@
 @value values: "../styles/vars.module.css";
-@value facebookBlue, facebookGray, facebookTypo from values;
+@value facebookBlue, facebookGray, facebookTypo, breakpoint from values;
 
 .advertisement {
     margin: 1.5rem 10vw;
@@ -90,4 +90,17 @@
 
 .input:hover {
     color: facebookBlue;
+}
+
+
+@media screen and (min-width: breakpoint) {
+    
+  .advertisement{
+      width: 31.28rem;
+      margin: 0 auto;
+  }
+
+  .articleImage {
+    min-width: 31.28rem;
+  }
 }
