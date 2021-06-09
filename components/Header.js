@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./Header.module.css";
+import Contact from "./Contact"
 
-export default function Header () {
+export default function Header({ user, onClick}) {
 
     return (
         <>
@@ -12,7 +13,7 @@ export default function Header () {
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <div className={styles.header}>
+            <div className={styles.header} onClick={onClick}>
             <div className={styles.headerImage}>
                <Image
                     src="/assets/facebook-logo.svg"
@@ -21,24 +22,7 @@ export default function Header () {
                     height={50}
                />
             </div>
-
-            <div className={styles.user}>
-                <div className={styles.userPicture}>
-                <Image
-                    className="userPic"
-                    src="/assets/sander.png"
-                    alt="Profile Picture"
-                    width={50}
-                    height={50}
-                />
-                </div>
-
-                <div className={styles.userName}>
-                    <p className={styles.name}>Suspicious Sander <span>&#10095;</span></p>
-                </div>
-               
-            </div>
-
+                <Contact user={user} />
         </div>
         </>
     )

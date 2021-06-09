@@ -12,6 +12,7 @@
 .username {
     margin-left: 1rem;
     margin-top: 1.2rem;
+    cursor: pointer;
 }
 
 .profile_picture {

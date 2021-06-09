@@ -15,26 +15,3 @@
     z-index: 2;
 }
 
-.user {
-    display: flex; 
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.userPicture > div {
-    border-radius: 10rem;
-}
-
-.userName {
-    color: facebookBlue; 
-    font-family: facebookTypo;
-    margin-left: 1rem;
-}
-
-.name span {
-    display: inline-block;
-    transform: rotate(90deg);
-    margin-left: .5rem;
-    color: facebookBlue;
-}

@@ -1,10 +1,12 @@
 @value values: "../styles/vars.module.css";
-@value facebookTypo, breakpoint from values;
+@value facebookTypo, breakpointTwo from values;
 
 
 .container {
      display: grid;
      grid-template-columns: repeat(3, auto);
+     width: 100vw;
+     margin: 0 auto;
 }
 
 .feed {
@@ -23,8 +25,24 @@
     font-family: facebookTypo;
 }
 
-@media screen and (max-width: breakpoint) {
+.side_elements {
+    margin-top: 7.5rem;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+@media screen and (max-width: breakpointTwo) {
     .names{
         display: none;
     }
+
+    .side_elements {
+        display: none;
+    }
+
+     .container {
+     display: block;
+
 }
+}
+
