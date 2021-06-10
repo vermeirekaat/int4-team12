@@ -44,7 +44,7 @@ export default function Home({ data, persons }) {
 
 
   const handleClick = () => {
-    console.log("click")
+    // console.log("click")
     if (persona.name.last === "Sander"){
       setPersona(user[1])
     }
@@ -97,8 +97,7 @@ export default function Home({ data, persons }) {
             </li>
           </ul>
         </section>
-
-      </div>
+        </div>
     </>
   )
 }
