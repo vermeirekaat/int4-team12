@@ -1,8 +1,8 @@
-import Header from "../components/Header";
-import Article from "../components/Article";
-import Advertisement from "../components/Advertisement";
+import Header from "../components/facebook/Header";
+import Article from "../components/facebook/Article";
+import Advertisement from "../components/facebook/Advertisement";
 import styles from '../styles/Home.module.css';
-import Contact from '../components/Contact';
+import Contact from '../components/facebook/Contact';
 import { useState } from "react";
 import Image from "next/image";
 

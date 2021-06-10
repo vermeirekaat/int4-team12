@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Advertisement.module.css";
 
 export default function Advertisement () {
@@ -32,7 +33,9 @@ export default function Advertisement () {
             <div className={styles.tagline}>
                 <h2 className={styles.articleTitle}>Verkiezingen 2024</h2>
                 {/* button */}
-                <p className={styles.button}>Doe de test</p>
+                <Link href="/stemtest">
+                    <a className={styles.button}>Doe de test</a>
+                </Link>
             </div>
             
         </section>
