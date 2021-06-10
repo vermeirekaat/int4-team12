@@ -1,0 +1,59 @@
+@value values: "../../styles/vars.module.css";
+@value mainColor, secondaryColor from values;
+
+.container {
+    min-height: 100vh; 
+    background-color: mainColor;
+
+    display: grid; 
+    grid-template-rows: 20% 15% 35% 15% 15%;
+}
+
+.title_container {
+    font-size: 3rem;
+    font-weight: 800;
+    grid-row: 1;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title_fill {
+    color: secondaryColor;
+    grid-row: 1; 
+    text-align: center;
+    position: relative; 
+    top: -2rem;
+}
+
+.title_stroke {
+    -webkit-text-fill-color: mainColor;
+    -webkit-text-stroke: .05rem secondaryColor;
+    position: relative; 
+    top: -1.5rem;
+}
+
+.intro_bold {
+    font-size: 1.5rem; 
+    font-weight: 600;
+    color: white; 
+    grid-row: 2;
+    padding: 1vh 5vw;
+}
+
+.intro_light {
+    font-size: 1.5rem; 
+    font-weight: 100; 
+    color: white; 
+    grid-row: 4;
+    padding: 0 5vw;
+}
+
+.image {
+    padding-right: 2.5vh;
+}
+
+.input {
+    grid-row: 5;
+    display: flex; 
+    justify-content: center;
+}
