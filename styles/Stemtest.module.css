@@ -1,5 +1,11 @@
 @value values: "../styles/vars.module.css";
-@value mainColor, breakpoint from values;
+@value mainColor, breakpoint, Menlo from values;
+
+@font-face {
+    font-family: 'Menlo';
+          src: url('/fonts/Menlo-Regular 2.ttf');
+    }
+
 
 .container {
     background-color: mainColor;
@@ -26,6 +32,8 @@
 
 .text {
     color: white;
+    font-family: Menlo;
+    font-size: ;
 }
 
 @media screen and (min-width: breakpoint) {
