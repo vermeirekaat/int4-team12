@@ -22,7 +22,7 @@ export default function Article ({ article }) {
 
             <section className={styles.content}>
                 <div className={styles.articleImage}>
-                    <Image
+                    <img
                         src={article.urlToImage}
                         width={500}
                         height={300} 
