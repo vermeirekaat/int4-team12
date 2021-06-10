@@ -52,6 +52,7 @@
     place-self: center;
     grid-row: 2;
     padding: 1vh 5vw;
+    max-width: 50rem;
 }
 
 .intro_second {
@@ -59,17 +60,32 @@
     font-size: bodyFont; 
     line-height: lineHeight; 
     color: white; 
+    place-self: center;
     grid-row: 4;
     padding: 0 5vw;
+    max-width: 50rem;
 }
 
-.image {
+.images {
+    width: 100vw;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    grid-row: 3;
+    overflow: hidden;
+}
+
+.image_left {
     padding-right: 2.5vh;
-    margin: 1rem 0;
-    width: 80vw; 
+    width: 60vw; 
     height: auto; 
-    background-image: url("../..//public/assets/protest.png");
+    margin: 1rem 0;
+    background-image: url("../../public/assets/protest.png");
     background-repeat: no-repeat;
+    background-size: cover;
+}
+.image_right {
+    display: none;
 }
 
 .input_mobile {
@@ -81,6 +97,10 @@
 }
 
 .input_desktop {
+    display: none;
+}
+
+.image_extra {
     display: none;
 }
 
@@ -140,22 +160,133 @@
 }
 
 @media screen and (min-width: breakpoint) {
+    .container {
+        grid-template-rows: 20% 15% 10% 40% 15%;
+    }
     .title_container {
-        font-size: 3.5rem;
+        font-size: 5.5rem;
+        position: relative; 
+        top: -12rem;
     }
     .intro_first {
-        place-self: flex-end;
+        grid-row: 2;
         font-size: bodyFontBig;
         line-height: lineHeightBig;
     }
     .intro_second {
-        place-self: center;
+        grid-row: 3;
         font-size: bodyFontBig;
         line-height: lineHeightBig;
     }
-    .image > div {
-        width: 80vw;
-        height: auto;
+    .images {
+        grid-row: 4;
+    }
+    .image_right {
+        display: flex;
+    }
+    /* .image_right {
+        width: 30vw;
+        height: 40vh;
+        background-image: url("../../public/assets/circles.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        left: 15vh;
+    }*/
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .container {
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 20% 50% 30%;
+    }
+    .title_container {
+        grid-row: 1;
+        grid-column: 1 / span 3;
+        font-size: 8rem;
+        position: relative; 
+        top: -17rem;
+    }
+    .title_fill {
+        position: relative; 
+        top: -5rem;
+    }
+    .title_stroke {
+        top: -3rem;
+    }
+    .intro_first {
+        grid-row: 2;
+        grid-column: 2;
+        width: 40vw;
+        position: relative;
+        top: -10rem;
+        left: 5rem;
+    }
+    .intro_second {
+        grid-row: 2;
+        grid-column: 2;
+        width: 40vw;
+        position: relative;
+        left: 5rem;
+    }
+    .images {
+        grid-row: 2;
+        grid-column: 1 / span 3;
+    }
+    .image_left {
+        background-size: 60%;
+    }
+    .input_mobile {
+        display: none;
+    }
+    .input_desktop {
+        display: flex;
+        grid-row: 2;
+        grid-column: 2;
+        align-self: flex-end;
+        justify-self: center;
+    }
+    .button {
+        font-family: 'Menlo';
+        color: secondaryColor;
+        padding: 1rem 1.5rem;
+        background-color: white; 
+        border-radius: 2rem;
+        place-self: center;
+    }
+    .image_extra {
+        display: flex; 
+        background-image: url('../../public/assets/triple.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 2rem;
+        grid-row: 3;
+        grid-column: 2; 
+    }
+    .image_double {
+        display: flex; 
+        background-image: url('../../public/assets/triple.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 2rem;
+        grid-row: 3;
+        grid-column: 2; 
+        position: relative; 
+        left: 1rem; 
+        top: 1rem;
+    }
+    .image_triple {
+        display: flex; 
+        background-image: url('../../public/assets/triple.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 2rem;
+        grid-row: 3;
+        grid-column: 2; 
+        position: relative; 
+        left: 2rem; 
+        top: 2rem;
+
     }
 
 }
