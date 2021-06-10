@@ -1,4 +1,4 @@
-@value values: "../styles/vars.module.css";
+@value values: "../../styles/vars.module.css";
 @value facebookBlue, facebookGray, facebookTypo, breakpoint from values;
 
 .advertisement {
@@ -56,7 +56,7 @@
 .articleImage {
     min-width: 60vw; 
     min-height: 20vh;
-    background-image: url('../public/assets/stemtest.png');
+    background-image: url('../../public/assets/stemtest.png');
     background-size: cover;
     display: flex; 
     flex-direction: column;

@@ -1,4 +1,4 @@
-@value values: "../styles/vars.module.css";
+@value values: "../../styles/vars.module.css";
 @value facebookBlue, facebookGray, facebookTypo from values;
 
 .header {
