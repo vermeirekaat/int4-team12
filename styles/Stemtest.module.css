@@ -1,0 +1,19 @@
+@value values: "../styles/vars.module.css";
+@value mainColor, breakpoint from values;
+
+.container {
+    background-color: mainColor;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../public/assets/raster2.svg);
+    background-size: 550vw;
+    background-position: 25% 25%;
+    filter: blur(0.125rem);
+}
+
+@media screen and (min-width: breakpoint) {
+
+    .container{
+        background-size: 200rem;
+    }
+}
