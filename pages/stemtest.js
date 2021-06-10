@@ -1,6 +1,7 @@
 import styles from '../styles/Stemtest.module.css';
 import { useState } from "react";
 import Image from "next/image";
+import Metadata from "../components/Metadata";
 import Button from '../components/stemtest/Button';
 
 export default function stemtest() {
@@ -20,6 +21,7 @@ export default function stemtest() {
 
     return (
         <>
+        <Metadata/>
             <section className={styles.container}>
                 <div className={styles.background}></div>
                 <div>

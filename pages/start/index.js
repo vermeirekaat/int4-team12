@@ -1,9 +1,12 @@
 import styles from "./Start.module.css";
+import Metadata from "../../components/Metadata";
 import Image from "next/image";
 
 export default function Stemtest () {
 
     return (
+        <>
+        <Metadata/>
         <article className={styles.container}>
             <div className={styles.title_container}>
                 <p className={styles.title_stroke}>Stemtest</p>
@@ -28,9 +31,8 @@ export default function Stemtest () {
 
             <div className={styles.input_desktop}>
                 <p className={styles.button}>Click to get started</p>
-
             </div>
         </article>
-        
+        </>     
     )
 }
