@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "next": "10.2.3",
+    "next-fonts": "^1.5.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-native-animated-progress": "^1.0.1"
   }
 }

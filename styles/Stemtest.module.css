@@ -1,5 +1,5 @@
 @value values: "../styles/vars.module.css";
-@value mainColor, breakpoint, Menlo, hightlightColor from values;
+@value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo from values;
 @font-face {
     font-family: 'Menlo';
     src: url('../public/fonts/Menlo-Regular\ 2.ttf');
@@ -74,10 +74,72 @@
     bottom: 11.79%;
 }
 
+
+.progress_div {
+    height: 2rem;
+    width: 60vw;
+    background-color: white;
+    margin-top: 3rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress{
+    height: 2rem;
+    background-color: green;
+}
+
+.content_container {
+    position: absolute;
+    margin-top: 10rem;
+    width: 60vw;
+}
+
+.hoofdoek {
+    width: 60vw;
+    margin: 0 auto;
+}
 @media screen and (min-width: breakpoint) {
 
     .background{
         background-size: 200rem;
 
     }
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .content_container {
+        top: 20%;
+        width: 60rem;
+    }
+
+    .hoofdoek {
+       display: none;
+    }
+
+    .buttons {
+        width: 30rem;
+        margin: 0 auto;
+    }
+
+    .text {
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .background {
+        position: absolute;
+    }
+
+    .hoofdoek_image{
+        background-image: url(../public/assets/hoofdoek.png);
+        position: absolute;
+        height: 100vh;
+        width: 100vw;   
+        background-repeat: no-repeat;
+        background-position: 120% -70%;
+    }
+
 }
