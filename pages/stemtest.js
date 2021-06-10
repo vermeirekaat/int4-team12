@@ -8,7 +8,7 @@ export default function stemtest() {
         {
             "questionNumber": 1,
             "picture": "/assets/hoofdoek.png",
-            "question": "Ik vind dat het personeel van de Vlaamse overheid achter het loket een hoofddoek mag dragen.",
+            "question": <p className={styles.text}>Ik vind dat het personeel van de <span className={styles.highlight}>Vlaamse overheid</span> achter het loket een  <span className={styles.highlight}>hoofddoek</span> mag dragen.</p>,
             "button1": "Eens",
             "button2": "Oneens",
         },
@@ -22,7 +22,7 @@ export default function stemtest() {
                 <div className={styles.background}></div>
                 <div className={styles.content}>
                     <Image src={question.picture} width={416} height={542} />
-                    <p className={styles.text}>{question.question}</p>
+                    {question.question}
                 </div>
             </section>
         </>

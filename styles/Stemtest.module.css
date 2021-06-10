@@ -1,5 +1,5 @@
 @value values: "../styles/vars.module.css";
-@value mainColor, breakpoint, Menlo from values;
+@value mainColor, breakpoint, Menlo, hightlightColor from values;
 
 @font-face {
     font-family: 'Menlo';
@@ -33,7 +33,15 @@
 .text {
     color: white;
     font-family: Menlo;
-    font-size: ;
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.6rem;
+}
+
+.highlight {
+    background: linear-gradient(to top, hightlightColor 50%, transparent 50%);
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }
 
 @media screen and (min-width: breakpoint) {
