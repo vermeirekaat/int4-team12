@@ -1,18 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./Header.module.css";
+import Metadata from "./../Metadata";
 import Contact from "./Contact"
 
 export default function Header({ user, onClicked}) {
 
     return (
         <>
-        <Head>
-            <title>Stemtest - Unfiltered</title>
-            <meta name="description" content="In welke mate ben jij akkoord met bepaalde standpunten van politieke partijen?"/>
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
-
+        <Metadata/>
             <div className={styles.header} onClick={onClicked}>
             <div className={styles.headerImage}>
                <Image

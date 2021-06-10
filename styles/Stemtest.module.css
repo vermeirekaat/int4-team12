@@ -1,9 +1,10 @@
 @value values: "../styles/vars.module.css";
-@value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo from values;
+
+@value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo, secondaryColor, bodyFont, lineHeight, bodyFontBig, lineHeightBig from values;
 
 @font-face {
     font-family: 'Menlo';
-    src: url('../public/fonts/Menlo-Regular\ 2.ttf');
+    src: url('../public/fonts/menlo-regular.ttf');
 }
 
 .container {
@@ -32,9 +33,9 @@
 .text {
     color: white;
     font-family: Menlo;
-    font-size: 1.25rem;
+    font-size: bodyFont;
     text-align: center;
-    line-height: 1.6rem;
+    line-height: lineHeigt;
 }
 
 .highlight {
@@ -68,7 +69,6 @@
 
     .background{
         background-size: 200rem;
-
     }
 }
 
@@ -89,8 +89,8 @@
 
     .text {
         margin-bottom: 3rem;
-        font-size: 1.5rem;
-        line-height: 2rem;
+        font-size: bodyFontBig;
+        line-height: lineHeightBig;
     }
 
     .background {
