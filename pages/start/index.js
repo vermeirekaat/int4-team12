@@ -23,6 +23,7 @@ export default function Stemtest () {
             </div>
 
             <div className={styles.input}>
+                <p className={styles.instruction}>Slide to get started</p>
                 <input className={styles.range} type="range" defaultValue="0"></input> 
             </div>
         </article>
