@@ -33,7 +33,7 @@ export default function Advertisement () {
             <div className={styles.tagline}>
                 <h2 className={styles.articleTitle}>Verkiezingen 2024</h2>
                 {/* button */}
-                <Link href="/stemtest">
+                <Link href="/start">
                     <a className={styles.button}>Doe de test</a>
                 </Link>
             </div>
