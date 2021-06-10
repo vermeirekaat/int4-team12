@@ -1,0 +1,32 @@
+@value values: "../../styles/vars.module.css";
+@value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo, secondaryColor from values;
+
+.progress_button {  
+    display: grid;
+    width: 65vw;
+    grid-column: 60vw 5vw;
+    position: absolute;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button_image {
+    height: 5vw;
+    margin-top: -0.4rem;
+    grid-column: 2;
+}
+
+.progress_div {
+    grid-column: 1;
+    height: 2rem;
+    width: 50vw;
+    background-color: white;
+    border-radius: 1.5rem;
+}
+
+.progress{
+    height: 2rem;
+    background-color:secondaryColor;
+    border-radius: 1.5rem;
+}

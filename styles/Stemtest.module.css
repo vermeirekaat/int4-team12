@@ -1,4 +1,5 @@
 @value values: "../styles/vars.module.css";
+
 @value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo, secondaryColor, bodyFont, lineHeight, bodyFontBig, lineHeightBig from values;
 
 @font-face {
@@ -50,59 +51,6 @@
     margin-top: 2rem;
 }
 
-.versiering1 {
-    position: absolute;
-    left: 13.29%;
-    right: 83.08%;
-    top: 2.57%;
-    bottom: 94.95%;
-}
-
-.versiering2 {
-    position: absolute;
-    left: 8.7%;
-    right: 86.84%;
-    top: 88.84%;
-    bottom: 8.94%;
-}
-
-.versiering3 {
-    position: absolute;
-    left: 88.41%;
-    right: 6.07%;
-    top: 85.6%;
-    bottom: 11.79%;
-}
-
-.progress_button {  
-    display: grid;
-    width: 65vw;
-    grid-column: 60vw 5vw;
-    position: absolute;
-    margin-top: 4rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.button_image {
-    height: 5vw;
-    margin-top: -0.4rem;
-    grid-column: 2;
-}
-
-.progress_div {
-    grid-column: 1;
-    height: 2rem;
-    width: 50vw;
-    background-color: white;
-    border-radius: 1.5rem;
-}
-
-.progress{
-    height: 2rem;
-    background-color:secondaryColor;
-    border-radius: 1.5rem;
-}
 
 .content_container {
     position: absolute;
