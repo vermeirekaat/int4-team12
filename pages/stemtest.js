@@ -29,8 +29,11 @@ export default function stemtest() {
                 </div>
                 <div className={question.bigImageClassName}></div>
                 <div className={styles.content}>
-                    <div className={styles.progress_div}>
-                        <div className={styles.progress} style={{ width: (question.questionNumber * 10) + 'vw' }}> </div>
+                    <div className={styles.progress_button}>
+                        <div className={styles.progress_div}>
+                            <div className={styles.progress} style={{ width: (question.questionNumber * 10) + 'vw' }}> </div>
+                        </div>
+                        <img className={styles.button_image} src="/assets/kruis.png" ></img>
                     </div>
                     <div className={styles.content_container}>
                         <img className={question.imageClassName} src={question.picture} />

@@ -1,5 +1,5 @@
 @value values: "../styles/vars.module.css";
-@value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo from values;
+@value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo, secondaryColor from values;
 
 @font-face {
     font-family: 'Menlo';
@@ -74,20 +74,34 @@
     bottom: 11.79%;
 }
 
-
-.progress_div {
-    height: 2rem;
-    width: 60vw;
-    background-color: white;
-    margin-top: 3rem;
+.progress_button {  
+    display: grid;
+    width: 65vw;
+    grid-column: 60vw 5vw;
     position: absolute;
+    margin-top: 4rem;
     margin-left: auto;
     margin-right: auto;
 }
 
+.button_image {
+    height: 5vw;
+    margin-top: -0.4rem;
+    grid-column: 2;
+}
+
+.progress_div {
+    grid-column: 1;
+    height: 2rem;
+    width: 50vw;
+    background-color: white;
+    border-radius: 1.5rem;
+}
+
 .progress{
     height: 2rem;
-    background-color: green;
+    background-color:secondaryColor;
+    border-radius: 1.5rem;
 }
 
 .content_container {
@@ -100,6 +114,9 @@
     width: 60vw;
     margin: 0 auto;
 }
+
+
+
 @media screen and (min-width: breakpoint) {
 
     .background{
@@ -140,6 +157,10 @@
         width: 100vw;   
         background-repeat: no-repeat;
         background-position: 120% -70%;
+    }
+
+    .button_image {
+        height: 3vw;
     }
 
 }
