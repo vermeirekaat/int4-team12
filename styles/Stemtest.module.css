@@ -5,15 +5,33 @@
     background-color: mainColor;
     height: 100vh;
     width: 100vw;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background-image: url(../public/assets/raster2.svg);
     background-size: 550vw;
     background-position: 25% 25%;
     filter: blur(0.125rem);
 }
 
+.content {
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.text {
+    color: white;
+}
+
 @media screen and (min-width: breakpoint) {
 
-    .container{
+    .background{
         background-size: 200rem;
+
     }
 }
