@@ -1,10 +1,10 @@
 @value values: "../styles/vars.module.css";
 @value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo from values;
+
 @font-face {
     font-family: 'Menlo';
     src: url('../public/fonts/Menlo-Regular\ 2.ttf');
 }
-
 
 .container {
     background-color: mainColor;

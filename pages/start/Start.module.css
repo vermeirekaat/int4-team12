@@ -1,16 +1,22 @@
 @value values: "../../styles/vars.module.css";
 @value mainColor, secondaryColor from values;
 
+@font-face {
+    font-family: 'Menlo';
+    src: url('/public/fonts/Menlo-Regular 2.ttf');
+}
+
 .container {
-    min-height: 100vh; 
+    height: 100vh;
+    width: 100vw;
     background-color: mainColor;
 
     display: grid; 
     grid-template-rows: 20% 15% 35% 15% 15%;
-    overflow: hidden;
 }
 
 .title_container {
+    font-family: Akira;
     font-size: 3rem;
     font-weight: 800;
     grid-row: 1;
@@ -34,16 +40,18 @@
 }
 
 .intro_bold {
-    font-size: 1.5rem; 
-    font-weight: 600;
+    font-family: Menlo;
+    font-size: 1.2rem;
+    line-height: 1.7rem; 
     color: white; 
     grid-row: 2;
     padding: 1vh 5vw;
 }
 
 .intro_light {
-    font-size: 1.5rem; 
-    font-weight: 100; 
+    font-family: Menlo;
+    font-size: 1.2rem; 
+    line-height: 1.7rem; 
     color: white; 
     grid-row: 4;
     padding: 0 5vw;
@@ -61,28 +69,26 @@
     padding: 0 2rem;
 }
 
-.instruction {
-    color: secondaryColor; 
-    text-align: right;
-    font-weight: 400; 
-    font-size: 1.5rem;
-    position: relative; 
-    top: 2.5rem;
-    left: -1.5rem;
-    z-index: -1;
-}
-
 .range {
     position: relative;
-    width: 25rem;
+}
+
+.instruction {
+    font-family: Menlo;
+    color: secondaryColor; 
+    text-align: center;
+    font-weight: 400; 
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
 }
 
 .range[type=range] {
     -webkit-appearance: none; 
     background: transparent;
+    width: 80vw;
 }
 
-.range::after {
+/*.range::after {
     content:"Slide to get started";
     color: secondaryColor; 
     text-align: right;
@@ -91,7 +97,7 @@
     position: relative;
     left: -10rem; 
     top: 1.2rem;
-}
+}*/
 
 .range[type=range]::-ms-track {
     width: 100%; 
