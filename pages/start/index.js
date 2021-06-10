@@ -23,7 +23,7 @@ export default function Stemtest () {
             </div>
 
             <div className={styles.input}>
-                <input className={styles.range} type="range" defaultValue="0"></input>
+                <input className={styles.range} type="range" defaultValue="0"></input> 
             </div>
         </article>
         
