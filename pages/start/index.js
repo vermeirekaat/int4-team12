@@ -2,10 +2,18 @@ import styles from "./Start.module.css";
 import Metadata from "../../components/Metadata";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 
 export default function Stemtest () {
+    const router = useRouter();
+
+    const handleRangeInput = (e) => {
+        if (e.target.value === "100") {
+            router.push('/stemtest');
+        }
+    }
 
     return (
         <>
@@ -28,10 +36,6 @@ export default function Stemtest () {
 
             <div className={styles.images}>
                 <div className={styles.image_left}>
-                    {/*<Image
-                        src="/assets/protest.png"
-                        alt="Protest"
-                        layout="fill"/>*/}
                 </div>
                 <div className={styles.image_right}>
                     <Image
@@ -44,7 +48,7 @@ export default function Stemtest () {
 
             <div className={styles.input_mobile}>
                 <p className={styles.instruction}>Slide to get started</p>
-                <input className={styles.range} type="range" defaultValue="0"></input> 
+                <input className={styles.range} onChange={(e) => handleRangeInput(e)} type="range" defaultValue="0"></input> 
             </div>
 
             <div className={styles.image_extra}></div>
