@@ -19,7 +19,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-image: url(../public/assets/raster2.svg);
+    background-image: url(/assets/raster2.svg);
     background-size: 550vw;
     background-position: 25% 25%;
     filter: blur(0.125rem);
@@ -99,6 +99,17 @@
     display: none;
 }
 
+.buttons_text_three {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.button_three {
+    width: 20vw;
+    margin: 0 auto;
+}
 
 @media screen and (min-width: breakpoint) {
 
@@ -144,7 +155,7 @@
     }
 
     .hoofdoek_image{
-        background-image: url(../public/assets/hoofdoek.png);
+        background-image: url(/assets/hoofdoek.png);
         position: absolute;
         height: 100vh;
         width: 100vw;   
@@ -165,5 +176,15 @@
 .trumpRight {
   left: 22vw;
 }
+
+.maskers_image{
+        background-image: url(/assets/maskers.gif);
+        position: absolute;
+        background-size: 50vw;
+        height: 100vh;
+        width: 100vw;   
+        background-repeat: no-repeat;
+        background-position: -10% 100%;
+    }
 
 }

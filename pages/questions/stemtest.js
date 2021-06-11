@@ -5,12 +5,26 @@ import Versiering from "../../components/stemtest/Versiering";
 import Link from 'next/link';
 import { useState } from "react";
 import { useRouter } from 'next/router';
+import Popup from '../../components/stemtest/FacebookPopup';
+import TextArea from '../../components/stemtest/TextArea';
+
 
 export default function stemtest() {
     const router = useRouter();
 
+
     const [questionSpecs, setquestionSpecs] = useState({ question: 0, direction: '' });
     const { question, direction } = questionSpecs;
+    const [isOpen, setisOpen] = useState(false);
+
+    const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l',' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n'];
+    const arrayLeft = ['H', 'e', 't', ' ', 'z', 'i', 'j', 'n', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n'];
+
+    const textRight = "Het is allemaal de schuld van de sossen";
+    const textLeft = "Het zijn allemaal racisten";
+
+    const popupTextRight = 'U bent aangesloten aan de groep "Alle Vlamingen eerst"';
+    const popupTextLeft = 'U bent aangesloten aan de groep "Alle bezittingen afschaffen"';
 
     const questions = [
         {
@@ -25,8 +39,7 @@ export default function stemtest() {
         },
         {
             "questionNumber": 2,
-            "classBigImage": styles.hoofdoek_image,
-            "classBigImage":  styles.display_none,
+            "classBigImage": styles.display_none,
             "classSmallImage": direction === "left" ? styles.trumpLeft : styles.trumpRight,
             "image_src": "/assets/trump.png",
             "button1": "Hell yeah",
@@ -34,36 +47,56 @@ export default function stemtest() {
             "classContainer": styles.content_containerTrump,
             "text": <p className={styles.textTrump}>Ik vind niet dat <span className={styles.highlight}>De Vlaamse overheid</span> geen nieuwe  <span className={styles.highlight}>moskeeën</span> meer mag herkennen.</p>
         },
+        {
+            "questionNumber": 3,
+            "classBigImage": styles.maskers_image,
+            "classSmallImage": styles.hoofdoek,
+            "image_src": "/assets/maskers.gif",
+            "button1": "Dit is mijn mening",
+            "classContainer": styles.content_containerTrump,
+            "text": <p className={styles.text}>Noteer hoe je staat tegenover de <span className={styles.highlight}>Vlaamse politiek</span> de dag van vandaag.</p>
+        },
     ]
 
 
     const handleClick = (e, value) => {
         const tmp = { ...questionSpecs };
-        tmp.direction= value
-        if (question < 5){
+        tmp.direction = value
+        if (question < 5) {
             tmp[question] = tmp.question++
         }
+        if (question == 1){
+            setisOpen(true);
+        }
         setquestionSpecs(tmp);
-        console.log(questionSpecs)
     }
 
+    const openPopup = () => {
+        setTimeout(() => (setisOpen(false)), 4000);
+    };
 
+    if (question == 2) {
+        openPopup();
+    }
 
     return (
         <>
             <section className={styles.container}>
                 <div className={styles.background}></div>
                 <Versiering />
+                {question == 2 ? <div className={styles.maskers_image}></div>:''}
                 <div className={questions[question].classBigImage}></div>
                 <div className={styles.content}>
                     <Progress value={questions[question].questionNumber} />
                     <div className={questions[question].classContainer}>
                         <img className={questions[question].classSmallImage} src={questions[question].image_src} />
                         <div className={styles.buttons_text}>
+                            {isOpen && <Popup text={direction === "left" ? popupTextLeft : popupTextRight} />}
                             {questions[question].text}
-                            <div className={styles.buttons}>
-                                <Button text={questions[question].button1} onClicked={(e)=>handleClick(e, "left")}/>
-                                <Button text={questions[question].button2} onClicked={(e) => handleClick(e, "right")} />
+                            <div className={question == 2 ? styles.buttons_text_three : styles.buttons}>
+                                {question == 2 ? <TextArea array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /> : ''}
+                                {question == 2 ? <Button className={styles.button_three} text={questions[question].button1} onClicked={(e) => handleClick(e, direction)} /> :   <Button text={questions[question].button1} onClicked={(e) => handleClick(e, "left")} />}
+                                {question == 2 ? '' : <Button text={questions[question].button2} onClicked={(e) => handleClick(e, "right")} />}
                             </div>
                         </div>
                     </div>
