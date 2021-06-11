@@ -17,7 +17,6 @@ export default function Campagne () {
                         width={117}
                         height={122}
                         />
-                    <div className={styles.trail}></div>
                 </div>
                 <div className={styles.introduction}>
                     <div className={styles.window_green}></div>
@@ -53,6 +52,18 @@ export default function Campagne () {
                     <p className={styles.highlight}>Neen,</p>
                     <p className={styles.paragraaf_white}>Dit is helaas niet het geval. De algoritmes zorgen ervoor dat deze kliks zodanig geanalyseerd worden waardoor je er als gebruiker geen controle meer over hebt. <br/> <br/> Het gaat hier over "extreme personalisatie", je ziet enkel berichten die jij leuk of interssant gaat vinden. Onbewust bevindt je je in je eigen onzichtbare filter bubble.</p>
                 </div>     
+            </section>
+
+            <section className={styles.information}>
+                <div className={styles.intermezzo}> 
+                    <h2 className={styles.search}><span>&#9906;</span> Filter bubble</h2>
+                    <p className={styles.definition}>Verzameling van specifieke informatie die afgestemd is op het online gedrag van de gebruiker.</p>
+                </div>
+
+                <div className={styles.awareness}>
+                    <h2 className={styles.subtitle_purple}>Be aware of your bubble</h2>
+                    <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je neit geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De plitieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
+                </div>
             </section>
         </article>
     )

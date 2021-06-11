@@ -43,20 +43,9 @@
     grid-row: 1 / span 2; 
     grid-column: 2; 
     align-self: center;
-}
-
-.arrow > div {
     position: relative; 
-    left: 2rem;
-}
-
-.trail {
-    width: 10vw;
-    height: 30vh;
-    background-image: url('../../public/assets/campagne/arrow.svg'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 10rem;
+    left: -1.5rem;
+    top: -1.5rem;
 }
 
 .introduction {
@@ -140,4 +129,53 @@
     font-size: .7rem; 
     line-height: calc(.7 * 2.5); 
     color: white;
+}
+
+.intermezzo {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.search {
+    font-family: 'Akira';
+    font-size: bodyFont;
+    color: secondaryColor;
+    padding: 1rem; 
+    border: .05rem solid mainColor;
+    border-radius: 5rem;
+    width: 60vw;
+}
+
+.search span {
+    transform: rotate(-20deg);
+    color: mainColor;
+}
+
+.definition {
+    font-family: 'Menlo';
+    font-size: .7rem;
+    line-height: calc(.7 * 2);
+    color: secondaryColor; 
+    text-align: center;
+    width: 80vw;
+    margin: 1rem 0;
+}
+
+.subtitle_purple {
+    font-family: 'Akira';
+    font-size: bodyFont; 
+    line-height: calc(bodyFont * 1.7);
+    color: mainColor;
+    text-align: center;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.awareness_content {
+    font-family: 'Menlo';
+    font-size: .7rem;
+    line-height: calc(.7 * 2);
+    color: mainColor; 
+    padding: 1rem;
 }
