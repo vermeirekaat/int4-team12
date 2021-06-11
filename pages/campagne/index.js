@@ -41,6 +41,15 @@ export default function Campagne () {
                     /> 
                 </div>
             </section>
+
+            <section className={styles.purple}>
+                <div className={styles.venster}></div>
+                <div className={styles.content}>
+                    <h2 className={styles.subtitle}>"Dus ik heb zelf de controle in handen want het gaat over mijn gedrag?"</h2>
+                    <p className={styles.highlight}>Neen,</p>
+                    <p className={styles.paragraaf_white}>Dit is helaas niet het geval. De algoritmes zorgen ervoor dat deze kliks zodanig geanalyseerd worden waardoor je er als gebruiker geen controle meer over hebt. <br/> <br/> Het gaat hier over "extreme personalisatie", je ziet enkel berichten die jij leuk of interssant gaat vinden. Onbewust bevindt je je in je eigen onzichtbare filter bubble.</p>
+                </div>     
+            </section>
         </article>
     )
 }

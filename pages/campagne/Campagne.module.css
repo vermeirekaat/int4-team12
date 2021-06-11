@@ -60,7 +60,7 @@
 .paragraaf {
     font-family: "Menlo";
     font-size: .7rem; 
-    line-height: calc(.7 * 1.7); 
+    line-height: calc(.7 * 2.5); 
     color: mainColor;
     background-color: white;
     max-width: 70vw;
@@ -88,4 +88,44 @@
     place-self: flex-end;
     margin-left: 2rem;
     border-top: 2rem solid secondaryColor;
+}
+
+.purple {
+    margin: 3rem 0rem;
+    background-color: mainColor;
+}
+
+.venster {
+    border-bottom: .05rem solid white;
+    background-image: url('../../public/assets/campagne/bollen.svg'); 
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    height: 5vh;
+}
+
+.content {
+    padding: 3rem 1rem;
+}
+
+.subtitle {
+    font-family: 'Akira';
+    font-size: bodyFont; 
+    line-height: calc(bodyFont * 1.7);
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    font-family: 'Akira';
+    font-size: bodyFont; 
+    color: secondaryColor;
+    margin-bottom: .5rem;
+}
+
+.paragraaf_white {
+    font-family: "Menlo";
+    font-size: .7rem; 
+    line-height: calc(.7 * 2.5); 
+    color: white;
 }
