@@ -27,7 +27,7 @@ export default function questionThree () {
     const openPopup= () => {
         setTimeout(() => {
             setIsOpen(false);
-        }, 7000);
+        }, 6000);
     };
 
     openPopup()
