@@ -1,5 +1,9 @@
 @value values: "../../styles/vars.module.css";
 @value mainColor, secondaryColor, breakpointTwo from values;
+@font-face {
+    font-family: 'Akira';
+    src: url('../../public/fonts/akira-expanded.ttf');
+}
 
 .buttons {
     width: 30vw;
@@ -16,6 +20,7 @@
     text-decoration: underline;
     margin: 1.5rem;
     font-size: 1.25rem;
+    font-family: Akira;
 }
 
 
@@ -32,10 +37,23 @@
     border-top:  secondaryColor 5rem solid;
 }
 
+.bolletjes {
+    position: absolute;
+    top:27vh;
+    left:30%;
+    z-index: 2;
+}
+
 
 @media screen and (min-width: breakpointTwo) {
    .content_container {
        left: 20%;
    }
+
+
+.bolletjes {
+    left:21%;
+     top:27.5vh;
+}
 
 }
