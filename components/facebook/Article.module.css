@@ -43,10 +43,6 @@
     background-color: facebookGray;
 }
 
-.articleImage {
-    min-width: 60vw; 
-}
-
 .interactions {
     display: flex; 
     flex-direction: row; 
