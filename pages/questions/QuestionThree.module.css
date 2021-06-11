@@ -2,6 +2,18 @@
 
 @value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo, secondaryColor, bodyFont, lineHeight, bodyFontBig, lineHeightBig from values;
 
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.button {
+    width: 20vw;
+    margin: 0 auto;
+}
+
 @media screen and (min-width: breakpointTwo) {
 .maskers_image{
         background-image: url(../../public/assets/maskers.gif);
