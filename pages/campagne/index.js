@@ -17,13 +17,16 @@ export default function Campagne () {
                         width={117}
                         height={122}
                         />
+                    <div className={styles.trail}></div>
                 </div>
                 <div className={styles.introduction}>
+                    <div className={styles.window_green}></div>
                     <p className={styles.paragraaf}>
                         Je spendeert talloze minuten op sociale media (Facebook, Instagram...) waarbij honderden berichten jouw aandacht vragen. Maar op welke manier wordt er beslist welke berichten JIJ te zien krijgt? <br/> <br/> Het zijn je eigen kliks die bepalen welke berichten er op je feed terecht komen.
                     </p>
                 </div>
                 <div className={styles.image_protest}>
+                <div className={styles.window_green}></div>
                     <Image
                         src="/assets/campagne/protest.png"
                         alt="Protest"
@@ -33,6 +36,7 @@ export default function Campagne () {
                     />
                 </div>
                 <div className={styles.image_phone}>
+                <div className={styles.window_green}></div>
                     <Image
                         src="/assets/campagne/phone.png"
                         alt="Phone with emoticons"
@@ -43,7 +47,7 @@ export default function Campagne () {
             </section>
 
             <section className={styles.purple}>
-                <div className={styles.venster}></div>
+                <div className={styles.window_purple}></div>
                 <div className={styles.content}>
                     <h2 className={styles.subtitle}>"Dus ik heb zelf de controle in handen want het gaat over mijn gedrag?"</h2>
                     <p className={styles.highlight}>Neen,</p>

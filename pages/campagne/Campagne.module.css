@@ -40,14 +40,23 @@
 .arrow {
     display: flex; 
     justify-content: flex-end;
-    position: relative; 
-    top: -3rem;
-    left: -2rem;
-    grid-row: 1; 
+    grid-row: 1 / span 2; 
     grid-column: 2; 
-    align-self: flex-end;
+    align-self: center;
+}
+
+.arrow > div {
     position: relative; 
-    top: 2rem;
+    left: 2rem;
+}
+
+.trail {
+    width: 10vw;
+    height: 30vh;
+    background-image: url('../../public/assets/campagne/arrow.svg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 10rem;
 }
 
 .introduction {
@@ -55,6 +64,16 @@
     margin-top: 1rem;
     grid-row: 2; 
     grid-column: 1 / span 2;
+    width: 60vw;
+}
+
+.window_green {
+    background-color: secondaryColor;
+    background-image: url('../../public/assets/campagne/bollen.svg'); 
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    height: 3vh;
 }
 
 .paragraaf {
@@ -65,12 +84,7 @@
     background-color: white;
     max-width: 70vw;
     border: .05rem solid secondaryColor;
-    border-top: 2rem solid secondaryColor;
     padding: 1rem;
-
-    /*background-image: url('../../public//assets/campagne/bollen.svg');
-    background-position-x: left;
-    background-position-y: top;*/
 }
 
 .image_protest {
@@ -79,7 +93,6 @@
     justify-self: flex-end;
     align-self: center;
     z-index: -1;
-    border-top: 2rem solid secondaryColor;
 }
 
 .image_phone {
@@ -87,7 +100,6 @@
     grid-column: 1; 
     place-self: flex-end;
     margin-left: 2rem;
-    border-top: 2rem solid secondaryColor;
 }
 
 .purple {
@@ -95,7 +107,7 @@
     background-color: mainColor;
 }
 
-.venster {
+.window_purple {
     border-bottom: .05rem solid white;
     background-image: url('../../public/assets/campagne/bollen.svg'); 
     background-repeat: no-repeat;
