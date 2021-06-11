@@ -63,6 +63,41 @@
     margin: 0 auto;
 }
 
+.textTrump {
+    color: white;
+    font-family: Menlo;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: lineHeigt;
+    margin-bottom: 15rem;
+}
+
+
+.content_containerTrump {
+    position: absolute;
+    top: 32%;
+    left: 10%;
+    width: 80vw;
+}
+
+
+.trumpLeft {
+    position: fixed;
+    bottom:0px;
+    height: 30rem;
+    right: -7rem;
+}
+
+.trumpRight{
+    position: fixed;
+    bottom:0px;
+    height: 30rem;
+    left: -7rem;
+}
+
+.display_none {
+    display: none;
+}
 
 
 @media screen and (min-width: breakpoint) {
@@ -70,6 +105,17 @@
     .background{
         background-size: 200rem;
     }
+
+    .trumpLeft {
+
+    height: 35rem;
+}
+
+
+.trumpRight {
+
+    height: 35rem;
+}
 }
 
 @media screen and (min-width: breakpointTwo) {
@@ -109,5 +155,15 @@
     .button_image {
         height: 3vw;
     }
+
+    .trumpLeft {
+
+   right:18vw;
+}
+
+
+.trumpRight {
+  left: 22vw;
+}
 
 }
