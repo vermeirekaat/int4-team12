@@ -115,8 +115,8 @@ export default function stemtest() {
                             {questions[question].text}
                             <div className={question == 2 ? styles.buttons_text_three : styles.buttons} onClick={handleClickTrump} >
                                 {question == 2 ? <TextArea array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /> : ''}
-                                {question == 2 ? <Button className={styles.button_three} text={questions[question].button1} onClicked={(e) => handleClick(e, direction)} /> : <Button classWord={direction === 'left' ? "button" : "disable"} question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, "left")} />}
-                                {question == 2 ? '' : <Button classWord={direction === 'left' ? "disable" : "button"} question={question}  text={questions[question].button2} onClicked={(e) => handleClick(e, "right")} />}
+                                {question == 2 ? <Button question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, direction)} /> : <Button classWord={direction === 'left' ? "button" : "disable"} question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, "left")} />}
+                                {question == 2 ? '' : <Button  classWord={direction === 'left' ? "disable" : "button"} question={question}  text={questions[question].button2} onClicked={(e) => handleClick(e, "right")} />}
                             </div>
                         </div>
                     </div>

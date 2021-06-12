@@ -66,9 +66,34 @@
     font-size: bodyFont;
 }
 
+.icon {
+  position: absolute;
+  top: 12%;
+  width: 19rem;
+  cursor: pointer;
+  height: 10vw;
+  background-size: 25rem;
+  background-position-y: 1vh;
+  background-repeat: no-repeat;
+  background-image: url(../../public/assets/arrow.svg);
+}
+
+.text_arrow{
+    color: white;
+    font-family: Akira;
+    text-align: right;
+    margin-bottom: -1vh;
+    font-size: bodyFont;
+}
+
 
 @media screen and (min-width: breakpoint) {
     .text {
         font-size:bodyFontBig;
+    }
+
+
+    .icon {
+        margin-top: 2rem;
     }
 }

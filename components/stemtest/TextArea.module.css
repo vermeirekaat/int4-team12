@@ -1,5 +1,5 @@
 @value values: "../../styles/vars.module.css";
-@value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo, secondaryColor from values;
+@value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo, secondaryColor, bodyFont, bodyFontBig from values;
 
 @font-face {
     font-family: 'Menlo';
@@ -11,22 +11,32 @@
     height: 20vw;
     border-radius: 1.2rem;
     border: none;
-    font-size: 1.2rem;
+    font-size: bodyFont;
     padding-left: 2vw;
     padding-top: 1rem;
     font-family: Menlo;
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 @media screen and (min-width: breakpoint) {
 .textarea{
     height: 10vw;
+    font-size: bodyFontBig;
+    width: 30rem;
 }
 
 }
 
-@media screen and (min-width: breakpoint) {
+@media screen and (min-width: breakpointTwo) {
+
 .textarea{
-    font-size: 1.5rem;
+    height: 10vw;
+    font-size: bodyFontBig;
+    width: 40rem;
+    height:8rem;
 }
 
 }

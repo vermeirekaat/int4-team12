@@ -61,6 +61,7 @@
 }
 
 .hoofdoek {
+    display: block;
     width: 60vw;
     margin: 0 auto;
 }
@@ -104,7 +105,7 @@
 .buttons_text_three {
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 60vw;
     margin: 0 auto;
 }
 
@@ -145,7 +146,6 @@
 }
 
 .hoofdoek {
-    display: block;
     width: 30rem;
     margin: 0 auto;
 }
