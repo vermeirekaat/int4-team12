@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import Popup from '../../components/stemtest/FacebookPopup';
 import TextArea from '../../components/stemtest/TextArea';
 import ClosePopup from '../../components/stemtest/ClosePopup';
+import Metadata from '../../components/Metadata';
 
 
 export default function stemtest() {
@@ -103,6 +104,7 @@ export default function stemtest() {
     return (
         <>
             <ClosePopup />
+            <Metadata/>
             <section className={styles.container}>
                 <div className={styles.background}></div>
                 <Versiering />
