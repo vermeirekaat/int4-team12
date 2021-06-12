@@ -72,7 +72,7 @@ export default function stemtest() {
     }
 
     const openPopup = () => {
-        setTimeout(() => (setisOpen(false)), 4000);
+        setTimeout(() => (setisOpen(false)), 7000);
     };
 
     if (question == 2) {
