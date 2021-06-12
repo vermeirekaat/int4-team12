@@ -14,12 +14,14 @@ import What from '../../components/stemtest/What';
 export default function stemtest() {
     const router = useRouter();
     const mountedRef = useRef(true)
+    let timer = useRef(null);
 
     useEffect(() => {
         return () => {
             mountedRef.current = false
         }
-    }, [])
+    }, []);
+
 
 
     const [questionSpecs, setquestionSpecs] = useState({ question: 0, direction: '' });
@@ -27,6 +29,7 @@ export default function stemtest() {
     const [isOpen, setisOpen] = useState(false);
     const [close, setClose] = useState(false);
     const [trump, setTrump] = useState(styles.display_none);
+    const [glitch, setglitch] = useState(styles.display_none);
 
     const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n'];
     const arrayLeft = ['H', 'e', 't', ' ', 'z', 'i', 'j', 'n', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n'];
@@ -69,6 +72,9 @@ export default function stemtest() {
         },
     ]
 
+    useEffect(() => {
+        makeGlitch();
+    }, [question])
 
     const handleClick = (e, value) => {
         const tmp = { ...questionSpecs };
@@ -110,13 +116,28 @@ export default function stemtest() {
         setClose(false);
     }
 
+    const makeGlitch = () => {
+        if (question == 2) {
+            clearTimeout(timer.current);
+            timer.current = setTimeout(() => {
+                setglitch(styles.glitch)
+            }, 9000);
+
+            timer.current = setTimeout(() => {
+                setglitch(styles.display_none)
+            }, 9400);
+
+        }
+
+    }
 
     return (
         <>
-            {close &&  <ClosePopup onClicked={handleClickCrossClose} />}
-            <Metadata/>
+            {close && <ClosePopup onClicked={handleClickCrossClose} />}
+            <Metadata />
             <section className={styles.container}>
                 <div className={styles.background}></div>
+                <img className={glitch} src="/assets/glitch.gif"></img>
                 <Versiering />
                 {question == 2 ? <div className={styles.maskers_image}></div> : ''}
                 <div className={questions[question].classBigImage}></div>
@@ -134,7 +155,7 @@ export default function stemtest() {
                             </div>
                         </div>
                     </div>
-                    {question > 0 && <What/>}
+                    {question > 0 && <What />}
                 </div>
             </section>
         </>

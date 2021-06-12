@@ -13,6 +13,13 @@
     width: 100vw;
 }
 
+.glitch {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+}
+
 .background {
     position: absolute;
     top: 0;
