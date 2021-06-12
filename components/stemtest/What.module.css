@@ -1,0 +1,30 @@
+
+@value values: "../../styles/vars.module.css";
+@value bodyFont, bodyFontBig, breakpoint, breakpointTwo  from values;
+
+@font-face {
+    font-family: 'Menlo';
+    src: url('../../public/fonts/menlo-regular.ttf');
+}
+
+.what {
+    position: absolute;
+    left: 60%;
+    right: 3.26%;
+    top: 91.74%;
+    bottom: 6.7%;
+    color: white;
+    text-decoration: underline;
+    font-family: Menlo;
+    font-size: bodyFont;
+    cursor: pointer;
+}
+
+
+
+@media screen and (min-width: breakpointTwo) {
+
+    .what {
+          left: 90%;
+        }
+}
