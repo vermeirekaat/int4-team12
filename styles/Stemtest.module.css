@@ -50,6 +50,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2rem;
+     cursor: pointer;
 }
 
 
@@ -67,9 +68,9 @@
 .textTrump {
     color: white;
     font-family: Menlo;
-    font-size: 1.5rem;
+    font-size: bodyFont;
     text-align: center;
-    line-height: lineHeigt;
+    line-height: lineHeight;
     margin-bottom: 15rem;
 }
 
@@ -85,15 +86,15 @@
 .trumpLeft {
     position: fixed;
     bottom:0px;
-    height: 30rem;
-    right: -7rem;
+    height: 27rem;
+    right: -13rem;
 }
 
 .trumpRight{
     position: fixed;
     bottom:0px;
-    height: 30rem;
-    left: -7rem;
+     height: 27rem;
+    left: -10rem;
 }
 
 .display_none {
@@ -135,6 +136,11 @@
 
 .text {
     font-size: bodyFontBig;
+    line-height: lineHeightBig;
+}
+
+.textTrump {
+     font-size: bodyFontBig;
     line-height: lineHeightBig;
 }
 

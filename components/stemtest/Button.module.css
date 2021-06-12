@@ -17,6 +17,21 @@
     color: mainColor;
     cursor: pointer;
     width: 25vw;
+    z-index: 999;
+}
+
+.disable{
+    background-color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    font-size:3vw;
+    font-family: 'Akira';
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: mainColor;
+    width: 25vw;
+    pointer-events:none;
+     cursor: pointer;
 }
 
 @media screen and (min-width: breakpoint) {
@@ -25,11 +40,21 @@
       font-size:bodyFont; 
       width: 15vw; 
     }
+
+     .disable {
+      font-size:bodyFont; 
+      width: 15vw; 
+    }
 }
 
 @media screen and (min-width: breakpointTwo) {
 
     .button {
+      font-size:bodyFont; 
+      width: 10vw; 
+    }
+
+      .disable {
       font-size:bodyFont; 
       width: 10vw; 
     }
