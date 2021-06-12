@@ -183,3 +183,65 @@
     color: mainColor; 
     padding: 1rem;
 }
+
+.examples {
+    background-color: mainColor;
+}
+
+.scroll {
+    font-family: 'Akira';
+    font-size: 1.2rem; 
+    line-height: 1.7rem;
+    color: secondaryColor;
+    padding: 1rem .5rem;
+}
+
+.example_header {
+    display: grid; 
+    grid-template-columns: repeat(2, 50%);
+    margin: 3rem .5rem;
+}
+
+.trump_title {
+    font-family: 'Akira';
+    font-size: 1.5rem; 
+    line-height: 1.7rem;
+    color: white;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 2;
+    z-index: 1;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.trump_image {
+    grid-row: 1; 
+    grid-column: 1;
+}
+
+.boris_title {
+    font-family: 'Akira';
+    font-size: 1.5rem; 
+    line-height: 1.7rem;
+    color: white;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+.boris_image {
+    grid-row: 1; 
+    grid-column: 2;
+}
+
+.example_paragraaf {
+    font-family: 'Menlo';
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color: white; 
+    padding: 1rem;
+}
