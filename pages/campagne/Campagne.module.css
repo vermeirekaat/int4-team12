@@ -132,11 +132,15 @@
     color: white;
 }
 
+.information {
+    margin: 2rem 0;
+}
+
 .intermezzo {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .search {
@@ -166,14 +170,23 @@
     margin: 1rem 0;
 }
 
-.subtitle_purple {
+.awareness_subtitle {
     font-family: 'Akira';
     font-size: 1.2rem; 
     line-height: 1.7rem;
     color: mainColor;
     text-align: center;
     width: 60vw;
+    height: 10vh;
     margin: 0 auto;
+
+    background-image: url("../../public/assets/campagne/bubble.svg");
+    background-size: cover;
+}
+
+.awareness_image {
+    display: flex; 
+    justify-content: center;
 }
 
 .awareness_content {
