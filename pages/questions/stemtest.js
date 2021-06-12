@@ -2,13 +2,13 @@ import styles from '../../styles/Stemtest.module.css';;
 import Button from '../../components/stemtest/Button';
 import Progress from "../../components/stemtest/Progress";
 import Versiering from "../../components/stemtest/Versiering";
-import Link from 'next/link';
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from 'next/router';
 import Popup from '../../components/stemtest/FacebookPopup';
 import TextArea from '../../components/stemtest/TextArea';
 import ClosePopup from '../../components/stemtest/ClosePopup';
 import Metadata from '../../components/Metadata';
+import What from '../../components/stemtest/What';
 
 
 export default function stemtest() {
@@ -134,6 +134,7 @@ export default function stemtest() {
                             </div>
                         </div>
                     </div>
+                    {question > 0 && <What/>}
                 </div>
             </section>
         </>
