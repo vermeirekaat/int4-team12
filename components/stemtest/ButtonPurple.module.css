@@ -1,0 +1,39 @@
+@value values: "../../styles/vars.module.css";
+@value mainColor, breakpoint, bodyFont, breakpointTwo from values;
+
+@font-face {
+    font-family: 'Akira';
+    src: url('../../public/fonts/akira-expanded.ttf');
+}
+
+.button{
+    background-color: mainColor;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    font-size:3vw;
+    font-family: 'Akira';
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    cursor: pointer;
+    width: 40vw;
+}
+
+@media screen and (min-width: breakpoint) {
+
+    .button {
+      font-size:bodyFont; 
+      width: 40vw; 
+    }
+
+  
+}
+
+@media screen and (min-width: breakpointTwo) {
+
+    .button {
+      font-size:bodyFont; 
+      width: 27rem; 
+    }
+
+}
