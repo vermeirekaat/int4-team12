@@ -3,13 +3,13 @@ import Button from './ButtonPurple';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-export default function FacebookPopup() {
+export default function ClosePopup({onClicked}) {
     const router = useRouter()
     return (
         <>
             <div className={styles.close_container}>
                 <div className={styles.box}>
-                    <span className={styles.close}></span>
+                    <span onClick={onClicked}  className={styles.close}></span>
                     <p className={styles.text}>Ben je zeker dat je wil afsluiten?</p>
                     <div className={styles.buttons}>
                         <Link href={{ pathname: `/campagne`, query: { knows: 'false' } }}>
@@ -25,6 +25,7 @@ export default function FacebookPopup() {
                     </div>
                 </div>
             </div>
+            <div className={styles.full_page}></div>
         </>
     )
 }

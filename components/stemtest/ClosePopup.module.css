@@ -1,5 +1,5 @@
 @value values: "../../styles/vars.module.css";
-@value facebookGray, breakpoint, secondaryColor, mainColor, lineHeight, bodyFont, bodyFontBig, lineHeightBig from values;
+@value facebookGray, breakpoint, breakpointTwo,secondaryColor, mainColor, lineHeight, bodyFont, bodyFontBig, lineHeightBig from values;
 
 @font-face {
     font-family: 'Menlo';
@@ -10,6 +10,7 @@
     font-family: 'Akira';
     src: url('../../public/fonts/akira-expanded.ttf');
 }
+
 
 .close_container {
   position: fixed;
@@ -60,8 +61,11 @@
 .close {
   position: absolute;
   top:-15%;
-  margin-left: 23vw;
+  left: 70%;
   border-radius: 50%;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
 }
 
 .close:before, .close:after {
@@ -105,8 +109,8 @@
     }
 
     .close {
-      margin-left: 18vw;
-      top: -17%;
+      left:75%;
+      top: -15%;
     }
   
 }
@@ -119,7 +123,8 @@
     }
 
       .close {
-      margin-left: 20vw;
+      top: -20%;
+      left:90%;
     }
 
 

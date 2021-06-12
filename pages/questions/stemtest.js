@@ -25,6 +25,7 @@ export default function stemtest() {
     const [questionSpecs, setquestionSpecs] = useState({ question: 0, direction: '' });
     const { question, direction } = questionSpecs;
     const [isOpen, setisOpen] = useState(false);
+    const [close, setClose] = useState(false);
     const [trump, setTrump] = useState(styles.display_none);
 
     const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n'];
@@ -100,10 +101,19 @@ export default function stemtest() {
         console.log(questions[1].classSmallImage)
     }
 
+    const handleClickCross = () => {
+        setClose(true);
+    }
+
+
+    const handleClickCrossClose = () => {
+        setClose(false);
+    }
+
 
     return (
         <>
-            <ClosePopup />
+            {close &&  <ClosePopup onClicked={handleClickCrossClose} />}
             <Metadata/>
             <section className={styles.container}>
                 <div className={styles.background}></div>
@@ -111,7 +121,7 @@ export default function stemtest() {
                 {question == 2 ? <div className={styles.maskers_image}></div> : ''}
                 <div className={questions[question].classBigImage}></div>
                 <div className={styles.content}>
-                    <Progress value={questions[question].questionNumber} />
+                    <Progress value={questions[question].questionNumber} onClicked={handleClickCross} />
                     <div className={questions[question].classContainer}>
                         <img className={questions[question].classSmallImage} src={questions[question].image_src} />
                         <div className={styles.buttons_text}>
