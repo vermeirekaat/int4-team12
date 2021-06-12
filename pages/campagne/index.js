@@ -4,8 +4,9 @@ import Image from "next/image";
 
 export default function Campagne () {
     return (
+        <>
+        <Metadata/>
         <article className={styles.container}>
-            <Metadata/>
             <h1 className={styles.hidden}>Filter Bubbles</h1>
             <section className={styles.header}>
                 <h2 className={styles.headline}>"You are what you <span>click</span>"</h2>
@@ -171,8 +172,26 @@ export default function Campagne () {
                         <p className={styles.tips_paragraaf}>Cookie klinken misschien positief maar dat zijn ze niet. Cookies verzamelen data zonder dat je er vat op hebt. Weg ermee!</p>
                     </div>
                 </article>
-
             </section>
         </article>
+
+        <footer className={styles.footer}>
+            <h2 className={styles.footer_title}>Share with your friends</h2>
+            <div className={styles.footer_info}>
+                <div className={styles.footer_image}>
+                    <Image 
+                        src="/assets/campagne/overheid.png"
+                        alt="Logo Vlaamse Overheid"
+                        width={96}
+                        height={44}
+                        />
+                </div>
+                <div className={styles.footer_names}>
+                    <p className={styles.names_content}>Integration 4</p>
+                    <p className={styles.names_content}>Amber Aspeslagh, Eline Claeys, Kaat Vermeire</p>
+                </div>
+            </div>
+        </footer>
+        </>
     )
 }

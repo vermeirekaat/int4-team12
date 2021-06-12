@@ -310,3 +310,33 @@
     grid-column: 3;
     z-index: 3;
 }
+
+.footer {
+    background-color: secondaryColor; 
+    padding: 2rem;
+}
+
+.footer_title {
+    font-family: 'Akira';
+    font-size: 1.5rem; 
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.footer_info {
+    display: flex;
+    flex-direction: column; 
+    align-content: space-between;
+}
+
+.footer_image {
+    width: 40vw;
+    margin-bottom: 1rem;
+}
+
+.footer_names {
+    font-family: "Menlo";
+    font-size: .7rem;
+    color: black;
+    line-height: 1.7rem;
+}
