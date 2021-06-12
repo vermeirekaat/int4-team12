@@ -7,6 +7,10 @@ export default function Progress({ value }) {
         e.currentTarget.innerHTML = "Er is geen weg terug"
     }
 
+    const handleMouseLeave = (e) => {
+        e.currentTarget.innerHTML = "Vorige vraag"
+    }
+
     console.log(typeof(value))
 
     return (
@@ -18,7 +22,7 @@ export default function Progress({ value }) {
             </div>
                 <span className={styles.close}></span>
         </div>
-            {value == 1 ? '' : <div className={styles.icon}><p onMouseEnter={(e) => handleMouseEnter(e)} className={styles.text_arrow}>Vorige vraag</p></div>}
+            {value == 1 ? '' : <div className={styles.icon}><p onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className={styles.text_arrow}>Vorige vraag</p></div>}
         </>
     );
 }
