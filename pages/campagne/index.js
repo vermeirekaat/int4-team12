@@ -81,16 +81,19 @@ export default function Campagne () {
                 </div>
 
                 <div className={styles.awareness}>
-                    {/*<div className={styles.awareness_image}>
-                        <Image 
-                            src="/assets/campagne/bubble.svg"
-                            alt="Filter bubble"
-                            width={300}
-                            height={300}
-                            />
-                    </div>*/}
                     <h2 className={styles.awareness_subtitle}>Be aware of your bubble</h2>
-                    <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je neit geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De plitieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
+
+                    <div className={styles.awareness_flex}>
+                        <div className={styles.awareness_image}>
+                            <Image 
+                                src="/assets/campagne/awareness.png"
+                                alt="Filter bubble"
+                                width={300}
+                                height={300}
+                                />
+                        </div>
+                        <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je neit geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De plitieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
+                    </div>
                 </div>
             </section>
         

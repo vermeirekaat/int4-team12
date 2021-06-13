@@ -181,7 +181,7 @@
     line-height: 1.7rem;
     color: mainColor;
     text-align: center;
-    width: 60vw;
+    max-width: 20rem;
     height: 10vh;
     margin: 0 auto;
 
@@ -200,6 +200,12 @@
     line-height: 1.7rem;
     color: mainColor; 
     padding: 1rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.awareness_image {
+    display: none;
 }
 
 .examples {
@@ -403,6 +409,7 @@
         font-size: titleFont; 
         line-height: 3.5rem; 
         height: 15vh;
+        max-width: 30rem;
     }
     .tips_subtitles {
         font-size: titleFont;
@@ -434,5 +441,18 @@
     .image_phone {
         grid-row: 3;
         place-self: flex-start;
+    }
+    .awareness_subtitle {
+        background-image: none;
+    }
+    .awareness_image {
+        display: inline-block;
+        place-self: center;
+    }
+    .awareness_flex {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between;
+        margin: 0 5rem;
     }
 }
