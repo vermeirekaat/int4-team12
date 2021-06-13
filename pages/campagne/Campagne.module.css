@@ -222,8 +222,9 @@
 
 .example_header {
     display: grid; 
-    grid-template-columns: repeat(2, 50%);
-    margin: 3rem .5rem;
+    grid-template-columns: repeat(2, 10rem);
+    padding: 1rem 2rem;
+    align-self: center;
 }
 
 .trump_title {
@@ -268,6 +269,8 @@
     line-height: 1.7rem;
     color: white; 
     padding: 1rem;
+    max-width: 40rem;
+    margin: 0 auto;
 }
 
 .tips_subtitles {
@@ -411,6 +414,10 @@
         height: 15vh;
         max-width: 30rem;
     }
+    .example_header {
+        grid-template-columns: repeat(2, 13rem);
+        margin: .5rem 10rem;
+    }
     .tips_subtitles {
         font-size: titleFont;
     }
@@ -454,5 +461,22 @@
         flex-direction: row; 
         justify-content: space-between;
         margin: 0 5rem;
+    }
+    .examples_flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .example_header {
+        margin: 0;
+    }
+    .trump {
+        max-width: 40vw;
+    }
+    .boris {
+        max-width: 40vw;
+    }
+    .boris_content {
+        justify-self: flex-end;
     }
 }

@@ -99,6 +99,7 @@ export default function Campagne () {
         
             <section className={styles.examples}>
                 <h2 className={styles.scroll}>Real Life Bubbles (gone wrong)</h2>
+                <div className={styles.examples_flex}>
                 <article className={styles.trump}>
                     <div className={styles.example_header}>
                         <h3 className={styles.trump_title}> Verkiezingen Trump 2016</h3>
@@ -132,7 +133,7 @@ export default function Campagne () {
                         <p className={styles.example_paragraaf}>In 2016 was de kogel door de kerk, ENgeland zal de EU verlaten.<br/> <br/>Twee kampen streden tegen elkaar: Pro-Leavers en Con-Leavers. <br/>Wat bleek, de eerste groep zag online enkel campagnes die hun mening versterkten: de EU verlaten. Geen enkel bericht met een tegenstrijdige mening. Allemaal te wijten aan de online filter bubble.</p>
                     </div>
                 </article>
-
+                </div>       
             </section>
         
             <section className={styles.tips}>
