@@ -106,8 +106,13 @@
     height: 5vh;
 }
 
+.purple_image {
+    display: none;
+}
+
 .content {
     padding: 3rem 1rem;
+    max-width: 40rem;
 }
 
 .subtitle {
@@ -264,9 +269,11 @@
     font-family: 'Akira';
     font-size: 1.2rem; 
 }
+
 .subtitle_green {
     color: secondaryColor;
 }
+
 .subtitle_outline {
     color: white;
     -webkit-text-stroke: .05rem secondaryColor;
@@ -376,6 +383,15 @@
         place-self: flex-end;
         border-top: 1.5rem solid secondaryColor;
         z-index: 2;
+    }
+    .purple_flex {
+        display: grid; 
+        grid-template-columns: 40vw 60vw; 
+    }
+    .purple_image {
+        display: block;
+        place-self: center;
+        max-width: 20rem;
     }
     .search {
         width: 20rem;

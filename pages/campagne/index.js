@@ -47,11 +47,21 @@ export default function Campagne () {
 
             <section className={styles.purple}>
                 <div className={styles.window_purple}></div>
-                <div className={styles.content}>
-                    <h2 className={styles.subtitle}>"Dus ik heb zelf de controle in handen want het gaat over mijn gedrag?"</h2>
-                    <p className={styles.highlight}>Neen,</p>
-                    <p className={styles.paragraaf_white}>Dit is helaas niet het geval. De algoritmes zorgen ervoor dat deze clicks zodanig geanalyseerd worden waardoor je er als gebruiker geen controle meer over hebt. <br/> <br/> Het gaat hier over "extreme personalisatie", je ziet enkel berichten die jij leuk of interessant gaat vinden. Onbewust bevindt je je in je eigen onzichtbare filter bubble.</p>
-                </div>     
+                <div className={styles.purple_flex}>
+                    <div className={styles.purple_image}>
+                        <Image 
+                            src="/assets/campagne/computer.png"
+                            width={447}
+                            height={545}
+                            />
+                    </div>
+                    <div className={styles.content}>
+                        <h2 className={styles.subtitle}>"Dus ik heb zelf de controle in handen want het gaat over mijn gedrag?"</h2>
+                        <p className={styles.highlight}>Neen,</p>
+                        <p className={styles.paragraaf_white}>Dit is helaas niet het geval. De algoritmes zorgen ervoor dat deze clicks zodanig geanalyseerd worden waardoor je er als gebruiker geen controle meer over hebt. <br/> <br/> Het gaat hier over "extreme personalisatie", je ziet enkel berichten die jij leuk of interessant gaat vinden. Onbewust bevindt je je in je eigen onzichtbare filter bubble.</p>
+                    </div>     
+                </div>
+                
             </section>
 
             <section className={styles.information}>
