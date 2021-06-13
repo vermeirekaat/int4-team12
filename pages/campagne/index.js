@@ -26,14 +26,13 @@ export default function Campagne () {
                     </p>
                 </div>
                 <div className={styles.image_protest}>
-                <div className={styles.window_green}></div>
-                    <Image
-                        src="/assets/campagne/protest.png"
-                        alt="Protest"
-                        layout="intrinsic"
-                        width={219}
-                        height={197}
-                    />
+                        <Image
+                            src="/assets/campagne/protest.png"
+                            alt="Protest"
+                            layout="intrinsic"
+                            width={219}
+                            height={197}
+                        />
                 </div>
                 <div className={styles.image_phone}>
                 <div className={styles.window_green}></div>
