@@ -197,7 +197,17 @@ export default function Campagne () {
         </article>
 
         <footer className={styles.footer}>
-            <h2 className={styles.footer_title}>Share with your friends</h2>
+            <div className={styles.footer_cta}>
+                <h2 className={styles.footer_title}>Share with your friends</h2>
+                <div className={styles.footer_socials}>
+                    <Image 
+                        src="/assets/campagne/socials.png"
+                        alt="Social Media Logo"
+                        width={221}
+                        height={51}
+                        />
+                </div>
+            </div>
             <div className={styles.footer_info}>
                 <div className={styles.footer_image}>
                     <Image 
