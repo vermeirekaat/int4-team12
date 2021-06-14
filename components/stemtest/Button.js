@@ -1,4 +1,3 @@
-import { PositionalAudio } from '@react-three/drei';
 import styles from './Button.module.css'
 
 export default function Button({ text, onClicked, classWord , question, Xposition, Yposition}) {

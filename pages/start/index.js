@@ -11,7 +11,7 @@ export default function Stemtest () {
 
     const handleRangeInput = (e) => {
         if (e.target.value === "100") {
-            router.push('/questions/stemtest');
+            router.push('/stemtest');
         }
     }
 
@@ -29,7 +29,7 @@ export default function Stemtest () {
             <p className={styles.intro_second}>Ben je zeker dat je alle correcte informatie hebt om kritische keuzes te maken?</p>
 
             <div className={styles.input_desktop}>
-                <Link href="/questions/stemtest">
+                <Link href="/stemtest">
                     <a className={styles.button}> Click to get started</a>
                 </Link>
             </div>

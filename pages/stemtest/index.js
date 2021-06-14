@@ -1,4 +1,4 @@
-import styles from '../../styles/Stemtest.module.css';;
+import styles from './Stemtest.module.css';;
 import Button from '../../components/stemtest/Button';
 import Progress from "../../components/stemtest/Progress";
 import Versiering from "../../components/stemtest/Versiering";
@@ -14,6 +14,8 @@ import What from '../../components/stemtest/What';
 export default function stemtest() {
     const router = useRouter();
     let timer = useRef(null);
+
+
 
     const [questionSpecs, setquestionSpecs] = useState({ question: 0, direction: '' });
     const { question, direction } = questionSpecs;
@@ -56,7 +58,7 @@ export default function stemtest() {
             "classBigImage": styles.hoofdoek_image,
             "classSmallImage": styles.hoofdoek,
             "image_src": "/assets/hoofdoek.png",
-            "buttons": <div className={styles.buttons}><Button Xposition="auto" Yposition="auto" question={question} text="Eens" onClicked={(e) => handleClick(e, "left")} /> <Button Xposition="auto" Yposition="auto" question={question} text="Oneens" onClicked={(e) => handleClick(e, "right")} /></div>,
+            "buttons": <div className={styles.buttons}><Button question={question} text="Eens" onClicked={(e) => handleClick(e, "left")} /> <Button question={question} text="Oneens" onClicked={(e) => handleClick(e, "right")} /></div>,
             "classContainer": styles.content_container,
             "text": <p className={styles.text}>Ik vind dat het personeel van de <span className={styles.highlight}>Vlaamse overheid</span> achter het loket een  <span className={styles.highlight}>hoofddoek</span> mag dragen.</p>,
         },
@@ -65,7 +67,7 @@ export default function stemtest() {
             "classBigImage": styles.display_none,
             "classSmallImage": trump,//direction === "left" ? styles.trumpLeft : styles.trumpRight,
             "image_src": "/assets/trump.png",
-            "buttons": <div className={styles.buttons} onClick={handleClickTrump} ><Button Xposition="auto" Yposition="auto" classWord={direction === 'left' ? "button" : "disable"} question={question} text="Hell yeah" onClicked={(e) => handleClick(e, "left")} /><Button Xposition="auto" Yposition="auto" classWord={direction === 'left' ? "disable" : "button"} question={question} text="Wtf??" onClicked={(e) => handleClick(e, "right")} /></div>,
+            "buttons": <div className={styles.buttons} onClick={handleClickTrump} ><Button classWord={direction === 'left' ? "button" : "disable"} question={question} text="Hell yeah" onClicked={(e) => handleClick(e, "left")} /><Button classWord={direction === 'left' ? "disable" : "button"} question={question} text="Wtf??" onClicked={(e) => handleClick(e, "right")} /></div>,
             "classContainer": styles.content_containerTrump,
             "text": <p className={styles.textTrump}>Ik vind niet dat <span className={styles.highlight}>De Vlaamse overheid</span> geen nieuwe  <span className={styles.highlight}>moskeeën</span> meer mag herkennen.</p>
         },
@@ -74,7 +76,7 @@ export default function stemtest() {
             "classBigImage": styles.maskers_image,
             "classSmallImage": styles.hoofdoek,
             "image_src": "/assets/maskers.gif",
-            "buttons": <div className={styles.buttons_text_three} ><TextArea array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /><Button Xposition="auto" Yposition="auto" question={question} text="Dit is mijn mening" onClicked={(e) => handleClick(e, direction)} /> </div>,
+            "buttons": <div className={styles.buttons_text_three} ><TextArea array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /><Button question={question} text="Dit is mijn mening" onClicked={(e) => handleClick(e, direction)} /> </div>,
             "classContainer": styles.content_containerTrump,
             "text": <p className={styles.text}>Noteer hoe je staat tegenover de <span className={styles.highlight}>Vlaamse politiek</span> de dag van vandaag.</p>
         },
