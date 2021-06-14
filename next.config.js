@@ -1,12 +1,13 @@
-module.exports = {
-    images: {
-        domains: ['ichef.bbci.co.uk'],
-    }
-};
-
 const withFonts = require('next-fonts');
-module.exports = withFonts({
+
+const nextConfig = withFonts({
     webpack(config, options) {
         return config;
     }
 });
+
+nextConfig.images = {
+    domains: ['ichef.bbci.co.uk'],
+}
+
+module.exports = nextConfig;

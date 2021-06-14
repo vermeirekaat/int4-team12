@@ -29,9 +29,8 @@ export default function Campagne () {
                         <Image
                             src="/assets/campagne/protest.png"
                             alt="Protest"
-                            layout="intrinsic"
-                            width={219}
-                            height={197}
+                            layout="fill"
+                            
                         />
                 </div>
                 <div className={styles.image_phone}>
