@@ -130,7 +130,7 @@ export default function Campagne () {
                         </div>
                     </div>
                     <div className={styles.boris_content}>
-                        <p className={styles.example_paragraaf}>In 2016 was de kogel door de kerk, ENgeland zal de EU verlaten.<br/> <br/>Twee kampen streden tegen elkaar: Pro-Leavers en Con-Leavers. <br/>Wat bleek, de eerste groep zag online enkel campagnes die hun mening versterkten: de EU verlaten. Geen enkel bericht met een tegenstrijdige mening. Allemaal te wijten aan de online filter bubble.</p>
+                        <p className={styles.example_paragraaf}>In 2016 was de kogel door de kerk, Engeland zal de EU verlaten.<br/> <br/>Twee kampen streden tegen elkaar: Pro-Leavers en Con-Leavers. <br/>Wat bleek, de eerste groep zag online enkel campagnes die hun mening versterkten: de EU verlaten. Geen enkel bericht met een tegenstrijdige mening. Allemaal te wijten aan de online filter bubble.</p>
                     </div>
                 </article>
                 </div>       
