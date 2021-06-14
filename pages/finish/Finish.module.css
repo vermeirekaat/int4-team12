@@ -1,0 +1,81 @@
+@value values: "../../styles/vars.module.css";
+@value mainColor, secondaryColor, bodyFont, lineHeight, bodyFontBig, lineHeightBig, titleFont, titleFontMiddle, titleFontBig, breakpoint, breakpointTwo from values;
+
+@font-face {
+    font-family: 'Menlo';
+    src: url('../../public/fonts/menlo-regular.ttf');
+}
+
+@font-face {
+    font-family: 'Akira';
+    src: url('../../public/fonts/akira-expanded.ttf');
+}
+
+.finish {
+    width: 100vw;
+    height: 100vh;
+    background-color: secondaryColor; 
+    display: grid; 
+    grid-template-rows: 25vh 50vh 25vh; 
+}
+
+.finish_image {
+    background-image: url("../../public/assets/finish-bubble.png"); 
+    height: 25vh;
+    background-position-x: -.5rem;
+    background-repeat: no-repeat;
+    transform: scaleY(-1);
+    grid-row: 1;
+}
+
+.finish_content {
+    grid-row: 2;
+    margin: 2rem 1rem;
+}
+
+.title {
+    font-family: "Akira";
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.paragraaf {
+    font-family: "Menlo";
+    font-size: 1rem;
+    color: mainColor;
+    line-height: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.button {
+    font-family: "Akira";
+    font-size: 1.2rem;
+    color: white; 
+    text-align: center;
+    padding: 1rem .5rem;
+    background-color: mainColor;
+    border-radius: .5rem;
+    box-shadow: .1rem .1rem .1rem mainColor, 0rem 0rem .1rem mainColor;
+}
+
+.share {
+    align-self: flex-end;
+    justify-self: center;
+    padding-bottom: 1rem;
+}
+
+.share_tagline {
+    font-family: "Akira";
+    font-size: .8rem;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.share_image {
+    width: 10rem;
+    margin: 0 auto;
+}

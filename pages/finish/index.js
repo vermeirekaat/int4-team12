@@ -9,17 +9,19 @@ export default function Finish () {
             <Metadata/>
 
             <article className={styles.finish}>
-                <div clasSName={styles.finish_image}>
-                    <Image
+                <div className={styles.finish_image}>
+                    {/*<Image
                         src="/assets/finish-bubble.png"
                         alt="Filter Bubble"
                         width={747}
                         height={709}
-                        />
+                        />*/}
                 </div>
-                <h1 className={styles.title}>Sorry to burst your bubble</h1>
-                <p className={styles.paragraaf}>Je zat vast in je eigen filter bubble waardoor je geen controle meer had over jouw antwoorden. Dit gebeurt in de online wereld elke dag. Ontdek wat je kan doen om zelf terug de controle te krijgen op jouw online gedrag.</p>
-                <p className={styles.button}></p>
+                <div className={styles.finish_content}>
+                    <h1 className={styles.title}>Sorry to burst your bubble</h1>
+                    <p className={styles.paragraaf}>Je zat vast in je eigen filter bubble waardoor je geen controle meer had over jouw antwoorden. Dit gebeurt in de online wereld elke dag. Ontdek wat je kan doen om zelf terug de controle te krijgen op jouw online gedrag.</p>
+                    <p className={styles.button}>Meer informatie</p>
+                </div>
 
                 <div className={styles.share}>
                     <p className={styles.share_tagline}>Share with your friends</p>
