@@ -1,0 +1,129 @@
+@value values: "../../styles/vars.module.css";
+
+@value mainColor, breakpoint, Menlo, hightlightColor, breakpointTwo, secondaryColor, bodyFont, lineHeight, bodyFontBig, lineHeightBig from values;
+
+
+.glitch {
+  color: white;
+  font-size: 100px;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+
+@keyframes noise-anim {
+  0% {
+            clip-path: inset(55% 0 6% 0);
+  }
+  10% {
+  
+            clip-path: inset(20% 0 53% 0);
+  }
+  20% {
+  
+            clip-path: inset(76% 0 24% 0);
+  }
+  30% {
+  
+            clip-path: inset(83% 0 3% 0);
+  }
+  40% {
+  
+            clip-path: inset(85% 0 9% 0);
+  }
+  50% {
+  
+            clip-path: inset(81% 0 7% 0);
+  }
+  60% {
+  
+            clip-path: inset(64% 0 33% 0);
+  }
+  70% {
+  
+            clip-path: inset(76% 0 21% 0);
+  }
+  80% {
+  
+            clip-path: inset(24% 0 37% 0);
+  }
+  90% {
+  
+            clip-path: inset(51% 0 18% 0);
+  }
+  100% {
+            clip-path: inset(6% 0 61% 0);
+  }
+}
+
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: mainColor;
+  overflow: hidden;
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+  
+            clip-path: inset(20% 0 64% 0);
+  }
+  10% {
+    
+            clip-path: inset(89% 0 12% 0);
+  }
+  20% {
+    
+            clip-path: inset(6% 0 17% 0);
+  }
+  30% {
+   
+            clip-path: inset(70% 0 12% 0);
+  }
+  40% {
+   
+            clip-path: inset(55% 0 32% 0);
+  }
+  50% {
+   
+            clip-path: inset(13% 0 86% 0);
+  }
+  60% {
+    
+            clip-path: inset(95% 0 5% 0);
+  }
+  70% {
+   
+            clip-path: inset(46% 0 22% 0);
+  }
+  80% {
+    
+            clip-path: inset(75% 0 10% 0);
+  }
+  90% {
+   
+            clip-path: inset(15% 0 72% 0);
+  }
+  100% {
+   
+            clip-path: inset(29% 0 54% 0);
+  }
+}
+
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: mainColor;
+  overflow: hidden;
+  animation: noise-anim-2 15s infinite linear alternate-reverse;
+}
