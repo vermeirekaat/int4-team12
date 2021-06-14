@@ -30,6 +30,8 @@ export default function stemtest() {
     const [close, setClose] = useState(false);
     const [trump, setTrump] = useState(styles.display_none);
     const [glitch, setglitch] = useState(styles.display_none);
+    const [Xposition, setXposition] = useState();
+    const [Yposition, setYposition] = useState();
 
     const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n'];
     const arrayLeft = ['H', 'e', 't', ' ', 'z', 'i', 'j', 'n', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n'];
@@ -70,6 +72,17 @@ export default function stemtest() {
             "classContainer": styles.content_containerTrump,
             "text": <p className={styles.text}>Noteer hoe je staat tegenover de <span className={styles.highlight}>Vlaamse politiek</span> de dag van vandaag.</p>
         },
+        {
+            "questionNumber": 4,
+            "classBigImage": styles.car_image,
+            "classSmallImage": styles.hoofdoek,
+            "image_src": "/assets/auto.png",
+            "button1": "Eens",
+            "button2": "Oneens",
+            "classContainer": styles.content_container,
+            "text": <p className={styles.text}>De meest <span className={styles.highlight}>vervuilende auto's</span> moeten in verschillende steden en overal <span className={styles.highlight}>verboden</span> worden.</p>,
+        },
+   
     ]
 
     useEffect(() => {
@@ -131,11 +144,20 @@ export default function stemtest() {
 
     }
 
+    const handleMouseMove = (e) => {
+        setXposition( e.pageX + 100);
+        setYposition(e.pageY + 100);
+    }
+    
+    const handleNothing =() => {
+        console.log("nothing")
+    }
+
     return (
         <>
             {close && <ClosePopup onClicked={handleClickCrossClose} />}
             <Metadata />
-            <section className={styles.container}>
+            <section onMouseMove={question == 3 ? handleMouseMove : handleNothing} className={styles.container}>
                 <div className={styles.background}></div>
                 <img className={glitch} src="/assets/glitch.gif"></img>
                 <Versiering />
@@ -150,8 +172,8 @@ export default function stemtest() {
                             {questions[question].text}
                             <div className={question == 2 ? styles.buttons_text_three : styles.buttons} onClick={handleClickTrump} >
                                 {question == 2 ? <TextArea array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /> : ''}
-                                {question == 2 ? <Button question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, direction)} /> : <Button classWord={direction === 'left' ? "button" : "disable"} question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, "left")} />}
-                                {question == 2 ? '' : <Button classWord={direction === 'left' ? "disable" : "button"} question={question} text={questions[question].button2} onClicked={(e) => handleClick(e, "right")} />}
+                                {question == 2 ? <Button question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, direction)} /> : <Button Xposition={direction == 'left' ? Xposition : ''} Yposition={direction == 'left' ? Yposition : ''} classWord={direction === 'left' ? "button" : "disable"} question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, "left")} />}
+                                {question == 2 ? '' : <Button Xposition={direction == 'right' ? Xposition : ''} Yposition={direction == 'right' ? Yposition : ''} classWord={direction === 'left' ? "disable" : "button"} question={question} text={questions[question].button2} onClicked={(e) => handleClick(e, "right")} />}
                             </div>
                         </div>
                     </div>
