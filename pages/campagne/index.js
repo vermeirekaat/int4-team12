@@ -11,15 +11,6 @@ export default function Campagne () {
             <h1 className={styles.hidden}>Filter Bubbles</h1>
             <section className={styles.header}>
                 <h2 className={styles.headline}>You are what you <span>click</span></h2>
-
-                <div className={styles.arrow}>
-                    <Image
-                        src="/assets/campagne/pijl.png"
-                        alt="Green computer mouse"
-                        width={117}
-                        height={122}
-                        />
-                </div>
                 <div className={styles.introduction}>
                     <div className={styles.window_green}></div>
                     <p className={styles.paragraaf}>
@@ -31,7 +22,6 @@ export default function Campagne () {
                             src="/assets/campagne/protest.png"
                             alt="Protest"
                             layout="fill"
-                            
                         />
                 </div>
                 <div className={styles.image_phone}>
@@ -39,8 +29,7 @@ export default function Campagne () {
                     <Image
                         src="/assets/campagne/phone.png"
                         alt="Phone with emoticons"
-                        width={199}
-                        height={169}
+                        layout="fill"
                     /> 
                 </div>
             </section>
