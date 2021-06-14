@@ -26,14 +26,13 @@ export default function Campagne () {
                     </p>
                 </div>
                 <div className={styles.image_protest}>
-                <div className={styles.window_green}></div>
-                    <Image
-                        src="/assets/campagne/protest.png"
-                        alt="Protest"
-                        layout="intrinsic"
-                        width={219}
-                        height={197}
-                    />
+                        <Image
+                            src="/assets/campagne/protest.png"
+                            alt="Protest"
+                            layout="intrinsic"
+                            width={219}
+                            height={197}
+                        />
                 </div>
                 <div className={styles.image_phone}>
                 <div className={styles.window_green}></div>
@@ -48,11 +47,21 @@ export default function Campagne () {
 
             <section className={styles.purple}>
                 <div className={styles.window_purple}></div>
-                <div className={styles.content}>
-                    <h2 className={styles.subtitle}>"Dus ik heb zelf de controle in handen want het gaat over mijn gedrag?"</h2>
-                    <p className={styles.highlight}>Neen,</p>
-                    <p className={styles.paragraaf_white}>Dit is helaas niet het geval. De algoritmes zorgen ervoor dat deze clicks zodanig geanalyseerd worden waardoor je er als gebruiker geen controle meer over hebt. <br/> <br/> Het gaat hier over "extreme personalisatie", je ziet enkel berichten die jij leuk of interessant gaat vinden. Onbewust bevindt je je in je eigen onzichtbare filter bubble.</p>
-                </div>     
+                <div className={styles.purple_flex}>
+                    <div className={styles.purple_image}>
+                        <Image 
+                            src="/assets/campagne/computer.png"
+                            width={447}
+                            height={545}
+                            />
+                    </div>
+                    <div className={styles.content}>
+                        <h2 className={styles.subtitle}>"Dus ik heb zelf de controle in handen want het gaat over mijn gedrag?"</h2>
+                        <p className={styles.highlight}>Neen,</p>
+                        <p className={styles.paragraaf_white}>Dit is helaas niet het geval. De algoritmes zorgen ervoor dat deze clicks zodanig geanalyseerd worden waardoor je er als gebruiker geen controle meer over hebt. <br/> <br/> Het gaat hier over "extreme personalisatie", je ziet enkel berichten die jij leuk of interessant gaat vinden. Onbewust bevindt je je in je eigen onzichtbare filter bubble.</p>
+                    </div>     
+                </div>
+                
             </section>
 
             <section className={styles.information}>
@@ -72,21 +81,25 @@ export default function Campagne () {
                 </div>
 
                 <div className={styles.awareness}>
-                    {/*<div className={styles.awareness_image}>
-                        <Image 
-                            src="/assets/campagne/bubble.svg"
-                            alt="Filter bubble"
-                            width={300}
-                            height={300}
-                            />
-                    </div>*/}
                     <h2 className={styles.awareness_subtitle}>Be aware of your bubble</h2>
-                    <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je neit geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De plitieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
+
+                    <div className={styles.awareness_flex}>
+                        <div className={styles.awareness_image}>
+                            <Image 
+                                src="/assets/campagne/awareness.png"
+                                alt="Filter bubble"
+                                width={300}
+                                height={300}
+                                />
+                        </div>
+                        <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je neit geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De plitieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
+                    </div>
                 </div>
             </section>
         
             <section className={styles.examples}>
                 <h2 className={styles.scroll}>Real Life Bubbles (gone wrong)</h2>
+                <div className={styles.examples_flex}>
                 <article className={styles.trump}>
                     <div className={styles.example_header}>
                         <h3 className={styles.trump_title}> Verkiezingen Trump 2016</h3>
@@ -120,7 +133,7 @@ export default function Campagne () {
                         <p className={styles.example_paragraaf}>In 2016 was de kogel door de kerk, ENgeland zal de EU verlaten.<br/> <br/>Twee kampen streden tegen elkaar: Pro-Leavers en Con-Leavers. <br/>Wat bleek, de eerste groep zag online enkel campagnes die hun mening versterkten: de EU verlaten. Geen enkel bericht met een tegenstrijdige mening. Allemaal te wijten aan de online filter bubble.</p>
                     </div>
                 </article>
-
+                </div>       
             </section>
         
             <section className={styles.tips}>
@@ -184,7 +197,17 @@ export default function Campagne () {
         </article>
 
         <footer className={styles.footer}>
-            <h2 className={styles.footer_title}>Share with your friends</h2>
+            <div className={styles.footer_cta}>
+                <h2 className={styles.footer_title}>Share with your friends</h2>
+                <div className={styles.footer_socials}>
+                    <Image 
+                        src="/assets/campagne/socials.png"
+                        alt="Social Media Logo"
+                        width={221}
+                        height={51}
+                        />
+                </div>
+            </div>
             <div className={styles.footer_info}>
                 <div className={styles.footer_image}>
                     <Image 

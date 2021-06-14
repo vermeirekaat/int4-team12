@@ -1,5 +1,5 @@
 @value values: "../../styles/vars.module.css";
-@value mainColor, secondaryColor, bodyFont, lineHeight, bodyFontBig, lineHeightBig, titleFont, titleFontMiddle, titleFontBit, breakpoint, breakpointTwo from values;
+@value mainColor, secondaryColor, bodyFont, lineHeight, bodyFontBig, lineHeightBig, titleFont, titleFontMiddle, titleFontBig, breakpoint, breakpointTwo from values;
 
 @font-face {
     font-family: 'Menlo';
@@ -53,7 +53,7 @@
     margin-top: 1rem;
     grid-row: 2; 
     grid-column: 1 / span 2;
-    width: 80vw;
+    max-width: 30rem;
 }
 
 .window_green {
@@ -106,8 +106,13 @@
     height: 5vh;
 }
 
+.purple_image {
+    display: none;
+}
+
 .content {
     padding: 3rem 1rem;
+    max-width: 40rem;
 }
 
 .subtitle {
@@ -176,7 +181,7 @@
     line-height: 1.7rem;
     color: mainColor;
     text-align: center;
-    width: 60vw;
+    max-width: 20rem;
     height: 10vh;
     margin: 0 auto;
 
@@ -195,6 +200,12 @@
     line-height: 1.7rem;
     color: mainColor; 
     padding: 1rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.awareness_image {
+    display: none;
 }
 
 .examples {
@@ -211,8 +222,9 @@
 
 .example_header {
     display: grid; 
-    grid-template-columns: repeat(2, 50%);
-    margin: 3rem .5rem;
+    grid-template-columns: repeat(2, 8rem);
+    padding: 1rem 2rem;
+    align-self: center;
 }
 
 .trump_title {
@@ -257,6 +269,8 @@
     line-height: 1.7rem;
     color: white; 
     padding: 1rem;
+    max-width: 40rem;
+    margin: 0 auto;
 }
 
 .tips_subtitles {
@@ -264,9 +278,11 @@
     font-family: 'Akira';
     font-size: 1.2rem; 
 }
+
 .subtitle_green {
     color: secondaryColor;
 }
+
 .subtitle_outline {
     color: white;
     -webkit-text-stroke: .05rem secondaryColor;
@@ -288,7 +304,7 @@
 }
 
 .tips_content {
-    width: 70vw;
+    max-width: 25rem;
     border: .05rem solid secondaryColor;
     background-color: white;
     grid-column: 2/ span 3;
@@ -302,7 +318,7 @@
     line-height: 1.7rem;
     color: secondaryColor;
     padding: 1rem;
-    width: 65vw;
+    max-width: 25rem;
 }
 
 .tips_paragraaf {
@@ -329,11 +345,19 @@
     padding: 2rem;
 }
 
+.footer_cta {
+    margin-bottom: 2rem;
+}
+
 .footer_title {
     font-family: 'Akira';
     font-size: 1.5rem; 
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
+}
+
+.footer_socials {
+    max-width: 10rem;
 }
 
 .footer_info {
@@ -352,4 +376,136 @@
     font-size: .7rem;
     color: black;
     line-height: 1.7rem;
+}
+
+@media screen and (min-width: breakpoint) {
+    .headline {
+        font-size: titleFontMiddle;
+        line-height: calc(titleFontMiddle * 1.2);
+        grid-column: 1 / span 2;
+    }
+    .introduction {
+        grid-row: 2 / span 3;
+        align-self: center;
+    }
+    .arrow {
+        justify-self: center;
+        position: relative;
+        top: 1.5rem;
+    }
+    .image_protest {
+        display: flex;
+        grid-column: 1;
+        grid-row: 3;
+        place-self: flex-end;
+        border-top: 1.5rem solid secondaryColor;
+        z-index: 2;
+    }
+    .purple_flex {
+        display: grid; 
+        grid-template-columns: 40vw 60vw; 
+    }
+    .purple_image {
+        display: block;
+        place-self: center;
+        max-width: 20rem;
+    }
+    .search {
+        width: 20rem;
+    }
+    .definition {
+        width: 30rem;
+    }
+    .awareness_subtitle {
+        font-size: titleFont; 
+        line-height: 3.5rem; 
+        height: 15vh;
+        max-width: 30rem;
+    }
+    .example_header {
+        grid-template-columns: repeat(2, 13rem);
+        margin: .5rem 10rem;
+    }
+    .tips_subtitles {
+        font-size: titleFont;
+        margin: 5rem 10rem;
+    }
+    .tips_grid {
+        grid-template-columns: 10rem 20rem 10rem;
+        grid-template-rows: 10rem 5rem 10rem;
+        width: 40rem; 
+        margin: 0 auto;
+        padding: 3rem 0;
+    }
+    .tips_image {
+        grid-column: 1 / span 3;
+    }
+    .footer_info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .header {
+        width: 80rem;
+        margin: 0 auto;
+    }
+    .arrow {
+        grid-row: 1;
+    }
+    .introduction {
+        grid-row: 2;
+        align-self: flex-end;
+    }
+    .image_protest {
+        grid-row: 3;
+        align-self: flex-start;
+    }
+    .image_phone {
+        grid-row: 2;
+        align-self: center;
+        justify-self: flex-start;
+    }
+    .awareness_subtitle {
+        background-image: none;
+    }
+    .awareness_image {
+        display: inline-block;
+        place-self: center;
+    }
+    .awareness_flex {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between;
+        margin: 0 10rem;
+    }
+    .examples_flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .example_header {
+        margin: 0;
+    }
+    .trump {
+        max-width: 40vw;
+    }
+    .boris {
+        max-width: 40vw;
+    }
+    .boris_content {
+        justify-self: flex-end;
+    }
+    .footer_title {
+        font-size: titleFont;
+    }
+    .footer_cta {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_info {
+        margin: 2rem 10rem;
+    }
 }
