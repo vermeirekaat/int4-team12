@@ -25,6 +25,7 @@ export default function stemtest() {
     const [glitch, setglitch] = useState(styles.display_none);
     const [Xposition, setXposition] = useState();
     const [Yposition, setYposition] = useState();
+    const [progress, setProgress] = useState(3);
 
     const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n'];
     const arrayLeft = ['H', 'e', 't', ' ', 'z', 'i', 'j', 'n', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n'];
@@ -45,12 +46,6 @@ export default function stemtest() {
 
         console.log(questions[1].classSmallImage)
     }
-
-    const randomProgress = () => {
-        let random = Math.random() *1;
-        return random;
-    }
-
 
     const questions = [
         {
@@ -81,7 +76,7 @@ export default function stemtest() {
             "text": <p className={styles.text}>Noteer hoe je staat tegenover de <span className={styles.highlight}>Vlaamse politiek</span> de dag van vandaag.</p>
         },
         {
-            "questionNumber": setInterval(randomProgress, 1000),
+            "questionNumber": progress,
             "classBigImage": styles.car_image,
             "classSmallImage": styles.hoofdoek,
             "image_src": "/assets/auto.png",
@@ -91,25 +86,38 @@ export default function stemtest() {
             "classContainer": styles.content_container,
             "text": <p className={styles.text}>De meest <span className={styles.highlight}>vervuilende auto's</span> moeten in verschillende steden en overal <span className={styles.highlight}>verboden</span> worden.</p>,
         },
-   
+
     ]
 
     useEffect(() => {
+        const timer = setInterval(() => {
+            setProgress(Math.floor(Math.random() * 5))
+        }, 500);
+        return () => clearInterval(timer);
+    });
+
+    useEffect(() => {
         if (question == 2) {
-            clearTimeout(timer.current);
+            timer.current = setTimeout(() => {
+                setisOpen(false)
+            }, 7000);
+
             timer.current = setTimeout(() => {
                 setglitch(styles.glitch)
-            }, 9000);
+            }, 7100);
 
             timer.current = setTimeout(() => {
                 setglitch(styles.display_none)
-            }, 9400);
-
+            }, 7500);
         }
-        return ()=> {
+
+        return () => {
             clearTimeout(timer.current);
         }
-    }, [question])
+
+    }, [question]);
+
+
 
     const handleClick = (e, value) => {
         const tmp = { ...questionSpecs };
@@ -123,14 +131,6 @@ export default function stemtest() {
         setquestionSpecs(tmp);
     }
 
-    const openPopup = () => {
-        setTimeout(() => (setisOpen(false)), 7000);
-    };
-
-    if (question == 2) {
-        openPopup();
-    }
-
     const handleClickCross = () => {
         setClose(true);
     }
@@ -141,11 +141,11 @@ export default function stemtest() {
     }
 
     const handleMouseMove = (e) => {
-        setXposition( e.pageX);
+        setXposition(e.pageX);
         setYposition(e.pageY);
     }
-    
-    const handleNothing =() => {
+
+    const handleNothing = () => {
         console.log("nothing")
     }
 
