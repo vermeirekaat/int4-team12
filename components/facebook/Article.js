@@ -22,11 +22,11 @@ export default function Article ({ article }) {
 
             <section className={styles.content}>
                 <div className={styles.articleImage}>
-                    {/*<Image 
+                    <Image 
                         src={article.urlToImage}
                         width={500}
                         height={200}
-                    />*/}   
+                    />   
                 </div>
                 <h2 className={styles.articleTitle}>{article.title}</h2>
             </section>
