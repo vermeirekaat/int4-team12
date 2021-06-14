@@ -54,19 +54,23 @@ export default function Campagne () {
 
             <section className={styles.information}>
                 <div className={styles.intermezzo}> 
+                <div className={styles.intermezzo_content}>
                     <div className={styles.search}>
-                        <Image 
-                            src="/assets/campagne/search.svg"
-                            alt="Search icon"
-                            width={20}
-                            height={20}
-                            />
-                            
-                            <h2 className={styles.search_title}>Filter bubble</h2>
+                            <Image 
+                                src="/assets/campagne/search.svg"
+                                alt="Search icon"
+                                width={20}
+                                height={20}
+                                />
+                                
+                                <h2 className={styles.search_title}>Filter bubble</h2>
 
                         </div>
-                        <p className={styles.definition}>"Verzameling van specifieke informatie die afgestemd is op het online gedrag van de gebruiker."</p>
-                    </div>
+                            <p className={styles.definition}>"Verzameling van specifieke informatie die afgestemd is op het online gedrag van de gebruiker."</p>
+                </div>
+                   
+                    <div className={styles.circles}></div>
+                </div>
 
                 <div className={styles.awareness}>
                     <h2 className={styles.awareness_subtitle}>Be aware of your bubble</h2>

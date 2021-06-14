@@ -430,8 +430,12 @@
         place-self: center;
     }
     .purple_flex {
+        height: 80vh;
         display: grid; 
         grid-template-columns: 40vw 60vw; 
+    }
+    .content {
+        place-self: center;
     }
     .purple_image {
         display: block;
@@ -517,6 +521,38 @@
         width: 20vw;
         padding-bottom: calc(200%/4);
         margin: 0;
+    }
+    .purple {
+        margin: 0;
+    }
+    .information {
+        margin-top: 0;
+    }
+    .intermezzo {
+        display: grid; 
+        grid-template-columns: 25vw 50vw 25vw;
+        height: 20rem;
+    }
+    .intermezzo_content {
+        grid-column: 2;
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        position: relative; 
+        top: -5rem;
+    }
+    .circles {
+        grid-column: 3;
+        background-image: url("../../public/assets/campagne/circles-green.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30rem; 
+        height: 30rem;
+        position: relative; 
+        place-self: flex-end;
+        top: -15rem;
+        z-index: -1;
+
     }
     .awareness_subtitle {
         background-image: none;
