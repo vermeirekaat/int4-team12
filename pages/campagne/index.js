@@ -1,6 +1,7 @@
 import Metadata from "../../components/Metadata";
 import styles from "./Campagne.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Campagne () {
     return (
@@ -9,7 +10,7 @@ export default function Campagne () {
         <article className={styles.container}>
             <h1 className={styles.hidden}>Filter Bubbles</h1>
             <section className={styles.header}>
-                <h2 className={styles.headline}>"You are what you <span>click</span>"</h2>
+                <h2 className={styles.headline}>You are what you <span>click</span></h2>
 
                 <div className={styles.arrow}>
                     <Image
@@ -206,6 +207,11 @@ export default function Campagne () {
                         height={51}
                         />
                 </div>
+            </div>
+            <div className={styles.footer_link}>
+                <Link href="/start">
+                    <a className={styles.link}>Doe de stemtest opnieuw</a>
+                </Link>
             </div>
             <div className={styles.footer_info}>
                 <div className={styles.footer_image}>
