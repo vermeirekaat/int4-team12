@@ -145,8 +145,8 @@ export default function stemtest() {
     }
 
     const handleMouseMove = (e) => {
-        setXposition( e.pageX + 100);
-        setYposition(e.pageY + 100);
+        setXposition( e.pageX);
+        setYposition(e.pageY);
     }
     
     const handleNothing =() => {
@@ -172,8 +172,8 @@ export default function stemtest() {
                             {questions[question].text}
                             <div className={question == 2 ? styles.buttons_text_three : styles.buttons} onClick={handleClickTrump} >
                                 {question == 2 ? <TextArea array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /> : ''}
-                                {question == 2 ? <Button question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, direction)} /> : <Button Xposition={direction == 'left' ? Xposition : ''} Yposition={direction == 'left' ? Yposition : ''} classWord={direction === 'left' ? "button" : "disable"} question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, "left")} />}
-                                {question == 2 ? '' : <Button Xposition={direction == 'right' ? Xposition : ''} Yposition={direction == 'right' ? Yposition : ''} classWord={direction === 'left' ? "disable" : "button"} question={question} text={questions[question].button2} onClicked={(e) => handleClick(e, "right")} />}
+                                {question == 2 ? <Button question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, direction)} /> : <Button Xposition={direction == 'right' ? Xposition : 'auto'} Yposition={direction == 'right' ? Yposition : 'auto'} classWord={direction === 'left' ? "button" : "disable"} question={question} text={questions[question].button1} onClicked={(e) => handleClick(e, "left")} />}
+                                {question == 2 ? '' : <Button Xposition={direction == 'left' ? Xposition : 'auto'} Yposition={direction == 'left' ? Yposition : 'auto'} classWord={direction === 'left' ? "disable" : "button"} question={question} text={questions[question].button2} onClicked={(e) => handleClick(e, "right")} />}
                             </div>
                         </div>
                     </div>
