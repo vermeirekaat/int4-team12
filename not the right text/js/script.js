@@ -22,4 +22,3 @@
         input.addEventListener("input", handleInput);
     }
     init();
-}
