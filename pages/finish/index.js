@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Finish () {
     
     return (
-        <>
+        <section className={styles.container}>
             <Metadata/>
 
             <article className={styles.finish}>
@@ -18,6 +18,7 @@ export default function Finish () {
                         />*/}
                 </div>
                 <div className={styles.finish_content}>
+                    <div className={styles.finsih_content}></div>
                     <h1 className={styles.title}>Sorry to burst your bubble</h1>
                     <p className={styles.paragraaf}>Je zat vast in je eigen filter bubble waardoor je geen controle meer had over jouw antwoorden. Dit gebeurt in de online wereld elke dag. Ontdek wat je kan doen om zelf terug de controle te krijgen op jouw online gedrag.</p>
                     <p className={styles.button}>Meer informatie</p>
@@ -35,6 +36,6 @@ export default function Finish () {
                     </div>
                 </div>
             </article>
-        </>
+        </section>
     )
 }
