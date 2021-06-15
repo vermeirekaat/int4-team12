@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Advertisement.module.css";
+import ReactPlayer from "react-player";
+import { useState } from "react";
 
 export default function Advertisement () {
+
+    const [isPlaying, setIsPlaying] = useState(true);
 
     return (
         <article className={styles.advertisement}>
@@ -23,16 +27,22 @@ export default function Advertisement () {
 
         <section className={styles.content}>
             <div className={styles.articleImage}>
+                <ReactPlayer 
+                    url="video/advertisement.mp4"
+                    width={350}
+                    height={200}
+                    playing={ isPlaying }
+                    loop={ true }
+                    muted={ true }/>
                 {/* <Image
                     src="/assets/stemtest.png"
                     width={500}
                     height={300}
-                />*/}
-                <p className={styles.play}> <span>&#9654;</span></p>
+                />
+                <p className={styles.play}> <span>&#9654;</span></p>*/}
             </div>
             <div className={styles.tagline}>
                 <h2 className={styles.articleTitle}>Verkiezingen 2024</h2>
-                {/* button */}
                 <Link href="/start">
                     <a className={styles.button}>Doe de test</a>
                 </Link>

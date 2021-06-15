@@ -55,9 +55,8 @@
 
 .articleImage {
     min-width: 60vw; 
-    min-height: 20vh;
-    background-image: url('../../public/assets/stemtest.png');
-    background-size: cover;
+    /*background-image: url('../../public/assets/stemtest.png');
+    background-size: cover; */
     display: flex; 
     flex-direction: column;
     justify-content: center;
