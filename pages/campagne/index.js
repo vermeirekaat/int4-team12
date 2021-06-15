@@ -135,13 +135,14 @@ export default function Campagne () {
                 </div>
 
                 <article className={styles.tips_grid}>
-                    <div className={styles.tips_image}>
-                        <Image
-                            src="/assets/campagne/ad-blocker.png"
-                            alt="Ad Blocker"
-                            width={198}
-                            height={278}
-                        />
+                    <div className={styles.tips_header}>
+                        <div className={styles.tips_image}>
+                            <Image
+                                src="/assets/campagne/ad-blocker.png"
+                                alt="Ad Blocker"
+                                layout="fill"
+                            />
+                        </div>
                         <p className={styles.tips_number}>1</p>
                     </div>
                     <div className={styles.tips_content}>
@@ -152,16 +153,17 @@ export default function Campagne () {
                 </article>
 
                 <article className={styles.tips_grid}>
-                    <div className={styles.tips_image}>
-                    <p className={styles.tips_number}>2</p>
-                        <Image
-                            src="/assets/campagne/anonymous.png"
-                            alt="Ad Blocker"
-                            width={200}
-                            height={220}
-                        />           
+                    <div className={styles.tips_header}>
+                        <p className={styles.tips_number}>2</p>
+                        <div className={styles.tips_image}>
+                            <Image
+                                src="/assets/campagne/anonymous.png"
+                                alt="Anonymous"
+                                layout="fill"
+                            />      
+                        </div>     
                     </div>
-                    <div className={styles.tips_content}>
+                    <div className={styles.tips_contentSecond}>
                         <div className={styles.window_green}></div>
                         <h3 className={styles.tips_title}>Browse anonymous</h3>
                         <p className={styles.tips_paragraaf}>Hello unknown! <br/>Als het internet niet weet wie je bent, kan het jouw gegevens ook niet opslaan.</p>
@@ -169,13 +171,14 @@ export default function Campagne () {
                 </article>
 
                 <article className={styles.tips_grid}>
-                    <div className={styles.tips_image}>
-                        <Image
-                            src="/assets/campagne/cookies.png"
-                            alt="Ad Blocker"
-                            width={200}
-                            height={220}
-                        />   
+                    <div className={styles.tips_header}>
+                        <div className={styles.tips_image}>
+                            <Image
+                                src="/assets/campagne/cookies.png"
+                                alt="Cookie Monster"
+                                layout="fill"
+                            />   
+                        </div>
                         <p className={styles.tips_number}>3</p>        
                     </div>
                     <div className={styles.tips_content}>
