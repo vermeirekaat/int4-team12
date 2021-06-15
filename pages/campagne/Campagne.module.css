@@ -440,7 +440,9 @@
     .purple_image {
         display: block;
         place-self: center;
-        max-width: 20rem;
+        width: 40vw;
+        position: relative;
+        padding-top: calc(450%/4);
     }
     .search {
         width: 20rem;
@@ -498,6 +500,7 @@
     }
     .headline {
         margin-top: 5rem;
+        place-self: center;
     }
     .introduction {
         grid-row: 2;
@@ -524,6 +527,20 @@
     }
     .purple {
         margin: 0;
+    }
+    .purple_flex {
+        grid-template-columns: repeat(4, 25vw);
+    }
+    .purple_image {
+        width: 25vw; 
+        padding-top: calc(250%/4);
+        grid-column: 1 / span 2;
+    }
+    .content {
+        align-self: center;
+        justify-self: flex-start;
+        width: 30rem;
+        grid-column: 3 / span 4;
     }
     .information {
         margin-top: 0;

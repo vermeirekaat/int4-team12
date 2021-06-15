@@ -40,8 +40,8 @@ export default function Campagne () {
                     <div className={styles.purple_image}>
                         <Image 
                             src="/assets/campagne/computer.png"
-                            width={447}
-                            height={545}
+                            alt="Computer in suit"
+                            layout="fill"
                             />
                     </div>
                     <div className={styles.content}>
