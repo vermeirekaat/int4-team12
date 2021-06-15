@@ -1,12 +1,37 @@
 import Metadata from "../../components/Metadata";
+import Positive from "../../components/campagne/Positive";
 import styles from "./Campagne.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export default function Campagne () {
+
+    const [link, setLink] = useState();
+
+    const router = useRouter();
+
+    useEffect(() => {
+        if (router.isReady) {
+            setLink(router.query.knows);
+        }
+    });
+
+    console.log(link);
+
+    if (link === "true") {
+        return (
+            <>
+            <Positive/>
+            </>
+        )
+    }
+
     return (
         <>
         <Metadata/>
+
         <article className={styles.container}>
             <h1 className={styles.hidden}>Filter Bubbles</h1>
             <section className={styles.header}>
