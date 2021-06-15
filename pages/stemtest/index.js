@@ -90,10 +90,12 @@ export default function stemtest() {
     ]
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            setProgress(Math.floor(Math.random() * 5))
-        }, 500);
-        return () => clearInterval(timer);
+        if (question == 3) {
+            const timer = setInterval(() => {
+                setProgress(Math.floor(Math.random() * 5))
+            }, 500);
+            return () => clearInterval(timer);
+        }
     });
 
     useEffect(() => {
