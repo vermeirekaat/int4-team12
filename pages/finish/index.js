@@ -6,19 +6,12 @@ export default function Finish () {
     
     return (
         <section className={styles.container}>
+            <div className={styles.background}></div>
             <Metadata/>
 
             <article className={styles.finish}>
-                <div className={styles.finish_image}>
-                    {/*<Image
-                        src="/assets/finish-bubble.png"
-                        alt="Filter Bubble"
-                        width={747}
-                        height={709}
-                        />*/}
-                </div>
+                <div className={styles.finish_image}></div>
                 <div className={styles.finish_content}>
-                    <div className={styles.finsih_content}></div>
                     <h1 className={styles.title}>Sorry to burst your bubble</h1>
                     <p className={styles.paragraaf}>Je zat vast in je eigen filter bubble waardoor je geen controle meer had over jouw antwoorden. Dit gebeurt in de online wereld elke dag. Ontdek wat je kan doen om zelf terug de controle te krijgen op jouw online gedrag.</p>
                     <p className={styles.button}>Meer informatie</p>

@@ -1,6 +1,7 @@
 import Metadata from "../../components/Metadata";
 import styles from "./Campagne.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Campagne () {
     return (
@@ -9,20 +10,11 @@ export default function Campagne () {
         <article className={styles.container}>
             <h1 className={styles.hidden}>Filter Bubbles</h1>
             <section className={styles.header}>
-                <h2 className={styles.headline}>"You are what you <span>click</span>"</h2>
-
-                <div className={styles.arrow}>
-                    <Image
-                        src="/assets/campagne/pijl.png"
-                        alt="Green computer mouse"
-                        width={117}
-                        height={122}
-                        />
-                </div>
+                <h2 className={styles.headline}>You are what you <span>click</span></h2>
                 <div className={styles.introduction}>
                     <div className={styles.window_green}></div>
                     <p className={styles.paragraaf}>
-                        Je spendeert talloze minuten op sociale media (Facebook, Instagram...) waarbij honderden berichten jouw aandacht vragen. Maar op welke manier wordt er beslist welke berichten JIJ te zien krijgt? <br/> <br/> Het zijn je eigen kliks die bepalen welke berichten er op je feed terecht komen.
+                        Je spendeert talloze minuten op sociale media (Facebook, Instagram...) waarbij honderden berichten jouw aandacht vragen. Maar op welke manier wordt er beslist welke berichten JIJ te zien krijgt? <br/> <br/> Het zijn je eigen clicks die bepalen welke berichten er op je feed terecht komen.
                     </p>
                 </div>
                 <div className={styles.image_protest}>
@@ -30,7 +22,6 @@ export default function Campagne () {
                             src="/assets/campagne/protest.png"
                             alt="Protest"
                             layout="fill"
-                            
                         />
                 </div>
                 <div className={styles.image_phone}>
@@ -38,8 +29,7 @@ export default function Campagne () {
                     <Image
                         src="/assets/campagne/phone.png"
                         alt="Phone with emoticons"
-                        width={199}
-                        height={169}
+                        layout="fill"
                     /> 
                 </div>
             </section>
@@ -50,8 +40,8 @@ export default function Campagne () {
                     <div className={styles.purple_image}>
                         <Image 
                             src="/assets/campagne/computer.png"
-                            width={447}
-                            height={545}
+                            alt="Computer in suit"
+                            layout="fill"
                             />
                     </div>
                     <div className={styles.content}>
@@ -59,24 +49,27 @@ export default function Campagne () {
                         <p className={styles.highlight}>Neen,</p>
                         <p className={styles.paragraaf_white}>Dit is helaas niet het geval. De algoritmes zorgen ervoor dat deze clicks zodanig geanalyseerd worden waardoor je er als gebruiker geen controle meer over hebt. <br/> <br/> Het gaat hier over "extreme personalisatie", je ziet enkel berichten die jij leuk of interessant gaat vinden. Onbewust bevindt je je in je eigen onzichtbare filter bubble.</p>
                     </div>     
-                </div>
-                
+                </div>       
             </section>
 
             <section className={styles.information}>
                 <div className={styles.intermezzo}> 
-                <div className={styles.search}>
-                    <Image 
-                        src="/assets/campagne/search.svg"
-                        alt="Search icon"
-                        width={20}
-                        height={20}
-                        />
-                        
-                        <h2 className={styles.search_title}>Filter bubble</h2>
+                <div className={styles.intermezzo_content}>
+                    <div className={styles.search}>
+                            <Image 
+                                src="/assets/campagne/search.svg"
+                                alt="Search icon"
+                                width={20}
+                                height={20}
+                                />
+                                
+                                <h2 className={styles.search_title}>Filter bubble</h2>
 
-                    </div>
-                    <p className={styles.definition}>"Verzameling van specifieke informatie die afgestemd is op het online gedrag van de gebruiker."</p>
+                        </div>
+                            <p className={styles.definition}>"Verzameling van specifieke informatie die afgestemd is op het online gedrag van de gebruiker."</p>
+                </div>
+                   
+                    <div className={styles.circles}></div>
                 </div>
 
                 <div className={styles.awareness}>
@@ -87,17 +80,24 @@ export default function Campagne () {
                             <Image 
                                 src="/assets/campagne/awareness.png"
                                 alt="Filter bubble"
-                                width={300}
-                                height={300}
+                                layout="fill"
                                 />
                         </div>
-                        <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je neit geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De plitieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
+                        <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je niet geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen. <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De plitieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
                     </div>
                 </div>
             </section>
         
             <section className={styles.examples}>
-                <h2 className={styles.scroll}>Real Life Bubbles (gone wrong)</h2>
+                <h2 className={styles.hidden}>Real Life Bubbles (gone wrong)</h2>
+
+                <div className={styles.scroll_wrapper}>
+                    <div className={styles.marquee}>
+                        <p className={styles.scroll}>Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong)</p>
+                        <p className={styles.scroll}>Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong)</p>
+                    </div>
+                </div>
+
                 <div className={styles.examples_flex}>
                 <article className={styles.trump}>
                     <div className={styles.example_header}>
@@ -143,13 +143,14 @@ export default function Campagne () {
                 </div>
 
                 <article className={styles.tips_grid}>
-                    <div className={styles.tips_image}>
-                        <Image
-                            src="/assets/campagne/ad-blocker.png"
-                            alt="Ad Blocker"
-                            width={198}
-                            height={278}
-                        />
+                    <div className={styles.tips_header}>
+                        <div className={styles.tips_image}>
+                            <Image
+                                src="/assets/campagne/ad-blocker.png"
+                                alt="Ad Blocker"
+                                layout="fill"
+                            />
+                        </div>
                         <p className={styles.tips_number}>1</p>
                     </div>
                     <div className={styles.tips_content}>
@@ -160,16 +161,17 @@ export default function Campagne () {
                 </article>
 
                 <article className={styles.tips_grid}>
-                    <div className={styles.tips_image}>
-                    <p className={styles.tips_number}>2</p>
-                        <Image
-                            src="/assets/campagne/anonymous.png"
-                            alt="Ad Blocker"
-                            width={200}
-                            height={220}
-                        />           
+                    <div className={styles.tips_header}>
+                        <p className={styles.tips_number}>2</p>
+                        <div className={styles.tips_image}>
+                            <Image
+                                src="/assets/campagne/anonymous.png"
+                                alt="Anonymous"
+                                layout="fill"
+                            />      
+                        </div>     
                     </div>
-                    <div className={styles.tips_content}>
+                    <div className={styles.tips_contentSecond}>
                         <div className={styles.window_green}></div>
                         <h3 className={styles.tips_title}>Browse anonymous</h3>
                         <p className={styles.tips_paragraaf}>Hello unknown! <br/>Als het internet niet weet wie je bent, kan het jouw gegevens ook niet opslaan.</p>
@@ -177,13 +179,14 @@ export default function Campagne () {
                 </article>
 
                 <article className={styles.tips_grid}>
-                    <div className={styles.tips_image}>
-                        <Image
-                            src="/assets/campagne/cookies.png"
-                            alt="Ad Blocker"
-                            width={200}
-                            height={220}
-                        />   
+                    <div className={styles.tips_header}>
+                        <div className={styles.tips_image}>
+                            <Image
+                                src="/assets/campagne/cookies.png"
+                                alt="Cookie Monster"
+                                layout="fill"
+                            />   
+                        </div>
                         <p className={styles.tips_number}>3</p>        
                     </div>
                     <div className={styles.tips_content}>
@@ -206,6 +209,11 @@ export default function Campagne () {
                         height={51}
                         />
                 </div>
+            </div>
+            <div className={styles.footer_link}>
+                <Link href="/start">
+                    <a className={styles.link}>Doe de stemtest opnieuw</a>
+                </Link>
             </div>
             <div className={styles.footer_info}>
                 <div className={styles.footer_image}>

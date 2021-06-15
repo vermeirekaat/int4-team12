@@ -19,33 +19,43 @@
     display: grid; 
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(3, calc(100%/3));
-    height: 105vh;
+    height: 110vh;
 }
 
 .headline {
     font-family: "Akira";
-    font-size: titleFont;
-    line-height: calc(titleFont * 1.2);
+    font-size: 2.8rem;
+    line-height: 3.5rem;
     color: secondaryColor;
     padding: 2rem;
     padding-bottom: 0rem;
     grid-row: 1;
     grid-column: 1 / span 2;
+    max-width: 60rem;
 }
 
 .headline span {
-    background-color: mainColor; 
+    background-color: mainColor;
+    padding: .5rem; 
+}
+
+.headline::after {
+    content:"";
+    background-image: url("../../public/assets/campagne/pijl.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
 }
 
 .arrow {
-    display: flex; 
-    justify-content: flex-end;
-    grid-row: 1 / span 2; 
+    grid-row: 1; 
     grid-column: 2; 
-    align-self: center;
+    align-self: flex-end;
     position: relative; 
-    left: -1.5rem;
-    top: -2rem;
+    width: 10vw; 
+    padding-top: calc(150%/4);
 }
 
 .introduction {
@@ -53,7 +63,7 @@
     margin-top: 1rem;
     grid-row: 2; 
     grid-column: 1 / span 2;
-    max-width: 30rem;
+    max-width: 25rem;
 }
 
 .window_green {
@@ -77,11 +87,6 @@
 
 .image_protest {
     display: none;
-    grid-row: 2 / span 3;
-    grid-column: 2;
-    justify-self: flex-end;
-    align-self: center;
-    z-index: -1;
 }
 
 .image_phone {
@@ -90,6 +95,10 @@
     place-self: flex-end;
     margin-left: 2rem;
     z-index: -1;
+
+    position: relative; 
+    width: 45vw;
+    padding-bottom: calc(400%/4);
 }
 
 .purple {
@@ -141,7 +150,7 @@
     margin: 2rem 0;
 }
 
-.intermezzo {
+.intermezzo_content {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -210,6 +219,31 @@
 
 .examples {
     background-color: mainColor;
+}
+
+.scroll_wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden; 
+    display: inline-block; 
+    animation: marquee 10s linear infinite;
+}
+
+.marquee p {
+    display: inline-block;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
 }
 
 .scroll {
@@ -295,12 +329,18 @@
     margin: 2.5rem .5rem;
 }
 
-.tips_image {
+.tips_header {
     grid-row: 1 / span 2;
     grid-column: 1 / span 4;
     display: flex; 
     flex-direction: row; 
     justify-content: space-between;
+}
+
+.tips_image {
+    position: relative; 
+    width: 40vw; 
+    padding-top: calc(150%/4);
 }
 
 .tips_content {
@@ -309,6 +349,15 @@
     background-color: white;
     grid-column: 2/ span 3;
     grid-row: 2 / span 3;
+    z-index: 2;
+}
+.tips_contentSecond {
+    max-width: 25rem;
+    border: .05rem solid secondaryColor;
+    background-color: white;
+    grid-column: 1/ span 3;
+    grid-row: 2 / span 3;
+    place-self: flex-end;
     z-index: 2;
 }
 
@@ -342,11 +391,12 @@
 
 .footer {
     background-color: secondaryColor; 
-    padding: 2rem;
+    padding: 1rem;
+    width: 100vw;
 }
 
 .footer_cta {
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .footer_title {
@@ -360,6 +410,20 @@
     max-width: 10rem;
 }
 
+.footer_link {
+    padding-bottom: 2rem;
+}
+
+.link {
+    font-family: 'Akira';
+    font-size: 1rem; 
+    line-height: 2rem;
+    justify-self: center;
+    color: mainColor; 
+    background-color: white; 
+    padding: .5rem;
+}
+
 .footer_info {
     display: flex;
     flex-direction: column; 
@@ -368,7 +432,7 @@
 
 .footer_image {
     width: 40vw;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 .footer_names {
@@ -382,16 +446,14 @@
     .headline {
         font-size: titleFontMiddle;
         line-height: calc(titleFontMiddle * 1.2);
-        grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
+    }
+    .headline::after {
+        width: 8rem;
+        height: 8rem;
     }
     .introduction {
         grid-row: 2 / span 3;
-        align-self: center;
-    }
-    .arrow {
-        justify-self: center;
-        position: relative;
-        top: 1.5rem;
     }
     .image_protest {
         display: flex;
@@ -399,16 +461,32 @@
         grid-row: 3;
         place-self: flex-end;
         border-top: 1.5rem solid secondaryColor;
-        z-index: 2;
+        z-index: -2;
+
+        position: relative; 
+        width: 25vw;
+        padding-top: calc(250%/4);
+    }
+    .image_phone {
+        grid-row: 2 / span 3;
+        width: 30vw; 
+        padding-bottom: calc(300%/4);
+        place-self: center;
     }
     .purple_flex {
+        height: 80vh;
         display: grid; 
         grid-template-columns: 40vw 60vw; 
+    }
+    .content {
+        place-self: center;
     }
     .purple_image {
         display: block;
         place-self: center;
-        max-width: 20rem;
+        width: 40vw;
+        position: relative;
+        padding-top: calc(450%/4);
     }
     .search {
         width: 20rem;
@@ -432,15 +510,38 @@
     }
     .tips_grid {
         grid-template-columns: 10rem 20rem 10rem;
-        grid-template-rows: 10rem 5rem 10rem;
+        grid-template-rows: 10rem 5rem 10rem 5rem;
         width: 40rem; 
         margin: 0 auto;
         padding: 3rem 0;
     }
-    .tips_image {
+    .tips_image { 
+        width: 30vw; 
+        padding-top: calc(300%/4);
+    }
+    .tips_contentSecond {
+        grid-column: 1 / span 2;
+    }
+    .tips_header {
         grid-column: 1 / span 3;
     }
+    .tips_content {
+        grid-row: 3 / span 4; 
+        place-self: flex-end;
+    }
+    .footer_cta {
+        max-width: 70rem; 
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_link {
+        text-align: center;
+    }
     .footer_info {
+        max-width: 50rem; 
+        margin: 0 auto;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -448,36 +549,102 @@
 
 @media screen and (min-width: breakpointTwo) {
     .header {
-        width: 80rem;
+        width: 100vw;
+        grid-template-columns: repeat(3, calc(100%/3));
         margin: 0 auto;
     }
-    .arrow {
-        grid-row: 1;
+    .headline {
+        margin-top: 5rem;
+        place-self: center;
     }
     .introduction {
         grid-row: 2;
-        align-self: flex-end;
+        grid-column: 1 / span 2;
+        max-width: 40rem;
+        margin: 0;
+        place-self: flex-end;
     }
     .image_protest {
         grid-row: 3;
-        align-self: flex-start;
+        grid-column: 2/ span 3;
+        place-self: flex-start;
+        width: 20vw; 
+        padding-top: calc(300%/10);
     }
     .image_phone {
-        grid-row: 2;
+        grid-row: 2 / span 3;
+        grid-column: 3;
         align-self: center;
         justify-self: flex-start;
+        width: 20vw;
+        padding-bottom: calc(200%/4);
+        margin: 0;
+    }
+    .purple {
+        margin: 0;
+    }
+    .purple_flex {
+        grid-template-columns: repeat(4, 25vw);
+    }
+    .purple_image {
+        width: 25vw; 
+        padding-top: calc(250%/4);
+        grid-column: 1 / span 2;
+    }
+    .content {
+        align-self: center;
+        justify-self: flex-start;
+        width: 30rem;
+        grid-column: 3 / span 4;
+    }
+    .information {
+        margin-top: 0;
+    }
+    .intermezzo {
+        display: grid; 
+        grid-template-columns: 25vw 50vw 25vw;
+    }
+    .intermezzo_content {
+        grid-column: 2;
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        position: relative; 
+        margin-top: 5rem;
+    }
+    .circles {
+        grid-column: 3;
+        background-image: url("../../public/assets/campagne/circles-green.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30rem; 
+        height: 30rem;
+        position: relative; 
+        place-self: flex-end;
+        top: -10rem;
+        z-index: -1;
     }
     .awareness_subtitle {
         background-image: none;
     }
-    .awareness_image {
-        display: inline-block;
+    .awareness_content {
         place-self: center;
+        width: 30rem;
+        margin: 0;
+    }
+    .awareness_image {
+        display: flex;
+        align-self: center;
+        justify-self: flex-start;
+        position: relative;
+        width: 25vw; 
+        padding-top: calc(150%/4);
     }
     .awareness_flex {
         display: flex; 
         flex-direction: row; 
-        justify-content: space-between;
+        justify-content: space-evenly;
+        width: 80vw;
         margin: 0 10rem;
     }
     .examples_flex {
@@ -497,15 +664,10 @@
     .boris_content {
         justify-self: flex-end;
     }
+    .tips_image {
+        width: 20vw; 
+    }
     .footer_title {
         font-size: titleFont;
-    }
-    .footer_cta {
-        display: flex; 
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer_info {
-        margin: 2rem 10rem;
     }
 }
