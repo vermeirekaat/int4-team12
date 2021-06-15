@@ -11,8 +11,20 @@
     src: url('../../public/fonts/akira-expanded.ttf');
 }
 
-.container {
-    background-color: secondaryColor; 
+.container { 
+    background-color: secondaryColor;   
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(/assets/raster2.svg);
+    background-size: 550vw;
+    background-position: 25% 25%;
+    filter: blur(0.125rem);
 }
 
 .finish {
@@ -21,6 +33,7 @@
     display: grid; 
     grid-template-rows: 25vh 50vh 25vh;
     margin: 0 auto;
+    z-index: 4;
 }
 
 .finish_image {

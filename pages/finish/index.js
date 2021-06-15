@@ -6,6 +6,7 @@ export default function Finish () {
     
     return (
         <section className={styles.container}>
+            <div className={styles.background}></div>
             <Metadata/>
 
             <article className={styles.finish}>
