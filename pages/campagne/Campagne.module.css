@@ -314,8 +314,8 @@
 
 .tips_image {
     position: relative; 
-    width: 30vw; 
-    padding-top: calc(300%/4);
+    width: 40vw; 
+    padding-top: calc(150%/4);
 }
 
 .tips_content {
@@ -403,7 +403,6 @@
     display: flex;
     flex-direction: column; 
     align-content: space-between;
-    align-items: center;
 }
 
 .footer_image {
