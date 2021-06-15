@@ -2,11 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Advertisement.module.css";
 import ReactPlayer from "react-player";
-import { useState } from "react";
 
 export default function Advertisement () {
-
-    const [isPlaying, setIsPlaying] = useState(true);
 
     return (
         <article className={styles.advertisement}>
@@ -26,23 +23,30 @@ export default function Advertisement () {
         </section>
 
         <section className={styles.content}>
-            <div className={styles.articleImage}>
-                <ReactPlayer 
-                    url="video/advertisement.mp4"
-                    width={350}
-                    height={200}
-                    playing={ isPlaying }
-                    loop={ true }
-                    muted={ true }/>
-                {/* <Image
-                    src="/assets/stemtest.png"
-                    width={500}
-                    height={300}
-                />
-                <p className={styles.play}> <span>&#9654;</span></p>*/}
+            <div className={styles.wrapper_mobile}>
+                <div className={styles.player_mobile}>
+                    <ReactPlayer 
+                            url="video/advertisement.mp4"
+                            width={300}
+                            height={150}
+                            playing={ true }
+                            loop={ true }
+                            muted={ true }/>
+                </div>
+            </div>
+            <div className={styles.wrapper_desktop}>
+                <div className={styles.player_desktop}>
+                    <ReactPlayer 
+                        url="video/advertisement.mp4"
+                        width={500}
+                        height={350}
+                        playing={ true }
+                        loop={ true }
+                        muted={ true }/>
+                </div>
             </div>
             <div className={styles.tagline}>
-                <h2 className={styles.articleTitle}>Verkiezingen 2024</h2>
+                <h2 className={styles.advertisement_title}>Verkiezingen 2024</h2>
                 <Link href="/start">
                     <a className={styles.button}>Doe de test</a>
                 </Link>

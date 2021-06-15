@@ -1,5 +1,5 @@
 @value values: "../../styles/vars.module.css";
-@value facebookBlue, facebookGray, facebookTypo, breakpoint from values;
+@value facebookBlue, facebookGray, facebookTypo, mainColor, breakpoint from values;
 
 .advertisement {
     margin: 1.5rem 10vw;
@@ -48,35 +48,35 @@
     border-radius: .2rem;
 }
 
-.articleTitle {
+.advertisement_title {
     font-weight: 700; 
     font-size: 1.3rem;   
 }
 
-.articleImage {
-    min-width: 60vw; 
-    /*background-image: url('../../public/assets/stemtest.png');
-    background-size: cover; */
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.wrapper_mobile {
+   width: auto; 
+   height: auto;
+   position: relative;
+   background-color: mainColor;
 }
 
-.play {
-    width: 2rem;
-    height: 2rem;
-    background-color: white;
-    padding: 2rem; 
-    border-radius: 100%;
-}
-
-.play span {
-    font-size: 3rem;
-    color: facebookBlue;
+.player_mobile {
+    /*display: inline-block;*/
     position: relative;
-    left: -1rem;
-    top: -1.5rem;
+    width: 50vw;
+    padding-top: 56.25%; /* aspect ratio for 16:9 */
+}
+
+.player_mobile > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.wrapper_desktop {
+    display: none;
 }
 
 .interactions {
@@ -94,12 +94,33 @@
 
 @media screen and (min-width: breakpoint) {
     
-  .advertisement{
-      width: 31.28rem;
-      margin: 0 auto;
-  }
+    .advertisement {
+        width: 31.28rem;
+        margin: 0 auto;
+    }
 
-  .articleImage {
-    min-width: 31.28rem;
-  }
+    .wrapper_mobile {
+        display: none;
+    }
+
+    .wrapper_desktop {
+        display: inline-block;
+        width: auto; 
+        height: auto;
+    }
+
+    .player_desktop {
+        position: relative;
+        width: 31.28rem;
+        padding-top: 56.25%; /* aspect ratio for 16:9 */
+        top: -2rem;
+    }
+
+    .player_desktop > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
 }
