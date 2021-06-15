@@ -149,7 +149,7 @@
     margin: 2rem 0;
 }
 
-.intermezzo {
+.intermezzo_content {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -492,7 +492,7 @@
 
 @media screen and (min-width: breakpointTwo) {
     .header {
-        width: 80rem;
+        width: 100vw;
         grid-template-columns: repeat(3, calc(100%/3));
         margin: 0 auto;
     }
@@ -531,7 +531,6 @@
     .intermezzo {
         display: grid; 
         grid-template-columns: 25vw 50vw 25vw;
-        height: 20rem;
     }
     .intermezzo_content {
         grid-column: 2;
@@ -539,7 +538,7 @@
         flex-direction: column;
         align-items: center; 
         position: relative; 
-        top: -5rem;
+        margin-top: 5rem;
     }
     .circles {
         grid-column: 3;
@@ -550,21 +549,30 @@
         height: 30rem;
         position: relative; 
         place-self: flex-end;
-        top: -15rem;
+        top: -10rem;
         z-index: -1;
-
     }
     .awareness_subtitle {
         background-image: none;
     }
-    .awareness_image {
-        display: inline-block;
+    .awareness_content {
         place-self: center;
+        width: 30rem;
+        margin: 0;
+    }
+    .awareness_image {
+        display: flex;
+        align-self: center;
+        justify-self: flex-start;
+        position: relative;
+        width: 25vw; 
+        padding-top: calc(150%/4);
     }
     .awareness_flex {
         display: flex; 
         flex-direction: row; 
-        justify-content: space-between;
+        justify-content: space-evenly;
+        width: 80vw;
         margin: 0 10rem;
     }
     .examples_flex {
