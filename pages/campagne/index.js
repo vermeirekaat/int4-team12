@@ -89,7 +89,15 @@ export default function Campagne () {
             </section>
         
             <section className={styles.examples}>
-                <h2 className={styles.scroll}>Real Life Bubbles (gone wrong)</h2>
+                <h2 className={styles.hidden}>Real Life Bubbles (gone wrong)</h2>
+
+                <div className={styles.scroll_wrapper}>
+                    <div className={styles.marquee}>
+                        <p className={styles.scroll}>Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong)</p>
+                        <p className={styles.scroll}>Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong)</p>
+                    </div>
+                </div>
+
                 <div className={styles.examples_flex}>
                 <article className={styles.trump}>
                     <div className={styles.example_header}>
