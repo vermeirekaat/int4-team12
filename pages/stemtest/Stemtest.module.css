@@ -7,6 +7,12 @@
     src: url('../../public/fonts/menlo-regular.ttf');
 }
 
+@font-face {
+    font-family: 'Akira';
+    src: url('../../public/fonts/akira-expanded.ttf');
+}
+
+
 .container {
     background-color: mainColor;
     height: 100vh;
@@ -91,6 +97,13 @@
 }
 
 
+.content_container_car {
+    position: absolute;
+    top: 32%;
+    left: 10%;
+    width: 80vw;
+}
+
 .trumpLeft {
     position: fixed;
     bottom:0px;
@@ -100,8 +113,8 @@
 
 .trumpRight{
     position: fixed;
-    right: calc(300%/24);
-    bottom: calc(-300%/300);
+    right: calc(300%/20);
+    bottom: calc(-300%/400);
     width: calc(300%/3);
 }
 
@@ -119,6 +132,14 @@
 .button_three {
     width: 20vw;
     margin: 0 auto;
+}
+
+.correct {
+    color: white;
+    text-align: center;
+    font-size: bodyFont;
+    font-family:'Akira';
+    text-decoration: underline;
 }
 
 @media screen and (min-width: breakpoint) {
@@ -152,7 +173,7 @@
 
     .trumpRight {
         position: fixed;
-        right: calc(300%/8);
+        right: calc(300%/5.7);
         bottom: calc(-300%/300);
         width: calc(300%/5.5);
     }
@@ -226,5 +247,16 @@
         width: 100vw;   
         background-repeat: no-repeat;
         background-position: -10% 100%;
+    }
+
+    .haanLeeuw {
+            background-image: url(/assets/haanLeeuw.png);
+            position: absolute;
+            background-size: 50vw;
+            height: 80vh;
+            width: 80vw;   
+            background-repeat: no-repeat;
+            background-position: -10% 100%;
+            bottom: 0;
     }
 }

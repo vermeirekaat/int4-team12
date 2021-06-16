@@ -69,8 +69,8 @@
 
 .icon {
   position: absolute;
-  top: 12%;
-  width: 19rem;
+  top:18%;
+  width: 15rem;
   cursor: pointer;
   height: 10vw;
   background-size: 25rem;
@@ -84,7 +84,7 @@
     font-family: Akira;
     text-align: right;
     margin-bottom: -1vh;
-    font-size: bodyFont;
+    font-size: 1rem;
 }
 
 
