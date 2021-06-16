@@ -100,9 +100,9 @@
 
 .trumpRight{
     position: fixed;
-    bottom:0px;
-     height: 27rem;
-    left: -10rem;
+    right: calc(300%/24);
+    bottom: calc(-300%/300);
+    width: calc(300%/3);
 }
 
 .display_none {
@@ -128,35 +128,34 @@
     }
 
     .trumpLeft {
+        height: 35rem;
+    }
 
-    height: 35rem;
-}
+    .content_container {
+        top: 15%;
+    }
 
+    .text {
+        font-size: bodyFontBig;
+        line-height: lineHeightBig;
+    }
 
-.trumpRight {
+    .textTrump {
+        font-size: bodyFontBig;
+        line-height: lineHeightBig;
+    }
 
-    height: 35rem;
-}
+    .hoofdoek {
+        width: 30rem;
+        margin: 0 auto;
+    }
 
-.content_container {
-    top: 15%;
-}
-
-.text {
-    font-size: bodyFontBig;
-    line-height: lineHeightBig;
-}
-
-.textTrump {
-     font-size: bodyFontBig;
-    line-height: lineHeightBig;
-}
-
-.hoofdoek {
-    width: 30rem;
-    margin: 0 auto;
-}
-
+    .trumpRight {
+        position: fixed;
+        right: calc(300%/8);
+        bottom: calc(-300%/300);
+        width: calc(300%/5.5);
+    }
 }
 
 @media screen and (min-width: breakpointTwo) {
@@ -199,16 +198,17 @@
     }
 
     .trumpLeft {
+        right:18vw;  
+    }
 
-   right:18vw;
-}
+    .trumpRight {
+        position: fixed;
+        right: calc(300%/8);
+        bottom: calc(-300%/300);
+        width: calc(300%/7);
+    }
 
-
-.trumpRight {
-  left: 22vw;
-}
-
-.maskers_image{
+    .maskers_image{
         background-image: url(/assets/maskers.gif);
         position: absolute;
         background-size: 50vw;
@@ -218,7 +218,7 @@
         background-position: -10% 100%;
     }
 
-.car_image{
+    .car_image{
         background-image: url(/assets/auto.png);
         position: absolute;
         background-size: 50vw;
@@ -226,5 +226,5 @@
         width: 100vw;   
         background-repeat: no-repeat;
         background-position: -10% 100%;
-}
+    }
 }
