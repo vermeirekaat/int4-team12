@@ -10,6 +10,8 @@ import ClosePopup from '../../components/stemtest/ClosePopup';
 import Metadata from '../../components/Metadata';
 import What from '../../components/stemtest/What';
 import ButtonStyles from '../../components/stemtest/Button.module.css';
+import Image from "next/image";
+
 
 
 export default function stemtest() {
@@ -168,14 +170,29 @@ export default function stemtest() {
             <Metadata />
             <section onMouseMove={question == 3 ? handleMouseMove : handleNothing} className={styles.container}>
                 <div className={styles.background}></div>
-                <img className={glitch} src="/assets/glitch.gif"></img>
+                {/* <img className={glitch} src="/assets/glitch.gif"></img> */}
+                <div className={glitch}>
+                    <Image
+                        src="/assets/glitch.gif"
+                        alt="glitch"
+                        width={1920}
+                        height={1080} />
+                </div>
+
                 <Versiering />
                 {question == 2 ? <div className={styles.maskers_image}></div> : ''}
                 <div className={questions[question].classBigImage}></div>
                 <div className={styles.content}>
                     <Progress value={questions[question].questionNumber} onClicked={handleClickCross} />
                     <div className={questions[question].classContainer}>
-                        <img className={questions[question].classSmallImage} src={questions[question].image_src} />
+                        {/* <img className={questions[question].classSmallImage} src={questions[question].image_src} /> */}
+                        <div className={questions[question].classSmallImage}>
+                            <Image
+                                src={questions[question].image_src}
+                                alt="question afbeelding"
+                                width={1920}
+                                height={1080} />
+                        </div>
                         <div className={styles.buttons_text}>
                             {isOpen && <Popup text={direction === "left" ? popupTextLeft : popupTextRight} />}
                             {question == 4 && <p className={styles.correct}>Geef het meest juiste antwoord</p>}
