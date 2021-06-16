@@ -4,7 +4,7 @@ import { useState } from "react";
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-export default function ClosePopup({ onClicked}) {
+export default function ComputerPopup({ onClicked, text}) {
     const [mouses, setMouses] = useState([]);
 
     const mouse = (e) => {
@@ -29,7 +29,7 @@ export default function ClosePopup({ onClicked}) {
             <div className={styles.close_container} onMouseMove={e => mouse(e)}>
                 <div className={styles.box}>
                     <span onClick={onClicked} className={styles.close}></span>
-                    <p className={styles.text}>U gaat akkoord met de stelling, volgens de computer.</p>
+                    <p className={styles.text}>{text}</p>
                     <Button text="Undo" />
                     {mouses}
                 </div>

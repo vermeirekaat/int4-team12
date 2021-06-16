@@ -43,6 +43,9 @@ export default function stemtest() {
     const popupTextRight = 'U bent aangesloten aan de groep "Alle Vlamingen eerst"';
     const popupTextLeft = 'U bent aangesloten aan de groep "Alle bezittingen afschaffen"';
 
+    const ComputerpopupTextLeft = 'U gaat niet akkoord met de stelling, volgens de computer.';
+    const ComputerpopupTextRight = 'U gaat akkoord met de stelling, volgens de computer.';
+
     const handleClickTrump = () => {
         if (direction == "left") {
             setTrump(styles.trumpLeft);
@@ -226,7 +229,7 @@ export default function stemtest() {
                         <div className={questions[question].classSmallImage}><Image src={questions[question].image_src} width={questions[question].width} height={questions[question].height}/></div>
                         <div className={styles.buttons_text}>
                             {isOpen && <Popup text={direction === "left" ? popupTextLeft : popupTextRight} />}
-                            {isOpenTwo && <ComputerPopup/>}
+                            {isOpenTwo && <ComputerPopup text={direction === "left" ? ComputerpopupTextLeft : ComputerpopupTextRight} />}
                             {question == 4 && <p className={styles.correct}>Geef het meest juiste antwoord</p>}
                             {questions[question].text}
                             {questions[question].buttons}
