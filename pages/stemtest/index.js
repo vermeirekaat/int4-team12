@@ -12,14 +12,12 @@ import What from '../../components/stemtest/What';
 import ButtonStyles from '../../components/stemtest/Button.module.css';
 import Image from "next/image";
 import ComputerPopup from '../../components/stemtest/ComputerPopup';
-
+import dynamic from "next/dynamic";
 
 
 export default function stemtest() {
     const router = useRouter();
-    let timer = useRef(null);
-
-
+    let timer = useRef(null);``
 
     const [questionSpecs, setquestionSpecs] = useState({ question: 0, direction: '' });
     const { question, direction } = questionSpecs;
@@ -32,6 +30,8 @@ export default function stemtest() {
     const [Yposition, setYposition] = useState();
     const [progress, setProgress] = useState(3);
     const [timing, setTiming] = useState(3000);
+    const [windowHeight, setWindowHeight] = useState();
+    const [windowWidth, setWindowWidth] = useState();
 
     const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n', '!'];
     const arrayLeft = ['D', 'e', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n', ' ', 'h', 'e', 'b', 'b', 'e', 'n', ' ', 'd', 'e', ' ', 'm', 'a', 'c', 'h', 't', ' ', 'i', 'n', ' ', 'o', 'n', 's', ' ', 'l', 'a', 'n', 'd', '.'];
@@ -104,7 +104,6 @@ export default function stemtest() {
         },
 
     ]
-
 
     useEffect(() => {
         if (question == 3) {
@@ -206,8 +205,7 @@ export default function stemtest() {
                     <Image
                         src="/assets/glitch.gif"
                         alt="glitch"
-                        width={1920}
-                        height={1080} />
+                        layout='fill' />
                 </div>
 
                 <Versiering />

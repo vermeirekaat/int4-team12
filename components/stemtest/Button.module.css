@@ -44,6 +44,7 @@
     color: mainColor;
     width: 60vw;
     text-align: center;
+    cursor: pointer;
 }
 
  .button_wrong {
