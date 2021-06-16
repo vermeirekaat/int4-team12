@@ -18,8 +18,6 @@ export default function Campagne () {
         }
     });
 
-    console.log(link);
-
     if (link === "true") {
         return (
             <>

@@ -81,6 +81,8 @@
     background-color: mainColor;
     border-radius: .5rem;
     box-shadow: .1rem .1rem .1rem mainColor, 0rem 0rem .1rem mainColor;
+    cursor: pointer;
+    z-index: 2;
 }
 
 .share {

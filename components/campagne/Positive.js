@@ -1,6 +1,7 @@
 import Metadata from "../../components/Metadata";
 import styles from "./Positive.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Positive () {
     return (
@@ -12,7 +13,11 @@ export default function Positive () {
               <div className={styles.finish_image}></div>
               <div className={styles.finish_content}>
                   <h1 className={styles.title}>Proficiat!</h1>
-                  <p className={styles.paragraaf}>Je hebt je niet in de val laten lokken door een filter bubble. Het is duidelijk dat je zeer alert bent op het internet. Zeer goed van je! <br/><br/> Scroll verder en kom alles te weten over filter bubbles en hoe je jezelf hier kan tegen wapenen online.</p>
+                  <p className={styles.paragraaf}>Je hebt je niet in de val laten lokken door een filter bubble. Het is duidelijk dat je zeer alert bent op het internet. Zeer goed van je! <br/><br/> Kom nog meer te weten over filter bubbles en hoe je jezelf hier kan tegen wapenen online.</p>
+
+                  <Link href="/campagne">
+                      <a className={styles.button}>Meer informatie</a>
+                  </Link>
               </div>
 
               <div className={styles.share}>
