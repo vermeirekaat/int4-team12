@@ -1,12 +1,15 @@
 import styles from './Button.module.css'
 
-export default function Button({ text, onClicked, classWord , question, Xposition, Yposition }) {
+export default function Button({ text, onClicked, classWord , Xposition, Yposition, replace }) {
 
     const handleMouseOver = (e) => {
 
-      if(question == 3){ 
-            console.log(e.currentTarget)
+        console.log(replace)
+
+      if(replace){ 
           e.currentTarget.style.cssText = `position:absolute; left:${Xposition - 420}px; top: ${Yposition - 420}px;`;
+        } else {
+          e.currentTarget.style.cssText = '';
         }
     }
 

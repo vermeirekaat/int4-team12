@@ -1,5 +1,6 @@
 import styles from './Stemtest.module.css';;
 import Button from '../../components/stemtest/Button';
+import ButtonTwo from '../../components/stemtest/ButtonTwo';
 import Progress from "../../components/stemtest/Progress";
 import Versiering from "../../components/stemtest/Versiering";
 import { useState, useEffect, useRef } from "react";
@@ -93,7 +94,7 @@ export default function stemtest() {
             "height": 160,
             "button1": "Eens",
             "button2": "Oneens",
-            "buttons": <div className={styles.buttons}><Button classWord={ButtonStyles.button} Xposition={direction == 'right' ? Xposition : 'auto'} Yposition={direction == 'right' ? Yposition : 'auto'} question={question} text="Eens" onClicked={(e) => handleClick(e, "left")} /> <Button classWord={ButtonStyles.button} Xposition={direction == 'left' ? Xposition : 'auto'} Yposition={direction == 'left' ? Yposition : 'auto'} question={question} text="Oneens" onClicked={(e) => handleClick(e, "right")} /></div>,
+            "buttons": <div className={styles.buttons}><Button classWord={ButtonStyles.button} replace={direction == 'right' ? true : false} Xposition={direction == 'right' ? Xposition : 'auto'} Yposition={direction == 'right' ? Yposition : 'auto'} question={question} text="Eens" onClicked={(e) => handleClick(e, "left")} /> <Button replace={direction == 'left' ? true : false} classWord={ButtonStyles.button} Xposition={direction == 'left' ? Xposition : 'auto'} Yposition={direction == 'left' ? Yposition : 'auto'} question={question} text="Oneens" onClicked={(e) => handleClick(e, "right")} /></div>,
             "classContainer": styles.content_container_car,
             "text": <p className={styles.text}>De meest <span className={styles.highlight}>vervuilende auto's</span> moeten in verschillende steden en overal <span className={styles.highlight}>verboden</span> worden.</p>,
         },
@@ -104,7 +105,7 @@ export default function stemtest() {
             "image_src": "/assets/haanLeeuw.png",
             "width": 251,
             "height": 189,
-            "buttons": <div className={styles.buttons}><Button classWord={direction === 'left' ? ButtonStyles.button_check : ButtonStyles.button_wrong}  question={question} text="Liever niet"/> <Button classWord={direction === 'left' ? ButtonStyles.button_wrong : ButtonStyles.button_check}  Xposition={direction == 'left' ? Xposition : 'auto'} Yposition={direction == 'left' ? Yposition : 'auto'} question={question} text="yes, please"/></div>,
+            "buttons": <div className={styles.buttons}><ButtonTwo classWord={direction === 'left' ? ButtonStyles.button_check : ButtonStyles.button_wrong} question={question} text="Liever niet" /> <ButtonTwo classWord={direction === 'left' ? ButtonStyles.button_wrong : ButtonStyles.button_check}  text="yes, please"/></div>,
             "classContainer": styles.content_container,
             "text": <p className={styles.text}>België moet gesplitst worden door middel van een muur tussen Vlaanderen en Walonië.</p>,
         },
