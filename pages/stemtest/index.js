@@ -11,6 +11,7 @@ import Metadata from '../../components/Metadata';
 import What from '../../components/stemtest/What';
 import ButtonStyles from '../../components/stemtest/Button.module.css';
 import Image from "next/image";
+import ComputerPopup from '../../components/stemtest/ComputerPopup';
 
 
 
@@ -23,18 +24,21 @@ export default function stemtest() {
     const [questionSpecs, setquestionSpecs] = useState({ question: 0, direction: '' });
     const { question, direction } = questionSpecs;
     const [isOpen, setisOpen] = useState(false);
+    const [isOpenTwo, setisOpenTwo] = useState(false);
     const [close, setClose] = useState(false);
     const [trump, setTrump] = useState(styles.display_none);
     const [glitch, setglitch] = useState(styles.display_none);
     const [Xposition, setXposition] = useState();
     const [Yposition, setYposition] = useState();
     const [progress, setProgress] = useState(3);
+    const [timing, setTiming] = useState(3000);
 
     const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n'];
     const arrayLeft = ['H', 'e', 't', ' ', 'z', 'i', 'j', 'n', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n'];
 
     const textRight = "Het is allemaal de schuld van de sossen";
     const textLeft = "Het zijn allemaal racisten";
+
 
     const popupTextRight = 'U bent aangesloten aan de groep "Alle Vlamingen eerst"';
     const popupTextLeft = 'U bent aangesloten aan de groep "Alle bezittingen afschaffen"';
@@ -94,21 +98,38 @@ export default function stemtest() {
             "classBigImage": styles.haanLeeuw,
             "classSmallImage": styles.hoofdoek,
             "image_src": "/assets/haanLeeuw.png",
-            "buttons": <div className={styles.buttons}><Button classWord={direction === 'left' ? ButtonStyles.button_check : ButtonStyles.button_wrong}  question={question} text="Liever niet" onClicked={(e) => handleClick(e, "left")} /> <Button classWord={direction === 'left' ? ButtonStyles.button_wrong : ButtonStyles.button_check}  Xposition={direction == 'left' ? Xposition : 'auto'} Yposition={direction == 'left' ? Yposition : 'auto'} question={question} text="yes, please" onClicked={(e) => handleClick(e, "right")} /></div>,
+            "buttons": <div className={styles.buttons}><Button classWord={direction === 'left' ? ButtonStyles.button_check : ButtonStyles.button_wrong}  question={question} text="Liever niet"/> <Button classWord={direction === 'left' ? ButtonStyles.button_wrong : ButtonStyles.button_check}  Xposition={direction == 'left' ? Xposition : 'auto'} Yposition={direction == 'left' ? Yposition : 'auto'} question={question} text="yes, please"/></div>,
             "classContainer": styles.content_container,
             "text": <p className={styles.text}>België moet gesplitst worden door middel van een muur tussen Vlaanderen en Walonië.</p>,
         },
 
     ]
 
+
     useEffect(() => {
         if (question == 3) {
             const timer = setInterval(() => {
                 setProgress(Math.floor(Math.random() * 5))
             }, 500);
-
             return () => clearInterval(timer);
         }
+
+        if (question == 4) {
+           const timerTwo = setInterval(() => {
+                setglitch(styles.glitch);
+                setTiming(timing - 1000)
+
+                timer.current = setTimeout(() => {
+                    setglitch(styles.display_none);
+                }, 400)
+
+               return () => {
+                   clearTimeout(timer.current);
+               }
+
+            }, timing);
+            return () => clearInterval(timerTwo);
+        }    
     });
 
     useEffect(() => {
@@ -124,6 +145,16 @@ export default function stemtest() {
             timer.current = setTimeout(() => {
                 setglitch(styles.display_none)
             }, 7500);
+        }
+
+        if(question == 4){
+            timer.current = setTimeout(() => {
+                setisOpenTwo(true)
+            }, 5000);
+
+            timer.current = setTimeout(() => {
+                router.push('/finish')
+            }, 15000);
         }
 
         return () => {
@@ -195,6 +226,7 @@ export default function stemtest() {
                         </div>
                         <div className={styles.buttons_text}>
                             {isOpen && <Popup text={direction === "left" ? popupTextLeft : popupTextRight} />}
+                            {isOpenTwo && <ComputerPopup/>}
                             {question == 4 && <p className={styles.correct}>Geef het meest juiste antwoord</p>}
                             {questions[question].text}
                             {questions[question].buttons}
