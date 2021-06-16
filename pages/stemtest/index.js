@@ -115,7 +115,7 @@ export default function stemtest() {
     useEffect(() => {
         if (question == 3) {
             const timer = setInterval(() => {
-                setProgress(Math.floor(Math.random() * 5))
+                setProgress(Math.floor(Math.random() * 5) + 2)
             }, 500);
             return () => clearInterval(timer);
         }
@@ -142,15 +142,15 @@ export default function stemtest() {
         if (question == 2) {
             timer.current = setTimeout(() => {
                 setisOpen(false)
-            }, 7000);
+            }, 5000);
 
             timer.current = setTimeout(() => {
                 setglitch(styles.glitch)
-            }, 7100);
+            }, 5100);
 
             timer.current = setTimeout(() => {
                 setglitch(styles.display_none)
-            }, 7500);
+            }, 5500);
         }
 
         if(question == 4){

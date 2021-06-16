@@ -17,7 +17,7 @@ export default function TextArea ({array, text}) {
 
     return (
         <>
-            <textarea className={styles.textarea} rows="2" cols="50" type="text" onInput={(e) =>handleInput(e)}></textarea>
+            <textarea required className={styles.textarea} rows="2" cols="50" type="text" onInput={(e) =>handleInput(e)}></textarea>
         </>
     )
 }
