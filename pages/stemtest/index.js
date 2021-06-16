@@ -12,14 +12,12 @@ import What from '../../components/stemtest/What';
 import ButtonStyles from '../../components/stemtest/Button.module.css';
 import Image from "next/image";
 import ComputerPopup from '../../components/stemtest/ComputerPopup';
-
+import dynamic from "next/dynamic";
 
 
 export default function stemtest() {
     const router = useRouter();
-    let timer = useRef(null);
-
-
+    let timer = useRef(null);``
 
     const [questionSpecs, setquestionSpecs] = useState({ question: 0, direction: '' });
     const { question, direction } = questionSpecs;
@@ -33,25 +31,23 @@ export default function stemtest() {
     const [progress, setProgress] = useState(3);
     const [timing, setTiming] = useState(3000);
 
-    const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n'];
-    const arrayLeft = ['H', 'e', 't', ' ', 'z', 'i', 'j', 'n', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n'];
+    const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n', '!'];
+    const arrayLeft = ['D', 'e', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n', ' ', 'h', 'e', 'b', 'b', 'e', 'n', ' ', 'd', 'e', ' ', 'm', 'a', 'c', 'h', 't', ' ', 'i', 'n', ' ', 'o', 'n', 's', ' ', 'l', 'a', 'n', 'd', '.'];
 
-    const textRight = "Het is allemaal de schuld van de sossen";
-    const textLeft = "Het zijn allemaal racisten";
+    const textRight = "Het is allemaal de schuld van de sossen!";
+    const textLeft = "De racisten hebben de macht in ons land.";
 
 
     const popupTextRight = 'U bent aangesloten aan de groep "Alle Vlamingen eerst"';
     const popupTextLeft = 'U bent aangesloten aan de groep "Alle bezittingen afschaffen"';
 
     const handleClickTrump = () => {
-        console.log("click")
         if (direction == "left") {
             setTrump(styles.trumpLeft);
         } else if (direction == "right") {
             setTrump(styles.trumpRight);
         }
 
-        console.log(questions[1].classSmallImage)
     }
 
     const questions = [
@@ -59,6 +55,8 @@ export default function stemtest() {
             "questionNumber": 1,
             "classBigImage": styles.hoofdoek_image,
             "classSmallImage": styles.hoofdoek,
+            "width": 277,
+            "height": 362,
             "image_src": "/assets/hoofdoek.png",
             "buttons": <div className={styles.buttons}><Button question={question} text="Eens" classWord={ButtonStyles.button} onClicked={(e) => handleClick(e, "left")} /> <Button classWord={ButtonStyles.button} question={question} text="Oneens" onClicked={(e) => handleClick(e, "right")} /></div>,
             "classContainer": styles.content_container,
@@ -66,9 +64,11 @@ export default function stemtest() {
         },
         {
             "questionNumber": 2,
-            "classBigImage": styles.display_none,
-            "classSmallImage": trump,//direction === "left" ? styles.trumpLeft : styles.trumpRight,
-            "image_src": "/assets/trump.png",
+            "classBigImage": styles.moskee,
+            "classSmallImage": styles.hoofdoek,
+            "width": 285,
+            "height": 245,
+            "image_src": "/assets/moskee.png",
             "buttons": <div className={styles.buttons} onClick={handleClickTrump} ><Button classWord={direction === 'left' ? ButtonStyles.button : ButtonStyles.disable} question={question} text="Hell yeah" onClicked={(e) => handleClick(e, "left")} /><Button classWord={direction === 'left' ? ButtonStyles.disable : ButtonStyles.button} question={question} text="Wtf??" onClicked={(e) => handleClick(e, "right")} /></div>,
             "classContainer": styles.content_containerTrump,
             "text": <p className={styles.textTrump}>Ik vind niet dat <span className={styles.highlight}>De Vlaamse overheid</span> geen nieuwe  <span className={styles.highlight}>moskeeën</span> meer mag herkennen.</p>
@@ -77,6 +77,8 @@ export default function stemtest() {
             "questionNumber": 3,
             "classBigImage": styles.maskers_image,
             "classSmallImage": styles.hoofdoek,
+            "width": 366,
+            "height": 267,
             "image_src": "/assets/maskers.gif",
             "buttons": <div className={styles.buttons_text_three} ><TextArea array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /><Button classWord={ButtonStyles.button_three} question={question} text="Dit is mijn mening" onClicked={(e) => handleClick(e, direction)} /> </div>,
             "classContainer": styles.content_containerTrump,
@@ -87,6 +89,8 @@ export default function stemtest() {
             "classBigImage": styles.car_image,
             "classSmallImage": styles.hoofdoek,
             "image_src": "/assets/auto.png",
+            "width": 505,
+            "height": 160,
             "button1": "Eens",
             "button2": "Oneens",
             "buttons": <div className={styles.buttons}><Button classWord={ButtonStyles.button} Xposition={direction == 'right' ? Xposition : 'auto'} Yposition={direction == 'right' ? Yposition : 'auto'} question={question} text="Eens" onClicked={(e) => handleClick(e, "left")} /> <Button classWord={ButtonStyles.button} Xposition={direction == 'left' ? Xposition : 'auto'} Yposition={direction == 'left' ? Yposition : 'auto'} question={question} text="Oneens" onClicked={(e) => handleClick(e, "right")} /></div>,
@@ -98,13 +102,14 @@ export default function stemtest() {
             "classBigImage": styles.haanLeeuw,
             "classSmallImage": styles.hoofdoek,
             "image_src": "/assets/haanLeeuw.png",
+            "width": 251,
+            "height": 189,
             "buttons": <div className={styles.buttons}><Button classWord={direction === 'left' ? ButtonStyles.button_check : ButtonStyles.button_wrong}  question={question} text="Liever niet"/> <Button classWord={direction === 'left' ? ButtonStyles.button_wrong : ButtonStyles.button_check}  Xposition={direction == 'left' ? Xposition : 'auto'} Yposition={direction == 'left' ? Yposition : 'auto'} question={question} text="yes, please"/></div>,
             "classContainer": styles.content_container,
             "text": <p className={styles.text}>België moet gesplitst worden door middel van een muur tussen Vlaanderen en Walonië.</p>,
         },
 
     ]
-
 
     useEffect(() => {
         if (question == 3) {
@@ -154,7 +159,7 @@ export default function stemtest() {
 
             timer.current = setTimeout(() => {
                 router.push('/finish')
-            }, 15000);
+            }, 10000);
         }
 
         return () => {
@@ -201,22 +206,15 @@ export default function stemtest() {
             <Metadata />
             <section onMouseMove={question == 3 ? handleMouseMove : handleNothing} className={styles.container}>
                 <div className={styles.background}></div>
-                {/* <img className={glitch} src="/assets/glitch.gif"></img> */}
-                <div className={glitch}>
-                    <Image
-                        src="/assets/glitch.gif"
-                        alt="glitch"
-                        width={1920}
-                        height={1080} />
-                </div>
-
+                <div className={glitch}><Image src="/assets/glitch.gif" alt="glitch" layout='fill' /></div>
                 <Versiering />
                 {question == 2 ? <div className={styles.maskers_image}></div> : ''}
                 <div className={questions[question].classBigImage}></div>
                 <div className={styles.content}>
                     <Progress value={questions[question].questionNumber} onClicked={handleClickCross} />
                     <div className={questions[question].classContainer}>
-                        <img className={questions[question].classSmallImage} src={questions[question].image_src}></img>
+                        {question == 1 && <img className={trump} src="/assets/trump.png"></img>}
+                        <div className={questions[question].classSmallImage}><Image src={questions[question].image_src} width={questions[question].width} height={questions[question].height}/></div>
                         <div className={styles.buttons_text}>
                             {isOpen && <Popup text={direction === "left" ? popupTextLeft : popupTextRight} />}
                             {isOpenTwo && <ComputerPopup/>}

@@ -8,7 +8,6 @@ export default function TextArea ({array, text}) {
         if (counter < array.length) {
             textMaker = textMaker + array[counter];
             e.target.value = textMaker;
-            console.log(textMaker)
             counter++
         } else {
             e.target.value = text
