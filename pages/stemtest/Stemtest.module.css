@@ -21,10 +21,10 @@
 }
 
 .glitch {
-    position: fixed; 
-    z-index: 1000;
-    height: 1000vh;
-    width: 100vh;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
 }
 
 .background {

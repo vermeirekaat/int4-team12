@@ -207,7 +207,7 @@ export default function stemtest() {
             <Metadata />
             <section onMouseMove={question == 3 ? handleMouseMove : handleNothing} className={styles.container}>
                 <div className={styles.background}></div>
-                <div className={glitch}><Image src="/assets/glitch.gif" alt="glitch" layout='fill' /></div>
+                <div className={glitch}><Image src="/assets/glitch.gif" alt="glitch" layout='fill' /> </div>
                 <Versiering />
                 {question == 2 ? <div className={styles.maskers_image}></div> : ''}
                 <div className={questions[question].classBigImage}></div>
