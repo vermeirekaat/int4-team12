@@ -91,11 +91,18 @@
 
 .content_containerTrump {
     position: absolute;
-    top: 27%;
+    top: 32%;
     left: 10%;
     width: 80vw;
 }
 
+
+.content_container_car {
+    position: absolute;
+    top: 32%;
+    left: 10%;
+    width: 80vw;
+}
 
 .trumpLeft {
     position: fixed;
@@ -134,13 +141,6 @@
     font-family:'Akira';
     text-decoration: underline;
 }
-
-.content_container_car {
-    position: absolute;
-    top: 40%;
-    width: 60vw;
-}
-
 
 @media screen and (min-width: breakpoint) {
 
