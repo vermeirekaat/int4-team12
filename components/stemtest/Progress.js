@@ -11,7 +11,6 @@ export default function Progress({ value, onClicked }) {
         e.currentTarget.innerHTML = "Vorige vraag"
     }
 
-    console.log(typeof(value))
 
     return (
         <>

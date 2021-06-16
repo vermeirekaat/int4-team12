@@ -44,14 +44,12 @@ export default function stemtest() {
     const popupTextLeft = 'U bent aangesloten aan de groep "Alle bezittingen afschaffen"';
 
     const handleClickTrump = () => {
-        console.log("click")
         if (direction == "left") {
             setTrump(styles.trumpLeft);
         } else if (direction == "right") {
             setTrump(styles.trumpRight);
         }
 
-        console.log(questions[1].classSmallImage)
     }
 
     const questions = [
