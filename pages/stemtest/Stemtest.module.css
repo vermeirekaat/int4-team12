@@ -14,6 +14,7 @@
 
 
 .container {
+    cursor:url("../../public/assets/campagne/pijl.png") 16 0,auto;
     background-color: mainColor;
     height: 100vh;
     width: 100vw;

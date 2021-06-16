@@ -33,11 +33,11 @@ export default function stemtest() {
     const [progress, setProgress] = useState(3);
     const [timing, setTiming] = useState(3000);
 
-    const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n'];
-    const arrayLeft = ['H', 'e', 't', ' ', 'z', 'i', 'j', 'n', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n'];
+    const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n', '!'];
+    const arrayLeft = ['D', 'e', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n', ' ', 'h', 'e', 'b', 'b', 'e', 'n', ' ', 'd', 'e', ' ', 'm', 'a', 'c', 'h', 't', ' ', 'i', 'n', ' ', 'o', 'n', 's', ' ', 'l', 'a', 'n', 'd', '.'];
 
-    const textRight = "Het is allemaal de schuld van de sossen";
-    const textLeft = "Het zijn allemaal racisten";
+    const textRight = "Het is allemaal de schuld van de sossen!";
+    const textLeft = "De racisten hebben de macht in ons land.";
 
 
     const popupTextRight = 'U bent aangesloten aan de groep "Alle Vlamingen eerst"';
@@ -154,7 +154,7 @@ export default function stemtest() {
 
             timer.current = setTimeout(() => {
                 router.push('/finish')
-            }, 15000);
+            }, 10000);
         }
 
         return () => {
