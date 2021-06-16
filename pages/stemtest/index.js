@@ -31,6 +31,7 @@ export default function stemtest() {
     const [Yposition, setYposition] = useState();
     const [progress, setProgress] = useState(3);
     const [timing, setTiming] = useState(3000);
+    const [textArea, setTextArea] = useState(false);
 
     const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n', '!'];
     const arrayLeft = ['D', 'e', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n', ' ', 'h', 'e', 'b', 'b', 'e', 'n', ' ', 'd', 'e', ' ', 'm', 'a', 'c', 'h', 't', ' ', 'i', 'n', ' ', 'o', 'n', 's', ' ', 'l', 'a', 'n', 'd', '.'];
@@ -49,6 +50,16 @@ export default function stemtest() {
             setTrump(styles.trumpRight);
         }
 
+    }
+
+    const handleChange = (e) =>{
+        if(e.currentTarget.value != ''){
+           setTextArea(true)
+        }
+    }
+
+    const handleNothing = () => {
+        console.log("nothing")
     }
 
     const questions = [
@@ -81,7 +92,7 @@ export default function stemtest() {
             "width": 366,
             "height": 267,
             "image_src": "/assets/maskers.gif",
-            "buttons": <div className={styles.buttons_text_three} ><TextArea array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /><Button classWord={ButtonStyles.button_three} question={question} text="Dit is mijn mening" onClicked={(e) => handleClick(e, direction)} /> </div>,
+            "buttons": <div className={styles.buttons_text_three} ><TextArea onchanged={e => handleChange(e)} array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /><Button classWord={ButtonStyles.button_three} question={question} text="Dit is mijn mening" onClicked={textArea ? (e) => handleClick(e, direction) : handleNothing} /> </div>,
             "classContainer": styles.content_containerTrump,
             "text": <p className={styles.text}>Noteer hoe je staat tegenover de <span className={styles.highlight}>Vlaamse politiek</span> de dag van vandaag.</p>
         },
@@ -197,9 +208,6 @@ export default function stemtest() {
         setYposition(e.pageY );
     }
 
-    const handleNothing = () => {
-        console.log("nothing")
-    }
 
     return (
         <>

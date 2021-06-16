@@ -1,5 +1,5 @@
 import styles from './TextArea.module.css'
-export default function TextArea ({array, text}) {
+export default function TextArea ({array, text, onchanged}) {
 
     let counter = 0;
     let textMaker = '';
@@ -17,7 +17,7 @@ export default function TextArea ({array, text}) {
 
     return (
         <>
-            <textarea required className={styles.textarea} rows="2" cols="50" type="text" onInput={(e) =>handleInput(e)}></textarea>
+            <textarea onChange={onchanged} className={styles.textarea} rows="2" cols="50" type="text" onInput={(e) =>handleInput(e)}></textarea>
         </>
     )
 }
