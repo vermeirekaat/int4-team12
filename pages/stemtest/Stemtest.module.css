@@ -86,13 +86,13 @@
     font-size: bodyFont;
     text-align: center;
     line-height: lineHeight;
-    margin-bottom: 15rem;
+    margin-top: 1rem;
 }
 
 
 .content_containerTrump {
     position: absolute;
-    top: 32%;
+    top: 25%;
     left: 10%;
     width: 80vw;
 }
@@ -107,9 +107,9 @@
 
 .trumpLeft {
     position: fixed;
-    bottom:0px;
-    height: 27rem;
-    right: -13rem;
+    left: calc(300%/10);
+    bottom: calc(-300%/400);
+    width: calc(300%/3);
 }
 
 .trumpRight{
@@ -149,10 +149,6 @@
         background-size: 200rem;
     }
 
-    .trumpLeft {
-        height: 35rem;
-    }
-
     .content_container {
         top: 15%;
     }
@@ -176,7 +172,15 @@
         position: fixed;
         right: calc(300%/5.7);
         bottom: calc(-300%/300);
-        width: calc(300%/5.5);
+        width: calc(300%/4.7);
+    }
+
+
+    .trumpLeft {
+        position: fixed;
+        left: calc(300%/5.7);
+        bottom: calc(-300%/300);
+        width: calc(300%/4.7);
     }
 
 }
@@ -221,14 +225,17 @@
     }
 
     .trumpLeft {
-        right:18vw;  
+        position: fixed;
+        left: calc(300%/6.5);
+        bottom: calc(-300%/300);
+        width: calc(300%/10);
     }
 
     .trumpRight {
         position: fixed;
-        right: calc(300%/8);
+        right: calc(300%/7);
         bottom: calc(-300%/300);
-        width: calc(300%/7);
+        width: calc(300%/10);
     }
 
     .maskers_image{
@@ -260,5 +267,21 @@
             background-repeat: no-repeat;
             background-position: -10% 100%;
             bottom: 0;
+    }
+
+    .moskee {
+        background-image: url(/assets/moskee.png);
+        position: absolute;
+        background-size: 50vw;
+        height: 100vh;
+        width: 100vw;   
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        bottom: 0;
+    }
+
+    .textTrump {
+        margin-top: 10rem;
+        margin-bottom: 7rem;
     }
 }

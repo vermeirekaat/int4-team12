@@ -30,8 +30,6 @@ export default function stemtest() {
     const [Yposition, setYposition] = useState();
     const [progress, setProgress] = useState(3);
     const [timing, setTiming] = useState(3000);
-    const [windowHeight, setWindowHeight] = useState();
-    const [windowWidth, setWindowWidth] = useState();
 
     const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n', '!'];
     const arrayLeft = ['D', 'e', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n', ' ', 'h', 'e', 'b', 'b', 'e', 'n', ' ', 'd', 'e', ' ', 'm', 'a', 'c', 'h', 't', ' ', 'i', 'n', ' ', 'o', 'n', 's', ' ', 'l', 'a', 'n', 'd', '.'];
@@ -64,9 +62,9 @@ export default function stemtest() {
         },
         {
             "questionNumber": 2,
-            "classBigImage": styles.display_none,
-            "classSmallImage": trump,//direction === "left" ? styles.trumpLeft : styles.trumpRight,
-            "image_src": "/assets/trump.png",
+            "classBigImage": styles.moskee,
+            "classSmallImage": styles.hoofdoek,//direction === "left" ? styles.trumpLeft : styles.trumpRight,
+            "image_src": "/assets/moskee.png",
             "buttons": <div className={styles.buttons} onClick={handleClickTrump} ><Button classWord={direction === 'left' ? ButtonStyles.button : ButtonStyles.disable} question={question} text="Hell yeah" onClicked={(e) => handleClick(e, "left")} /><Button classWord={direction === 'left' ? ButtonStyles.disable : ButtonStyles.button} question={question} text="Wtf??" onClicked={(e) => handleClick(e, "right")} /></div>,
             "classContainer": styles.content_containerTrump,
             "text": <p className={styles.textTrump}>Ik vind niet dat <span className={styles.highlight}>De Vlaamse overheid</span> geen nieuwe  <span className={styles.highlight}>moskeeën</span> meer mag herkennen.</p>
@@ -212,6 +210,7 @@ export default function stemtest() {
                 <div className={styles.content}>
                     <Progress value={questions[question].questionNumber} onClicked={handleClickCross} />
                     <div className={questions[question].classContainer}>
+                        {question == 1 && <img className={trump} src="/assets/trump.png"></img>}
                         <img className={questions[question].classSmallImage} src={questions[question].image_src}></img>
                         <div className={styles.buttons_text}>
                             {isOpen && <Popup text={direction === "left" ? popupTextLeft : popupTextRight} />}
