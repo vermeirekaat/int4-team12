@@ -16,7 +16,7 @@ export default function Campagne () {
     });
 
     const content = {
-        title: "Proficiat!", 
+        title: "Proficiat !", 
         partOne: "Je hebt je niet in de val laten lokken door een filter bubble. Het is duidelijk dat je zeer alert bent op het internet. Zeer goed van je!",
         partTwo: "Kom nog meer te weten over filter bubbles en hoe je jezelf hier kan tegen wapenen online."
     }

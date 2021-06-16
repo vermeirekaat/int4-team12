@@ -1,5 +1,5 @@
 @value values: "../../styles/vars.module.css";
-@value mainColor, secondaryColor, bodyFont, lineHeight, bodyFontBig, lineHeightBig, titleFont, titleFontMiddle, titleFontBig, breakpoint, breakpointTwo from values;
+@value mainColor, secondaryColor, bodyFont, lineHeight, subtitleFont, headlineFont, headlineFontBig, subtitleFontBig, breakpoint, breakpointTwo from values;
 
 @font-face {
     font-family: 'Menlo';
@@ -55,8 +55,8 @@
 
 .title {
     font-family: "Akira";
-    font-size: 1.2rem;
-    line-height: 1.7;
+    font-size: subtitleFont;
+    line-height: lineHeight;
     text-align: center;
     color: white;
     padding: 2rem;
@@ -64,15 +64,15 @@
 
 .paragraaf {
     font-family: "Menlo";
-    font-size: 1rem;
+    font-size: bodyFont;
     color: mainColor;
-    line-height: 1.7rem;
+    line-height: lineHeight;
     margin-bottom: 2rem;
 }
 
 .button {
     font-family: "Akira";
-    font-size: 1.2rem;
+    font-size: subtitleFont;
     color: white; 
     text-align: center;
     width: 20rem;
@@ -93,7 +93,7 @@
 
 .share_tagline {
     font-family: "Akira";
-    font-size: .8rem;
+    font-size: bodyFont;
     text-align: center;
     color: white;
     padding: 2rem;
@@ -111,6 +111,9 @@
     .finish_image {
         width: 30rem; 
     }
+    .title {
+        font-size: subtitleFontBig;
+    }
 }
 
 @media screen and (min-width: breakpointTwo) {
@@ -121,7 +124,8 @@
     }
 
     .title {
-        font-size: titleFont;
+        font-size: headlineFont;
+        line-height: 2.5rem;
         width: 40rem;
     }
 
