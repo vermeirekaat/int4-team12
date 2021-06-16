@@ -1,5 +1,5 @@
 @value values: "../../styles/vars.module.css";
-@value mainColor, secondaryColor, bodyFont, lineHeight, headlineFont, bodyFontBig, lineHeightBig, breakpoint, breakpointTwo from values;
+@value mainColor, secondaryColor, bodyFont, lineHeight, headlineFont, headlineFontBig, subtitleFont, subtitleFontBig, breakpoint, breakpointTwo from values;
 
 @font-face {
     font-family: 'Menlo';
@@ -112,7 +112,7 @@
     color: secondaryColor; 
     text-align: center;
     font-weight: 400; 
-    font-size: 1.2rem;
+    font-size: subtitleFont;
     padding-bottom: 1rem;
 }
 
@@ -122,17 +122,6 @@
     width: 18rem;
     place-self: center;
 }
-
-/*.range::after {
-    content:"Slide to get started";
-    color: secondaryColor; 
-    text-align: right;
-    font-weight: 400; 
-    font-size: 1rem;
-    position: relative;
-    left: -10rem; 
-    top: 1.2rem;
-}*/
 
 .range[type=range]::-ms-track {
     width: 100%; 
@@ -163,19 +152,19 @@
         grid-template-rows: 20% 15% 10% 40% 15%;
     }
     .title_container {
-        font-size: 5.5rem;
+        font-size: headlineFontBig;
         position: relative; 
-        top: -12rem;
+        top: -8rem;
     }
     .intro_first {
         grid-row: 2;
-        font-size: bodyFontBig;
-        line-height: lineHeightBig;
+        font-size: subtitleFontBig;
+        line-height: 2.3rem;
     }
     .intro_second {
         grid-row: 3;
-        font-size: bodyFontBig;
-        line-height: lineHeightBig;
+        font-size: subtitleFontBig;
+        line-height: 2.3rem;
     }
     .images {
         grid-row: 4;
@@ -183,15 +172,6 @@
     .image_right {
         display: flex;
     }
-    /* .image_right {
-        width: 30vw;
-        height: 40vh;
-        background-image: url("../../public/assets/circles.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: relative;
-        left: 15vh;
-    }*/
 }
 
 @media screen and (min-width: breakpointTwo) {
@@ -248,6 +228,7 @@
     .button {
         font-family: 'Menlo';
         color: secondaryColor;
+        font-size: subtitleFont;
         padding: 1rem 1.5rem;
         background-color: white; 
         border-radius: 2rem;
