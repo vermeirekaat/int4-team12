@@ -216,14 +216,7 @@ export default function stemtest() {
                 <div className={styles.content}>
                     <Progress value={questions[question].questionNumber} onClicked={handleClickCross} />
                     <div className={questions[question].classContainer}>
-                        {/* <img className={questions[question].classSmallImage} src={questions[question].image_src} /> */}
-                        <div className={questions[question].classSmallImage}>
-                            <Image
-                                src={questions[question].image_src}
-                                alt="question afbeelding"
-                                width={1920}
-                                height={1080} />
-                        </div>
+                        <img className={questions[question].classSmallImage} src={questions[question].image_src}></img>
                         <div className={styles.buttons_text}>
                             {isOpen && <Popup text={direction === "left" ? popupTextLeft : popupTextRight} />}
                             {isOpenTwo && <ComputerPopup/>}
