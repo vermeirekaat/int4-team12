@@ -9,12 +9,12 @@ export default function ComputerPopup({ onClicked, text}) {
 
     const mouse = (e) => {
 
-        const x = e.clientX - 400;
-        const y = e.clientY - 300;
+        const x = e.clientX - 420;
+        const y = e.clientY - 350;
 
        let mouse = React.createElement(
             "img", {
-            src: "./assets/campagne/pijl.png",
+            src: "./assets/mouse.png",
             className: "mouse",
             style: {position: "absolute", left:`${x}px`, top:`${y}px`},
             key: uuidv4()
