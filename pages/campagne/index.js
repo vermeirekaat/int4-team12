@@ -12,7 +12,7 @@ export default function Campagne () {
     useEffect(() => {
         if (router.isReady) {
             setLink(router.query.knows);
-            return () => clearInterval(router);
+            return () => setLink(router);
         }
     });
 
