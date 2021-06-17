@@ -10,9 +10,6 @@ export default function Button({ text, onClicked, classWord , Xposition, Ypositi
         }
     }
 
-
-    console.log(classWord)
-
     return (
         <button onMouseOver={e => handleMouseOver(e)} className={classWord} value={text} onClick={onClicked} >{text}</button>
     );

@@ -143,6 +143,12 @@
     text-decoration: underline;
 }
 
+.validation {
+    color: secondaryColor;
+    text-align: center;
+    font-family: 'Menlo';
+}
+
 @media screen and (min-width: breakpoint) {
 
     .background{
