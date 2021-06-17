@@ -17,7 +17,7 @@
     text-decoration: underline;
     font-family: Menlo;
     font-size: bodyFont;
-    cursor: pointer;
+    cursor: url('../../public/assets/hand2000.png') 0 0, auto;
 }
 
 

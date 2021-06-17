@@ -17,6 +17,7 @@
     color: mainColor;
     width: 25vw;
     z-index: 999;
+    cursor: url('../../public/assets/hand2000.png') 0 0, auto;
 }
 
 .disable{
@@ -30,7 +31,7 @@
     color: mainColor;
     width: 25vw;
     pointer-events:none;
-    cursor: pointer;
+    cursor: url('../../public/assets/hand2000.png') 0 0, auto;
 }
 
 .button_three {
@@ -43,7 +44,7 @@
     color: mainColor;
     width: 60vw;
     text-align: center;
-    cursor: pointer;
+    cursor: url('../../public/assets/hand2000.png') 0 0, auto;
 }
 
  .button_wrong {

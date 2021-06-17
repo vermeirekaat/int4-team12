@@ -19,6 +19,7 @@
     margin: 0 auto;
     margin-top: 2vh;
     margin-bottom: 2vh;
+    cursor: url('../../public/assets/readcursor.png') 0 0, auto;
 }
 
 @media screen and (min-width: breakpoint) {
@@ -26,6 +27,7 @@
     height: 10vw;
     font-size: bodyFontBig;
     width: 30rem;
+    cursor: url('../../public/assets/readcursor.png') 0 0, auto;
 }
 
 }
@@ -37,6 +39,7 @@
     font-size: bodyFontBig;
     width: 40rem;
     height:8rem;
+    cursor: url('../../public/assets/readcursor.png') 0 0, auto;
 }
 
 }

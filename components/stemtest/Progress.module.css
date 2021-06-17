@@ -38,7 +38,7 @@
   height: 2.5rem;
   border: white solid 1px;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: url('../../public/assets/hand2000.png') 0 0, auto;
 }
 
 .close:before, .close:after {
@@ -71,7 +71,7 @@
   position: absolute;
   top:18%;
   width: 15rem;
-  cursor: pointer;
+  cursor: url('../../public/assets/hand2000.png') 0 0, auto;
   height: 10vw;
   background-size: 25rem;
   background-position-y: 1vh;

@@ -35,7 +35,7 @@
   background: #fff;
   border-radius: 2vw;
   margin-top: 1.5rem;
-  cursor: pointer;
+  cursor: url('../../public/assets/hand2000.png') 0 0, auto;
 }
 
 .text_image{
