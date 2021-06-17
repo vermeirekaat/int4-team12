@@ -6,13 +6,13 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 export default function Content () {
 
-    let windowWidth;
+    /* let windowWidth;
 
     if (typeof window !== "undefined") {
         console.log(window.innerWidth / 4);
         windowWidth = window.innerWidth / 4;
     }
-    const breakpoint = 1168; 
+    const breakpoint = 1168; */
     
 
     const { scrollYProgress } = useViewportScroll();
@@ -28,7 +28,7 @@ export default function Content () {
     const opacityFooter = useTransform(scrollYProgress, [0, 1], [0, 1]);
     const scaleFooter = useTransform(scrollYProgress, [0, 1], [.5, 1]);
 
-    if (windowWidth <= breakpoint ) {
+    /* if (windowWidth <= breakpoint ) {
         return (
             <>
             <Metadata/>
@@ -267,7 +267,7 @@ export default function Content () {
             </footer>
             </>
         )
-    }
+    } */
 
     return (
         <>
