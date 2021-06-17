@@ -43,6 +43,7 @@
     background-size: cover;
     transform: scaleY(-1);
     grid-row: 1;
+    z-index: 2;
 }
 
 .finish_content {
