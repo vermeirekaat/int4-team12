@@ -21,30 +21,53 @@ export default function Stemtest() {
             <Metadata />
             <article className={styles.container}>
                 <div className={styles.title_container}>
-                    <p className={styles.title_stroke}>Stemtest</p>
-                    <p className={styles.title_stroke}>Stemtest</p>
-                    <p className={styles.title_stroke}>Stemtest</p>
-                    <h1 className={styles.title_fill}>Stemtest</h1>
+                    <motion.p className={styles.title_stroke}
+                    initial={{ y: "-3rem", opacity: 0}}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ ease:"easeInOut", duration: .7}}
+                    >Stemtest
+                    </motion.p>
+                    <motion.p className={styles.title_stroke}
+                    initial={{ y: "-3rem", opacity: 0}}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ ease:"easeInOut", duration: .7}}>Stemtest
+                    </motion.p>
+                    <motion.h1 className={styles.title_fill}
+                    initial={{ y: "-7rem", opacity: 0}}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ ease:"easeInOut", duration: 1 , delay: .2 }}>Stemtest
+                    </motion.h1>
                 </div>
                 <p className={styles.intro_first}>In welke mate ben jij akkoord met bepaalde standpunten van politieke partijen?</p>
                 <p className={styles.intro_second}>Ben je zeker dat je alle correcte informatie hebt om kritische keuzes te maken?</p>
 
-                <div className={styles.input_desktop}>
+                <motion.div className={styles.input_desktop}
+                    initial={{ y: "-.5rem", opacity: 0, scale: .8}}
+                    animate={{ y: 0, opacity: 1, scale: 1.2 }}
+                    transition={{ ease:"easeIn", duration: .5, delay: 3}}
+                >
                     <Link href="/stemtest">
                         <a className={styles.button}> Click to get started</a>
                     </Link>
-                </div>
+                </motion.div>
 
                 <div className={styles.images}>
-                    <div className={styles.image_left}>
-                    </div>
-                    <div className={styles.image_right}>
+                    <motion.div className={styles.image_left}
+                        initial={{ x: "-20rem", opacity: 0 }}
+                        animate={{ x: 0, opacity: 1}}
+                        transition={{ ease: "easeIn", duration: 1, delay: 2 }}
+                    >
+                    </motion.div>
+                    <motion.div className={styles.image_right}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1}}
+                        transition={{ ease: "easeIn", duration: 1, delay: 2.5 }}>
                         <Image
                             src="/assets/circles.png"
                             alt="Protest"
                             width={357}
                             height={598} />
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className={styles.input_mobile}>
@@ -56,12 +79,12 @@ export default function Stemtest() {
                 <motion.div className={styles.image_double}
                     initial={{ x: "-1rem", y: "-1rem" }}
                     animate={{ x: 0, y: 0 }}
-                    transition={{ ease: "easeOut", duration: 1, delay: 2}}
+                    transition={{ ease: "easeOut", duration: 1, delay: .5 }}
                     ></motion.div>
                 <motion.div className={styles.image_triple}
                     initial={{ x: "-2rem", y: "-2rem" }}
                     animate={{ x: 0, y: 0 }}
-                    transition={{ ease: "easeOut", duration: 1, delay: 2}}
+                    transition={{ ease: "easeOut", duration: 1, delay: .5 }}
                     ></motion.div>
             </article>
         </>

@@ -33,14 +33,14 @@
     grid-row: 1; 
     text-align: center;
     position: relative; 
-    top: -2rem;
+    top: -1.5rem;
 }
 
 .title_stroke {
     -webkit-text-fill-color: mainColor;
     -webkit-text-stroke: .05rem secondaryColor;
     position: relative; 
-    top: -1.5rem;
+    top: -1rem;
 }
 
 .intro_first {
@@ -154,7 +154,7 @@
     .title_container {
         font-size: headlineFontBig;
         position: relative; 
-        top: -8rem;
+        top: -5rem;
     }
     .intro_first {
         grid-row: 2;
@@ -184,7 +184,7 @@
         grid-column: 1 / span 3;
         font-size: 8rem;
         position: relative; 
-        top: -17rem;
+        top: -8rem;
     }
     .title_fill {
         position: relative; 
