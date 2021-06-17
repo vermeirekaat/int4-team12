@@ -2,6 +2,7 @@ import Metadata from "../Metadata";
 import styles from "./Content.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Content () {
 
@@ -11,14 +12,23 @@ export default function Content () {
 
         <article className={styles.container}>
             <h1 className={styles.hidden}>Filter Bubbles</h1>
+
             <section className={styles.header}>
-                <h2 className={styles.headline}>You are what you <span>click</span></h2>
-                <div className={styles.introduction}>
+                <motion.h2 className={styles.headline}
+                    initial={{ scale: 1.2 }}
+                    animate={{ scale: 1 }}
+                    transition={{ ease:"easeIn", duration: .5, delay: 2}}
+                >You are what you <span>click</span></motion.h2>
+                <motion.div className={styles.introduction}
+                    initial={{ y: "-5rem", opacity: 0}}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ ease: "easeInOut", duration: 1, delay: 2.5 }}
+                >
                     <div className={styles.window_green}></div>
                     <p className={styles.paragraaf}>
                         Je spendeert talloze minuten op sociale media (Facebook, Instagram...) waarbij honderden berichten jouw aandacht vragen. Maar op welke manier wordt er beslist welke berichten JIJ te zien krijgt? <br/> <br/> Het zijn je eigen clicks die bepalen welke berichten er op je feed terecht komen.
                     </p>
-                </div>
+                </motion.div>
                 <div className={styles.image_protest}>
                         <Image
                             src="/assets/campagne/protest.png"

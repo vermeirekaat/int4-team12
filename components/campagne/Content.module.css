@@ -32,6 +32,7 @@
     grid-row: 1;
     grid-column: 1 / span 2;
     max-width: 60rem;
+    background-color: white;
 }
 
 .headline span {
