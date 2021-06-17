@@ -13,7 +13,7 @@ import What from '../../components/stemtest/What';
 import ButtonStyles from '../../components/stemtest/Button.module.css';
 import Image from "next/image";
 import ComputerPopup from '../../components/stemtest/ComputerPopup';
-import dynamic from "next/dynamic";
+import Banner from '../../components/stemtest/Banner'
 
 
 export default function stemtest() {
@@ -216,6 +216,7 @@ export default function stemtest() {
         <>
             {close && <ClosePopup onClicked={handleClickCrossClose} />}
             <Metadata />
+            {question == 0 && <Banner />}
             <section onMouseMove={question == 3 ? handleMouseMove : handleNothing} className={styles.container}>
                 <div className={styles.background}></div>
                 <div className={glitch}><Image src="/assets/glitch.gif" alt="glitch" layout='fill' /> </div>
