@@ -7,6 +7,7 @@
     background-color: secondaryColor;
     position: absolute;
     bottom: 0;
+    z-index: 2;
 }
 
 .marquee {
