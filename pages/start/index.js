@@ -3,6 +3,7 @@ import Metadata from "../../components/Metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 
 
@@ -52,8 +53,16 @@ export default function Stemtest() {
                 </div>
 
                 <div className={styles.image_extra}></div>
-                <div className={styles.image_double}></div>
-                <div className={styles.image_triple}></div>
+                <motion.div className={styles.image_double}
+                    initial={{ x: "-1rem", y: "-1rem" }}
+                    animate={{ x: 0, y: 0 }}
+                    transition={{ ease: "easeOut", duration: 1, delay: 2}}
+                    ></motion.div>
+                <motion.div className={styles.image_triple}
+                    initial={{ x: "-2rem", y: "-2rem" }}
+                    animate={{ x: 0, y: 0 }}
+                    transition={{ ease: "easeOut", duration: 1, delay: 2}}
+                    ></motion.div>
             </article>
         </>
     )
