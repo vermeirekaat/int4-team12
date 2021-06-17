@@ -1,5 +1,4 @@
 import styles from './Progress.module.css';
-import Back from './Back'
 
 export default function Progress({ value, onClicked }) {
 
