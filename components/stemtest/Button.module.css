@@ -31,7 +31,7 @@
     color: mainColor;
     width: 25vw;
     pointer-events:none;
-     cursor: pointer;
+    cursor: pointer;
 }
 
 .button_three {
