@@ -651,18 +651,52 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        height: 80vh;
+        margin-top: 3rem;
     }
     .example_header {
         margin: 0;
     }
     .trump {
-        max-width: 40vw;
+        width: 40vw;
+        height: 40vh;
+        place-self: center;
+    }
+    .trump_content::before {
+        content: "Verkizeingen Trump 2016";
+        font-family: 'Akira';
+        font-size: subtitleFontBig; 
+        line-height: lineHeight;
+        color: secondaryColor;
+        text-align: center;
+    }
+    .trump_content {
+        display: none;
+    }
+    .example_header:hover + .trump_content {
+        display: inline-block;
+    }
+    .example_header:hover {
+        display: none;
     }
     .boris {
-        max-width: 40vw;
+        width: 40vw;
+        height: 40vh;
+        place-self: center;
     }
     .boris_content {
-        justify-self: flex-end;
+        display: none;
+    }
+    .boris_content::before {
+        content: "Brexit Referendum 2016";
+        font-family: 'Akira';
+        font-size: subtitleFontBig; 
+        line-height: lineHeight;
+        color: secondaryColor;
+        text-align: center;
+    }
+    .example_header:hover + .boris_content {
+        display: inline-block;
     }
     .tips_image {
         width: 20vw; 
