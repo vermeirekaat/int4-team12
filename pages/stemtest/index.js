@@ -129,7 +129,7 @@ export default function stemtest() {
     useEffect(() => {
         if (question == 3) {
             const timer = setInterval(() => {
-                setProgress(Math.floor(Math.random() * 5) + 2)
+                setProgress(Math.floor(Math.random() * 4) + 2)
             }, 500);
             return () => clearInterval(timer);
         }
