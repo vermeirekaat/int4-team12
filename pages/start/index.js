@@ -5,8 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
-
-
 export default function Stemtest() {
     const router = useRouter();
 
@@ -42,9 +40,9 @@ export default function Stemtest() {
                 <p className={styles.intro_second}>Ben je zeker dat je alle correcte informatie hebt om kritische keuzes te maken?</p>
 
                 <motion.div className={styles.input_desktop}
-                    initial={{ y: "-.5rem", opacity: 0, scale: .8}}
+                    /* initial={{ y: "-.5rem", opacity: 0, scale: .8}}
                     animate={{ y: 0, opacity: 1, scale: 1.2 }}
-                    transition={{ ease:"easeIn", duration: .5, delay: 1.5 }}
+                    transition={{ ease:"easeIn", duration: .5, delay: 1.5 }} */
                 >
                     <Link href="/stemtest">
                         <a className={styles.button}> Click to get started</a>
