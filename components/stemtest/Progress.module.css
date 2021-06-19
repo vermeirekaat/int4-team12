@@ -9,9 +9,10 @@
 .progress_button {  
     display: grid;
     width: 65vw;
-    grid-column: 50vw 10vw;
     position: absolute;
-    margin-top: 4rem;
+    left: 20%;
+    top: 5%;
+    grid-column: 50vw 10vw;
     gap:1rem;
 }
 
@@ -31,11 +32,11 @@
 
 
 .close {
-    margin-top: -1vh;
+  margin-top: -1vh;
   grid-column: 2;
   background-color: hightlightColor;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   border: white solid 1px;
   border-radius: 50%;
   cursor: url('../../public/assets/hand2000.png') 0 0, auto;
@@ -44,10 +45,10 @@
 .close:before, .close:after {
   position: absolute;
   content: ' ';
-  height:1.7rem;
+  height:1.2rem;
   width: 0.05rem;
-  margin-left: 1.2rem;
-  margin-top: 0.35rem;
+  margin-left: 0.94rem;
+  margin-top: 0.32rem;
   background-color: white;
 }
 

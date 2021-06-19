@@ -1,5 +1,5 @@
 @value values: "../../styles/vars.module.css";
-@value secondaryColor from values;
+@value secondaryColor, bodyFont from values;
 
 .scroll_wrapper {
     max-width: 100%;
@@ -8,6 +8,7 @@
     position: absolute;
     bottom: 0;
     z-index: 2;
+    height:2rem;
 }
 
 .marquee {
@@ -32,8 +33,8 @@
 
 .scroll {
     font-family: 'Akira';
-    font-size: subtitleFont; 
-    line-height: lineHeight;
+    font-size: bodyFont; 
+    line-height: 0rem;
     color: white;
     padding: 1rem .5rem;
 }
