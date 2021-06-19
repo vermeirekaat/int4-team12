@@ -76,7 +76,7 @@
     font-size: subtitleFont;
     color: white; 
     text-align: center;
-    width: 20rem;
+    /* width: 20rem; */
     margin: 0 auto;
     padding: 1rem .5rem;
     background-color: mainColor;
@@ -87,9 +87,7 @@
 }
 
 .share {
-    align-self: flex-end;
-    justify-self: center;
-    padding-bottom: 1rem;
+    display: none;
 }
 
 .share_tagline {
@@ -114,6 +112,15 @@
     }
     .title {
         font-size: subtitleFontBig;
+    }
+    .button {
+        width: 20rem;
+    }
+    .share {
+        display: block;
+        align-self: flex-end;
+        justify-self: center;
+        padding-bottom: 1rem;
     }
 }
 

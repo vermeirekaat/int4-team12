@@ -1,7 +1,9 @@
 import Bubble from "../../components/campagne/Bubble";
 import Content from "../../components/campagne/Content";
+import styles from "./Campagne.module.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Mobile from "../../components/campagne/Mobile";
 
 export default function Campagne () {
 
@@ -29,6 +31,15 @@ export default function Campagne () {
     }
 
     return (
-        <Content/>
+        <>
+        <div className={styles.mobile}>
+            <Mobile/>
+        </div>
+
+        <div className={styles.desktop}>
+            <Content/>
+        </div>
+        
+        </>
     )
 }

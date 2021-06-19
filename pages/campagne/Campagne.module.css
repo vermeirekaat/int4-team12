@@ -1,0 +1,22 @@
+@value values: "../../styles/vars.module.css";
+@value breakpoint from values;
+
+.mobile {
+    display: block;
+    overflow: hidden;
+}
+
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: breakpoint) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+        overflow: hidden;
+    }
+}

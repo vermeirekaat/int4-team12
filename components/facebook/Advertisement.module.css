@@ -46,6 +46,7 @@
     background-color: white;
     padding: .5rem; 
     border-radius: .2rem;
+    place-self: center;
 }
 
 .advertisement_title {
@@ -121,5 +122,9 @@
         left: 0;
         bottom: 0;
         right: 0;
+    }
+    .button {
+        font-size: 1rem;
+        padding: 1rem 1.5rem; 
     }
 }
