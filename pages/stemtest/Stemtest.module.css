@@ -102,7 +102,7 @@
 
 .content_containerTrump {
     position: absolute;
-    top: 25%;
+    top: 23%;
     left: 10%;
     width: 80vw;
 }
@@ -134,9 +134,8 @@
 }
 
 .buttons_text_three {
-    display: flex;
-    flex-direction: column;
-    width: 60vw;
+    display: block;
+    width: 70vw;
     margin: 0 auto;
 }
 

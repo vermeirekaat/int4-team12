@@ -7,17 +7,15 @@
 }
 
 .textarea{
-    margin: 2rem;
     height: 20vw;
-    border-radius: 1.2rem;
+    border-radius: 2vw;
     border: none;
     font-size: bodyFont;
-    padding-left: 2vw;
-    padding-top: 1rem;
+    padding-left: 3vw;
+    padding-top: 3vw;
     font-family: Menlo;
-    width: 60vw;
-    margin: 0 auto;
-    margin-top: 2vh;
+    width: 70vw;
+    margin-top: -1.5vh;
     margin-bottom: 2vh;
     cursor: url('../../public/assets/readcursor.png') 0 0, auto;
 }
