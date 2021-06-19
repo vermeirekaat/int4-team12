@@ -1,8 +1,9 @@
 @value values: "../../styles/vars.module.css";
-@value breakpoint, breakpointTwo from values;
+@value breakpoint from values;
 
 .mobile {
     display: block;
+    overflow: hidden;
 }
 
 .desktop {

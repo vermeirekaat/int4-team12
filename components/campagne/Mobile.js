@@ -2,8 +2,24 @@ import Metadata from "../Metadata";
 import styles from "./Mobile.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 export default function Mobile () {
+
+    const { scrollYProgress } = useViewportScroll();
+    const opacityHeader = useTransform(scrollYProgress, [0, .1], [0, 1]);
+    const positionHeader = useTransform(scrollYProgress, [0, .05], [-50, 0]);
+    const positionX = useTransform(scrollYProgress, [0, .15], [200, 0]);
+    const opacityAwareness = useTransform(scrollYProgress, [0, .4], [0, 1]); 
+    const positionAwareness = useTransform(scrollYProgress, [0, .45], [200, 0]);
+    const opacityTrump = useTransform(scrollYProgress, [0, .55], [0, 1]);
+    const opacityBoris = useTransform(scrollYProgress, [0, .7], [0, 1]);
+    const scaleTips = useTransform(scrollYProgress, [0, .75], [.5, 1]);
+    const positionFirst = useTransform(scrollYProgress, [0, .8], [-500, 0]);
+    const positionSecond = useTransform(scrollYProgress, [0, .85], [500, 0]);
+    const positionThird = useTransform(scrollYProgress, [0, .95], [-500, 0]);
+    const opacityFooter = useTransform(scrollYProgress, [0, 1], [0, 1]);
+    const scaleFooter = useTransform(scrollYProgress, [0, 1], [.5, 1]);
 
     return (
         <>
@@ -21,24 +37,21 @@ export default function Mobile () {
                         Je spendeert talloze minuten op sociale media (Facebook, Instagram...) waarbij honderden berichten jouw aandacht vragen. Maar op welke manier wordt er beslist welke berichten JIJ te zien krijgt? <br/> <br/> Het zijn je eigen clicks die bepalen welke berichten er op je feed terecht komen.
                     </p>
                 </div>
-                <div className={styles.image_protest}>
-                        <Image
-                            src="/assets/campagne/protest.png"
-                            alt="Protest"
-                            layout="fill"
-                        />
-                </div>
-                <div className={styles.image_phone}>
+                <motion.div className={styles.image_phone}
+                    style={{ opacity: opacityHeader, y: positionHeader }}
+                >
                 <div className={styles.window_green}></div>
                     <Image
                         src="/assets/campagne/phone.png"
                         alt="Phone with emoticons"
                         layout="fill"
                     /> 
-                </div>
+                </motion.div>
             </section>
 
-            <section className={styles.purple}>
+            <motion.section className={styles.purple}
+                style={{ x: positionX }}    
+            >
                 <div className={styles.window_purple}></div>
                 <div className={styles.purple_flex}>
                     <div className={styles.purple_image}>
@@ -54,10 +67,9 @@ export default function Mobile () {
                         <p className={styles.paragraaf_white}>Dit is helaas niet het geval. De algoritmes zorgen ervoor dat deze clicks zodanig geanalyseerd worden waardoor je er als gebruiker geen controle meer over hebt. <br/> <br/> Het gaat hier over "extreme personalisatie", je ziet enkel berichten die jij leuk of interessant gaat vinden. Onbewust bevindt je je in je eigen onzichtbare filter bubble.</p>
                     </div>     
                 </div>       
-            </section>
+            </motion.section>
 
             <section className={styles.information}>
-                <div className={styles.intermezzo}> 
                 <div className={styles.intermezzo_content}>
                     <div className={styles.search}>
                             <Image 
@@ -72,10 +84,10 @@ export default function Mobile () {
                         </div>
                             <p className={styles.definition}>"Verzameling van specifieke informatie die afgestemd is op het online gedrag van de gebruiker."</p>
                 </div> 
-                    <div className={styles.circles}></div>
-                </div>
 
-                <div className={styles.awareness}>
+                <motion.div className={styles.awareness}
+                    style={{ opacity: opacityAwareness, y: positionAwareness }}
+                >
                     <h2 className={styles.awareness_subtitle}>Be aware of your bubble</h2>
 
                     <div className={styles.awareness_flex}>
@@ -88,7 +100,7 @@ export default function Mobile () {
                         </div>
                         <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je niet geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen. <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De politieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
                     </div>
-                </div>
+                </motion.div>
             </section>
         
             <section className={styles.examples}>
@@ -102,7 +114,9 @@ export default function Mobile () {
                 </div>
 
                 <div className={styles.examples_flex}>
-                <article className={styles.trump}>
+                <motion.article className={styles.trump}
+                    style={{ opacity: opacityTrump }}
+                >
                     <div className={styles.example_header}>
                         <h3 className={styles.trump_title}> Verkiezingen Trump 2016</h3>
                         <div className={styles.trump_image}>
@@ -117,9 +131,11 @@ export default function Mobile () {
                     <div className={styles.trump_content}>
                         <p className={styles.example_paragraaf}>Niemand had verwacht dat Trump de nieuwe president zou worden in 2016, en toch werd dit realiteit. <br/> <br/>De verklaring hiervoor is 'Trumpism' waarbij Trump-aanhangers online gesteund werden in hun opninies. <br/>Door de filter bubble kregen ze geen andere perspectieven te zien waardoor ze enkel extremer gingen denken - en uiteindelijk ook stemmen.</p>
                     </div>
-                </article>
+                </motion.article>
 
-                <article className={styles.boris}>
+                <motion.article className={styles.boris}
+                    style={{ opacity: opacityBoris }}
+                >
                     <div className={styles.example_header}>
                         <h3 className={styles.boris_title}> Brexit Referendum 2016</h3>
                         <div className={styles.boris_image}>
@@ -134,18 +150,22 @@ export default function Mobile () {
                     <div className={styles.boris_content}>
                         <p className={styles.example_paragraaf}>In 2016 was de kogel door de kerk, Engeland zal de EU verlaten.<br/> <br/>Twee kampen streden tegen elkaar: Pro-Leavers en Con-Leavers. <br/>Wat bleek, de eerste groep zag online enkel campagnes die hun mening versterkten: de EU verlaten. Geen enkel bericht met een tegenstrijdige mening. Allemaal te wijten aan de online filter bubble.</p>
                     </div>
-                </article>
+                </motion.article>
                 </div>       
             </section>
         
             <section className={styles.tips}>
-                <div className={styles.tips_subtitles}>
+                <motion.div className={styles.tips_subtitles}
+                    style={{ scale: scaleTips }} 
+                >
                     <h2 className={styles.subtitle_green}>Pop your Bubble</h2>
                     <p className={styles.subtitle_outline}>Pop your Bubble</p>
                     <p className={styles.subtitle_outline}>Pop your Bubble</p>
-                </div>
+                </motion.div>
 
-                <article className={styles.tips_grid}>
+                <motion.article className={styles.tips_grid}
+                    style={{ x: positionFirst }} 
+                >
                     <div className={styles.tips_header}>
                         <div className={styles.tips_image}>
                             <Image
@@ -161,9 +181,11 @@ export default function Mobile () {
                         <h3 className={styles.tips_title}>Say yes to ad-blockers</h3>
                         <p className={styles.tips_paragraaf}>Installeer een ad-block extensie op jouw computer zodat je minder blootgesteld wordt aan online advertenties.</p>
                     </div>
-                </article>
+                </motion.article>
 
-                <article className={styles.tips_grid}>
+                <motion.article className={styles.tips_grid}
+                    style={{ x: positionSecond }}
+                >
                     <div className={styles.tips_header}>
                         <p className={styles.tips_number}>2</p>
                         <div className={styles.tips_image}>
@@ -179,9 +201,11 @@ export default function Mobile () {
                         <h3 className={styles.tips_title}>Browse anonymous</h3>
                         <p className={styles.tips_paragraaf}>Hello unknown! <br/>Als het internet niet weet wie je bent, kan het jouw gegevens ook niet opslaan.</p>
                     </div>
-                </article>
+                </motion.article>
 
-                <article className={styles.tips_grid}>
+                <motion.article className={styles.tips_grid}
+                    style={{ x: positionThird }}
+                >
                     <div className={styles.tips_header}>
                         <div className={styles.tips_image}>
                             <Image
@@ -197,11 +221,13 @@ export default function Mobile () {
                         <h3 className={styles.tips_title}>Delete those cookies</h3>
                         <p className={styles.tips_paragraaf}>Cookies klinken misschien positief maar dat zijn ze niet. Cookies verzamelen data zonder dat je er vat op hebt. Weg ermee!</p>
                     </div>
-                </article>
+                </motion.article>
             </section>
         </article>
 
-        <footer className={styles.footer}>
+        <motion.footer className={styles.footer}
+            style={{ opacity: opacityFooter, scale: scaleFooter }}
+        >
             <div className={styles.footer_cta}>
                 <h2 className={styles.footer_title}>Share with your friends</h2>
                 <div className={styles.footer_socials}>
@@ -232,7 +258,7 @@ export default function Mobile () {
                     <p className={styles.names_content}>Amber Aspeslagh, Eline Claeys, Kaat Vermeire</p>
                 </div>
             </div>
-        </footer>
+        </motion.footer>
         </>
     )
 }
