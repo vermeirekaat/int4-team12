@@ -9,7 +9,7 @@
     display: none;
 }
 
-@media screen and (min-width: breakpointTwo) {
+@media screen and (min-width: breakpoint) {
     .mobile {
         display: none;
     }

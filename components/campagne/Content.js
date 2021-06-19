@@ -9,9 +9,9 @@ export default function Content () {
     const { scrollYProgress } = useViewportScroll();
     const opacityHeader = useTransform(scrollYProgress, [0, .15], [1, 0]);
     const scalePurple = useTransform(scrollYProgress, [0, .2], [.5, 1]);
-    const positionY = useTransform(scrollYProgress, [0, .55], [-300, 0]);
-    const opacityY = useTransform(scrollYProgress, [0, .5], [0, 1]);
-    const positionX = useTransform(scrollYProgress, [0, .58], [5000, 0]);
+    const positionY = useTransform(scrollYProgress, [0, .45], [-300, 0]);
+    const opacityY = useTransform(scrollYProgress, [0, .4], [0, 1]);
+    const positionX = useTransform(scrollYProgress, [0, .52], [5000, 0]);
     const scaleTips = useTransform(scrollYProgress, [0, .75], [.5, 1]);
     const positionFirst = useTransform(scrollYProgress, [0, .9], [-1000, 0]);
     const positionSecond = useTransform(scrollYProgress, [0, .95], [1000, 0]);
@@ -108,7 +108,7 @@ export default function Content () {
                                 layout="fill"
                                 />
                         </div>
-                        <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je niet geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen. <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De plitieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
+                        <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je niet geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen. <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De politieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
                     </div>
                 </motion.div>
             </section>
@@ -227,7 +227,7 @@ export default function Content () {
                     <div className={styles.tips_content}>
                         <div className={styles.window_green}></div>
                         <h3 className={styles.tips_title}>Delete those cookies</h3>
-                        <p className={styles.tips_paragraaf}>Cookie klinken misschien positief maar dat zijn ze niet. Cookies verzamelen data zonder dat je er vat op hebt. Weg ermee!</p>
+                        <p className={styles.tips_paragraaf}>Cookies klinken misschien positief maar dat zijn ze niet. Cookies verzamelen data zonder dat je er vat op hebt. Weg ermee!</p>
                     </div>
                 </motion.article>
             </section>
