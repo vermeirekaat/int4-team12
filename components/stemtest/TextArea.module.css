@@ -33,9 +33,15 @@
 @media screen and (min-width: breakpointTwo) {
 
 .textarea{
+    display: block;
     height: 10vw;
     font-size: bodyFontBig;
     width: 40rem;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
     height:8rem;
     cursor: url('../../public/assets/readcursor.png') 0 0, auto;
 }
