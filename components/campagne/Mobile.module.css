@@ -1,0 +1,671 @@
+@value values: "../../styles/vars.module.css";
+@value mainColor, secondaryColor, bodyFont, lineHeight, subtitleFont, subtitleFontBig, headlineFont, headlineFontBig, breakpoint, breakpointTwo from values;
+
+@font-face {
+    font-family: 'Menlo';
+    src: url('../../public/fonts/menlo-regular.ttf');
+}
+
+@font-face {
+    font-family: 'Akira';
+    src: url('../../public/fonts/akira-expanded.ttf');
+}
+
+.hidden {
+    display: none;
+}
+
+.header {
+    display: grid; 
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, calc(100%/3));
+    height: 110vh;
+}
+
+.headline {
+    font-family: "Akira";
+    font-size: headlineFont;
+    line-height: 3.5rem;
+    color: secondaryColor;
+    padding: 2rem;
+    padding-bottom: 0rem;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    max-width: 60rem;
+    background-color: white;
+}
+
+.headline span {
+    background-color: mainColor;
+    padding: .5rem; 
+}
+
+.headline::after {
+    content:"";
+    background-image: url("../../public/assets/campagne/pijl.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+}
+
+.arrow {
+    grid-row: 1; 
+    grid-column: 2; 
+    align-self: flex-end;
+    position: relative; 
+    width: 10vw; 
+    padding-top: calc(150%/4);
+}
+
+.introduction {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    grid-row: 2; 
+    grid-column: 1 / span 2;
+    max-width: 25rem;
+}
+
+.window_green {
+    background-color: secondaryColor;
+    background-image: url('../../public/assets/campagne/bollen.svg'); 
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    height: 3vh;
+}
+
+.paragraaf {
+    font-family: "Menlo";
+    font-size: bodyFont;
+    color: mainColor;
+    line-height: lineHeight;
+    background-color: white;
+    border: .05rem solid secondaryColor;
+    padding: 1rem;
+}
+
+.image_protest {
+    display: none;
+}
+
+.image_phone {
+    grid-row: 3; 
+    grid-column: 2; 
+    place-self: flex-end;
+    margin-left: 2rem;
+    z-index: -1;
+
+    position: relative; 
+    width: 45vw;
+    padding-bottom: calc(400%/4);
+}
+
+.purple {
+    margin: 3rem 0rem;
+    background-color: mainColor;
+    z-index: 4;
+}
+
+.window_purple {
+    border-bottom: .05rem solid white;
+    background-image: url('../../public/assets/campagne/bollen.svg'); 
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    height: 5vh;
+}
+
+.purple_image {
+    display: none;
+}
+
+.content {
+    padding: 3rem 1rem;
+    max-width: 40rem;
+}
+
+.subtitle {
+    font-family: 'Akira';
+    font-size: subtitleFont; 
+    line-height: lineHeight;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    font-family: 'Akira';
+    font-size: bodyFont; 
+    color: secondaryColor;
+    margin-bottom: .5rem;
+}
+
+.paragraaf_white {
+    font-family: "Menlo";
+    font-size: bodyFont; 
+    line-height: lineHeight; 
+    color: white;
+}
+
+.information {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+
+.intermezzo_content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 3rem;
+}
+
+.search {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; 
+    border: .05rem solid mainColor;
+    border-radius: 5rem;
+    width: 70vw;
+}
+
+.search_title {
+    font-family: 'Akira';
+    font-size: subtitleFont;
+    color: secondaryColor;
+}
+
+.definition {
+    font-family: 'Menlo';
+    font-size: bodyFont;
+    line-height: lineHeight;
+    color: secondaryColor; 
+    text-align: center;
+    width: 80vw;
+    margin: 1rem 0;
+}
+
+.awareness_subtitle {
+    font-family: 'Akira';
+    font-size: subtitleFont; 
+    line-height: lineHeight;
+    color: mainColor;
+    text-align: center;
+    max-width: 20rem;
+    height: 10vh;
+    margin: 0 auto;
+
+    background-image: url("../../public/assets/campagne/bubble.svg");
+    background-size: cover;
+}
+
+.awareness_image {
+    display: flex; 
+    justify-content: center;
+}
+
+.awareness_content {
+    font-family: 'Menlo';
+    font-size: bodyFont;
+    line-height: lineHeight;
+    color: mainColor; 
+    padding: 1rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.awareness_image {
+    display: none;
+}
+
+.examples {
+    background-color: mainColor;
+}
+
+.scroll_wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden; 
+    display: inline-block; 
+    animation: marquee 10s linear infinite;
+}
+
+.marquee p {
+    display: inline-block;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.scroll {
+    font-family: 'Akira';
+    font-size: subtitleFont; 
+    line-height: lineHeight;
+    color: secondaryColor;
+    padding: 1rem .5rem;
+}
+
+.example_header {
+    display: grid; 
+    grid-template-columns: repeat(2, 8rem);
+    padding: 1rem 2rem;
+    align-self: center;
+}
+
+.trump_title {
+    font-family: 'Akira';
+    font-size: subtitleFontBig; 
+    line-height: lineHeight;
+    color: white;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 2;
+    z-index: 1;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.trump_image {
+    grid-row: 1; 
+    grid-column: 1;
+}
+
+.boris_title {
+    font-family: 'Akira';
+    font-size: subtitleFontBig; 
+    line-height: lineHeight;
+    color: white;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+.boris_image {
+    grid-row: 1; 
+    grid-column: 2;
+}
+
+.example_paragraaf {
+    font-family: 'Menlo';
+    font-size: bodyFont;
+    line-height: lineHeight;
+    color: white; 
+    padding: 1rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.tips_subtitles {
+    margin: 2rem 1rem; 
+    font-family: 'Akira';
+    font-size: subtitleFont; 
+}
+
+.subtitle_green {
+    color: secondaryColor;
+}
+
+.subtitle_outline {
+    color: white;
+    -webkit-text-stroke: .05rem secondaryColor;
+}
+
+.tips_grid {
+    display: grid; 
+    grid-template-columns: 20vw 40vw 10vw;
+    grid-template-rows: 25vh 20vh 10vh;
+    margin: 2.5rem .5rem;
+}
+
+.tips_header {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 4;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.tips_image {
+    position: relative; 
+    width: 40vw; 
+    padding-top: calc(150%/4);
+}
+
+.tips_content {
+    max-width: 25rem;
+    border: .05rem solid secondaryColor;
+    background-color: white;
+    grid-column: 2/ span 3;
+    grid-row: 2 / span 3;
+    z-index: 2;
+}
+.tips_contentSecond {
+    max-width: 25rem;
+    border: .05rem solid secondaryColor;
+    background-color: white;
+    grid-column: 1/ span 3;
+    grid-row: 2 / span 3;
+    place-self: flex-end;
+    z-index: 2;
+}
+
+.tips_title {
+    font-family: 'Akira';
+    font-size: subtitleFont; 
+    line-height: lineHeight;
+    color: secondaryColor;
+    padding: 1rem;
+    max-width: 25rem;
+}
+
+.tips_paragraaf {
+    font-family: "Menlo";
+    font-size: bodyFont;
+    color: mainColor;
+    line-height: lineHeight;
+    background-color: white;
+    padding: 1rem;
+}
+
+.tips_number {
+    font-family: "Akira";
+    font-size: 8rem; 
+    color: white; 
+    -webkit-text-stroke: .25rem secondaryColor; 
+    grid-row: 3; 
+    grid-column: 3;
+    z-index: 3;
+}
+
+.footer {
+    background-color: secondaryColor; 
+    padding: 1rem;
+    width: 100vw;
+}
+
+.footer_cta {
+    padding-bottom: 2rem;
+}
+
+.footer_title {
+    font-family: 'Akira';
+    font-size: subtitleFontBig; 
+    color: white;
+    margin-bottom: .5rem;
+}
+
+.footer_socials {
+    max-width: 10rem;
+}
+
+.footer_link {
+    padding-bottom: 2rem;
+}
+
+.link {
+    font-family: 'Akira';
+    font-size: bodyFont; 
+    line-height: 2rem;
+    justify-self: center;
+    color: mainColor; 
+    background-color: white; 
+    padding: .5rem;
+}
+
+.footer_info {
+    display: flex;
+    flex-direction: column; 
+    align-content: space-between;
+}
+
+.footer_image {
+    width: 40vw;
+    padding-bottom: 1rem;
+}
+
+.footer_names {
+    font-family: "Menlo";
+    font-size: .7rem;
+    color: black;
+    line-height: lineHeight;
+}
+
+@media screen and (min-width: breakpoint) {
+    .headline {
+        font-size: headlineFontBig;
+        line-height: calc(headlineFontBig * 1.2);
+        grid-column: 1 / span 3;
+    }
+    .headline::after {
+        width: 8rem;
+        height: 8rem;
+    }
+    .introduction {
+        grid-row: 2 / span 3;
+    }
+    .image_protest {
+        display: flex;
+        grid-column: 1;
+        grid-row: 3;
+        place-self: flex-end;
+        border-top: 1.5rem solid secondaryColor;
+        z-index: -2;
+
+        position: relative; 
+        width: 25vw;
+        padding-top: calc(250%/4);
+    }
+    .image_phone {
+        grid-row: 2 / span 3;
+        width: 30vw; 
+        padding-bottom: calc(300%/4);
+        place-self: center;
+    }
+    .purple_flex {
+        height: 80vh;
+        display: grid; 
+        grid-template-columns: 40vw 60vw; 
+    }
+    .content {
+        place-self: center;
+    }
+    .purple_image {
+        display: block;
+        place-self: center;
+        width: 40vw;
+        position: relative;
+        padding-top: calc(450%/4);
+    }
+    .search {
+        width: 20rem;
+    }
+    .definition {
+        width: 30rem;
+    }
+    .awareness_subtitle {
+        font-size: headlineFont; 
+        line-height: 3.5rem; 
+        height: 15vh;
+        max-width: 30rem;
+    }
+    .example_header {
+        grid-template-columns: repeat(2, 13rem);
+        margin: .5rem 10rem;
+    }
+    .tips_subtitles {
+        font-size: headlineFont;
+        margin: 5rem 1rem;
+    }
+    .tips_grid {
+        grid-template-columns: 10rem 20rem 10rem;
+        grid-template-rows: 10rem 5rem 10rem 5rem;
+        width: 40rem; 
+        margin: 0 auto;
+        padding: 3rem 0;
+    }
+    .tips_image { 
+        width: 30vw; 
+        padding-top: calc(300%/4);
+    }
+    .tips_contentSecond {
+        grid-column: 1 / span 2;
+    }
+    .tips_header {
+        grid-column: 1 / span 3;
+    }
+    .tips_content {
+        grid-row: 3 / span 4; 
+        place-self: flex-end;
+    }
+    .footer_cta {
+        max-width: 70rem; 
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_link {
+        text-align: center;
+    }
+    .footer_info {
+        max-width: 50rem; 
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .header {
+        width: 100vw;
+        grid-template-columns: repeat(3, calc(100%/3));
+        margin: 0 auto;
+    }
+    .headline {
+        margin-top: 5rem;
+        place-self: center;
+    }
+    .introduction {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+        max-width: 40rem;
+        margin: 0;
+        place-self: flex-end;
+    }
+    .image_protest {
+        grid-row: 3;
+        grid-column: 2/ span 3;
+        place-self: flex-start;
+        width: 20vw; 
+        padding-top: calc(300%/10);
+    }
+    .image_phone {
+        grid-row: 2 / span 3;
+        grid-column: 3;
+        align-self: center;
+        justify-self: flex-start;
+        width: 20vw;
+        padding-bottom: calc(200%/4);
+        margin: 0;
+    }
+    .purple {
+        margin: 0;
+    }
+    .purple_flex {
+        grid-template-columns: repeat(4, 25vw);
+    }
+    .purple_image {
+        width: 25vw; 
+        padding-top: calc(250%/4);
+        grid-column: 1 / span 2;
+    }
+    .content {
+        align-self: center;
+        justify-self: flex-start;
+        width: 30rem;
+        grid-column: 3 / span 4;
+    }
+    .intermezzo {
+        display: grid; 
+        grid-template-columns: 25vw 50vw 25vw;
+    }
+    .intermezzo_content {
+        grid-column: 2;
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        position: relative; 
+        margin-top: 5rem;
+    }
+    .circles {
+        grid-column: 3;
+        background-image: url("../../public/assets/campagne/circles-green.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30rem; 
+        height: 30rem;
+        position: relative; 
+        place-self: flex-end;
+        top: -10rem;
+        z-index: -1;
+    }
+    .awareness_subtitle {
+        background-image: none;
+    }
+    .awareness_content {
+        place-self: center;
+        width: 30rem;
+        margin: 0;
+    }
+    .awareness_image {
+        display: flex;
+        align-self: center;
+        justify-self: flex-start;
+        position: relative;
+        width: 25vw; 
+        padding-top: calc(150%/4);
+    }
+    .awareness_flex {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-evenly;
+        width: 80vw;
+        margin: 0 10rem;
+    }
+    .examples_flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 80vh;
+        margin-top: 3rem;
+    }
+    .example_header {
+        margin: 0;
+    }
+    .trump {
+        width: 40vw;
+        height: 40vh;
+        place-self: center;
+    }
+    .tips_image {
+        width: 20vw; 
+    }
+    .footer_title {
+        font-size: headlineFont;
+    }
+}

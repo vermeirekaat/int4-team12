@@ -1,23 +1,9 @@
 import Metadata from "../Metadata";
-import styles from "./Content.module.css";
+import styles from "./Mobile.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
 
-export default function Content () {  
-
-    const { scrollYProgress } = useViewportScroll();
-    const opacityHeader = useTransform(scrollYProgress, [0, .15], [1, 0]);
-    const scalePurple = useTransform(scrollYProgress, [0, .2], [.5, 1]);
-    const positionY = useTransform(scrollYProgress, [0, .55], [-300, 0]);
-    const opacityY = useTransform(scrollYProgress, [0, .5], [0, 1]);
-    const positionX = useTransform(scrollYProgress, [0, .58], [5000, 0]);
-    const scaleTips = useTransform(scrollYProgress, [0, .75], [.5, 1]);
-    const positionFirst = useTransform(scrollYProgress, [0, .9], [-1000, 0]);
-    const positionSecond = useTransform(scrollYProgress, [0, .95], [1000, 0]);
-    const positionThird = useTransform(scrollYProgress, [0, 1], [-1000, 0]);
-    const opacityFooter = useTransform(scrollYProgress, [0, 1], [0, 1]);
-    const scaleFooter = useTransform(scrollYProgress, [0, 1], [.5, 1]);
+export default function Mobile () {
 
     return (
         <>
@@ -27,12 +13,8 @@ export default function Content () {
             <h1 className={styles.hidden}>Filter Bubbles</h1>
 
             
-            <motion.section className={styles.header}
-                style={{ opacity: opacityHeader }}
-            >
-                <h2 className={styles.headline}>
-                    You are what you <span>click</span>
-                </h2>
+            <section className={styles.header}>
+                <h2 className={styles.headline}>You are what you <span>click</span></h2>
                 <div className={styles.introduction}>
                     <div className={styles.window_green}></div>
                     <p className={styles.paragraaf}>
@@ -54,11 +36,9 @@ export default function Content () {
                         layout="fill"
                     /> 
                 </div>
-            </motion.section>
+            </section>
 
-            <motion.section className={styles.purple}
-                style={{ scale: scalePurple }}
-            >
+            <section className={styles.purple}>
                 <div className={styles.window_purple}></div>
                 <div className={styles.purple_flex}>
                     <div className={styles.purple_image}>
@@ -74,7 +54,7 @@ export default function Content () {
                         <p className={styles.paragraaf_white}>Dit is helaas niet het geval. De algoritmes zorgen ervoor dat deze clicks zodanig geanalyseerd worden waardoor je er als gebruiker geen controle meer over hebt. <br/> <br/> Het gaat hier over "extreme personalisatie", je ziet enkel berichten die jij leuk of interessant gaat vinden. Onbewust bevindt je je in je eigen onzichtbare filter bubble.</p>
                     </div>     
                 </div>       
-            </motion.section>
+            </section>
 
             <section className={styles.information}>
                 <div className={styles.intermezzo}> 
@@ -95,9 +75,7 @@ export default function Content () {
                     <div className={styles.circles}></div>
                 </div>
 
-                <motion.div className={styles.awareness}
-                    style={{ y: positionY, opacity: opacityY }}
-                >
+                <div className={styles.awareness}>
                     <h2 className={styles.awareness_subtitle}>Be aware of your bubble</h2>
 
                     <div className={styles.awareness_flex}>
@@ -110,12 +88,10 @@ export default function Content () {
                         </div>
                         <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je niet geconfronteerd wordt met tegenstrijdige ideeën. <br/> <br/> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen. <br/> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De plitieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
                     </div>
-                </motion.div>
+                </div>
             </section>
         
-            <motion.section className={styles.examples}
-                style={{ x: positionX }}
-            >
+            <section className={styles.examples}>
                 <h2 className={styles.hidden}>Real Life Bubbles (gone wrong)</h2>
 
                 <div className={styles.scroll_wrapper}>
@@ -160,20 +136,16 @@ export default function Content () {
                     </div>
                 </article>
                 </div>       
-            </motion.section>
+            </section>
         
             <section className={styles.tips}>
-                <motion.div className={styles.tips_subtitles}
-                    style={{ scale: scaleTips }}
-                >
+                <div className={styles.tips_subtitles}>
                     <h2 className={styles.subtitle_green}>Pop your Bubble</h2>
                     <p className={styles.subtitle_outline}>Pop your Bubble</p>
                     <p className={styles.subtitle_outline}>Pop your Bubble</p>
-                </motion.div>
+                </div>
 
-                <motion.article className={styles.tips_grid}
-                    style={{ x: positionFirst }}
-                >
+                <article className={styles.tips_grid}>
                     <div className={styles.tips_header}>
                         <div className={styles.tips_image}>
                             <Image
@@ -189,11 +161,9 @@ export default function Content () {
                         <h3 className={styles.tips_title}>Say yes to ad-blockers</h3>
                         <p className={styles.tips_paragraaf}>Installeer een ad-block extensie op jouw computer zodat je minder blootgesteld wordt aan online advertenties.</p>
                     </div>
-                </motion.article>
+                </article>
 
-                <motion.article className={styles.tips_grid}
-                    style={{ x: positionSecond }}
-                >
+                <article className={styles.tips_grid}>
                     <div className={styles.tips_header}>
                         <p className={styles.tips_number}>2</p>
                         <div className={styles.tips_image}>
@@ -209,11 +179,9 @@ export default function Content () {
                         <h3 className={styles.tips_title}>Browse anonymous</h3>
                         <p className={styles.tips_paragraaf}>Hello unknown! <br/>Als het internet niet weet wie je bent, kan het jouw gegevens ook niet opslaan.</p>
                     </div>
-                </motion.article>
+                </article>
 
-                <motion.article className={styles.tips_grid}
-                    style={{ x: positionThird }}
-                >
+                <article className={styles.tips_grid}>
                     <div className={styles.tips_header}>
                         <div className={styles.tips_image}>
                             <Image
@@ -229,13 +197,11 @@ export default function Content () {
                         <h3 className={styles.tips_title}>Delete those cookies</h3>
                         <p className={styles.tips_paragraaf}>Cookie klinken misschien positief maar dat zijn ze niet. Cookies verzamelen data zonder dat je er vat op hebt. Weg ermee!</p>
                     </div>
-                </motion.article>
+                </article>
             </section>
         </article>
 
-        <motion.footer className={styles.footer}
-            style={{ opacity: opacityFooter, scale: scaleFooter }}
-        >
+        <footer className={styles.footer}>
             <div className={styles.footer_cta}>
                 <h2 className={styles.footer_title}>Share with your friends</h2>
                 <div className={styles.footer_socials}>
@@ -266,7 +232,7 @@ export default function Content () {
                     <p className={styles.names_content}>Amber Aspeslagh, Eline Claeys, Kaat Vermeire</p>
                 </div>
             </div>
-        </motion.footer>
+        </footer>
         </>
     )
 }
