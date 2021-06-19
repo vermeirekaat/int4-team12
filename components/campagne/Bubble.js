@@ -27,17 +27,17 @@ export default function Bubble ({ input }) {
 
                   <Link href="/campagne">
                       <motion.a className={styles.button}
-                         initial={{ y: "-5rem", opacity: 0 }}
+                         /*initial={{ y: "-5rem", opacity: 0 }}
                          animate={{ y: 0, opacity: 1}}
-                         transition={{ ease: "easeInOut", duration: 1.5, delay: 1.5 }}
+                         transition={{ ease: "easeInOut", duration: 1.5, delay: 1.5 }}*/
                       >Meer informatie</motion.a>
                   </Link>
               </div>
 
               <motion.div className={styles.share}
-                initial={{ y: "20rem", opacity: 0 }}
+                /*initial={{ y: "20rem", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ ease: "easeOut", duration: 2, delay: 1.25 }}
+                transition={{ ease: "easeOut", duration: 2, delay: 1.25 }}*/
               >
                   <p className={styles.share_tagline}>Share with your friends</p>
                   <div className={styles.share_image}>
