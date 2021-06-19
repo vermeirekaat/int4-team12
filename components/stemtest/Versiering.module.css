@@ -1,3 +1,7 @@
+@value values: "../../styles/vars.module.css";
+@value  breakpointTwo  from values;
+
+
 .versiering1 {
     position: absolute;
     left: 13.29%;
@@ -7,11 +11,7 @@
 }
 
 .versiering2 {
-    position: absolute;
-    left: 8.7%;
-    right: 86.84%;
-    top: 88.84%;
-    bottom: 8.94%;
+    display:none;
 }
 
 .versiering3 {
@@ -20,4 +20,17 @@
     right: 6.07%;
     top: 85.6%;
     bottom: 11.79%;
+}
+
+
+@media screen and (min-width: breakpointTwo ) {
+
+    .versiering2 {
+        position: absolute;
+        left: 8.7%;
+        right: 86.84%;
+        top: 88.84%;
+        bottom: 8.94%;
+    }
+
 }

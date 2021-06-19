@@ -1,6 +1,6 @@
 
 @value values: "../../styles/vars.module.css";
-@value bodyFont, bodyFontBig, breakpoint, breakpointTwo  from values;
+@value bodyFont, bodyFontBig, breakpoint, breakpointTwo, lineHeight  from values;
 
 @font-face {
     font-family: 'Menlo';
@@ -9,15 +9,16 @@
 
 .what {
     position: absolute;
-    left: 60%;
+    left: 5%;
     right: 3.26%;
-    top: 92.74%;
+    top: 89.74%;
     bottom: 6.7%;
     color: white;
-    text-decoration: underline;
+    line-height:1rem;
     font-family: Menlo;
-    font-size: bodyFont;
+    font-size: 0.7rem;
     cursor: url('../../public/assets/hand2000.png') 0 0, auto;
+    width: 90vw;
 }
 
 
@@ -25,6 +26,8 @@
 @media screen and (min-width: breakpointTwo) {
 
     .what {
-          left: 90%;
+          left: 47%;
+          font-size: bodyFont;
+          text-decoration: underline;
         }
 }

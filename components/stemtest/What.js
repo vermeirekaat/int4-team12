@@ -1,10 +1,17 @@
 import styles from './What.module.css';
-import Link from 'next/link';
 
 export default function What (){
+    
+    const handleMouseOver = (e) => {
+       e.currentTarget.innerHTML = "Niet gevreesd u bent niet gehackt, deze test stuurt u binnen een bepaalde richting"
+    }
+
+    const handleMouseLeave = (e) => {
+        e.currentTarget.innerHTML = "Wat is dit?"
+    }
+
+
     return (
-        <Link href={{ pathname: `/campagne`, query: { knows: 'false' } }}>
-        <a className={styles.what}>Wat is dit?</a>
-        </Link>
+        <p onClick={e => handleMouseOver(e)} onMouseOver={e => handleMouseOver(e)} onBlur={e => handleMouseLeave(e)} onMouseLeave={e => handleMouseLeave(e)} className={styles.what}>Wat is dit?</p>
     )
 }
