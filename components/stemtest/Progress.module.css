@@ -69,13 +69,14 @@
 }
 
 .icon {
+  width: 10rem;
   position: absolute;
-  top:18%;
-  width: 15rem;
+  top: 6rem;
+  left:20%;
   cursor: url('../../public/assets/hand2000.png') 0 0, auto;
-  height: 10vw;
-  background-size: 25rem;
-  background-position-y: 1vh;
+  height: 5rem;
+  background-size: 15rem;
+  background-position-y: 0.5rem;
   background-repeat: no-repeat;
   background-image: url(../../public/assets/arrow.svg);
 }
@@ -84,8 +85,7 @@
     color: white;
     font-family: Akira;
     text-align: right;
-    margin-bottom: -1vh;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 

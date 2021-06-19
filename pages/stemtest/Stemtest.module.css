@@ -95,7 +95,8 @@
     font-size: bodyFont;
     text-align: center;
     line-height: lineHeight;
-    margin-top: 1rem;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
 }
 
 
@@ -116,16 +117,16 @@
 
 .trumpLeft {
     position: fixed;
-    left: calc(300%/10);
-    bottom: calc(-300%/400);
-    width: calc(300%/3);
+    left: 25vw;
+    bottom:0vh;
+    width: 47vh;
 }
 
 .trumpRight{
     position: fixed;
-    right: calc(300%/20);
-    bottom: calc(-300%/400);
-    width: calc(300%/3);
+    right: 20vw;
+    bottom:0vh;
+    width: 47vh
 }
 
 .display_none {
