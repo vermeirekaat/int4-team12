@@ -129,7 +129,7 @@ export default function stemtest() {
             "width": 251,
             "height": 189,
             "buttons": <div className={styles.buttons}><ButtonTwo classWord={direction === 'left' ? ButtonStyles.button_check : ButtonStyles.button_wrong} question={question} text="Liever niet" /> <ButtonTwo classWord={direction === 'left' ? ButtonStyles.button_wrong : ButtonStyles.button_check} text="yes, please" /></div>,
-            "classContainer": styles.content_container,
+            "classContainer": styles.content_container_five,
             "text": <p className={styles.text}>België moet gesplitst worden door middel van een muur tussen Vlaanderen en Walonië.</p>,
         },
 

@@ -76,6 +76,11 @@
     margin-top: 15vh;
 }
 
+.content_container_five{
+     position: absolute;
+    margin-top: 25vh;
+}
+
 .hoofdoek {
     display: block;
     width: 60vw;
@@ -147,7 +152,8 @@
 .correct {
     color: white;
     text-align: center;
-    font-size: bodyFont;
+    font-size: 0.8rem;
+    margin-bottom: 2vh;
     font-family:'Akira';
     text-decoration: underline;
 }
@@ -156,6 +162,11 @@
     color: secondaryColor;
     text-align: center;
     font-family: 'Menlo';
+    font-size: 0.7rem;
+    position: relative;
+    z-index: 99;
+    margin-top: -3vh;
+    margin-bottom: 3vh;
 }
 
 @media screen and (min-width: breakpoint) {
