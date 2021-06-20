@@ -170,5 +170,6 @@
       color: mainColor;
       z-index: 999;
       cursor: url('../../public/assets/hand2000.png') 0 0, auto;
+      display: block;
       }
 }
