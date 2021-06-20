@@ -11,6 +11,6 @@ export default function Button({ text, onClicked, classWord , Xposition, Ypositi
     }
 
     return (
-        <button onMouseOver={e => handleMouseOver(e)} className={classWord} value={text} onClick={onClicked} >{text}</button>
+      <button onMouseOver={e => handleMouseOver(e)} className={classWord} value={text} onClick={onClicked} >{text}</button>
     );
 }
