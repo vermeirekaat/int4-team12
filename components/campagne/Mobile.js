@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import Socials from "./Socials";
+import SocialsStyles from "./Socials.module.css";
 
 export default function Mobile ({url}) {
 
@@ -231,7 +232,7 @@ export default function Mobile ({url}) {
         >
             <div className={styles.footer_cta}>
                 <h2 className={styles.footer_title}>Share with your friends</h2>
-                    <Socials url={url} />
+                    <Socials className={SocialsStyles.footer_socials } url={url} />
             </div>
             <div className={styles.footer_link}>
                 <Link href="/start">

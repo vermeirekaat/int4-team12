@@ -8,7 +8,9 @@ export default function Finish () {
         partTwo: "Ontdek wat je zelf kan doen om terug de controle te krijgen over jouw online gedrag."
     }
 
+    const shareUrl = `${process.env.NEXT_PUBLIC_URL}/start`;
+
     return (
-        <Bubble input={content}/>
+        <Bubble url={shareUrl} input={content}/>
     )
 }

@@ -1,7 +1,7 @@
 import styles from "./Socials.module.css";
 import Image from "next/image";
 
-export default function Socials ({url}) {
+export default function Socials ({url, className}) {
     
     const copyToClipboard = async (value) => {
         try {
@@ -18,7 +18,7 @@ export default function Socials ({url}) {
 
 
     return (
-        <div className={styles.footer_socials} onClick={handleClicked}>
+        <div className={className} onClick={handleClicked}>
             <Image
                 src="/assets/campagne/socials.png"
                 alt="Social Media Logo"
