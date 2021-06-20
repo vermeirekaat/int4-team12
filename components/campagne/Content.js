@@ -3,8 +3,9 @@ import styles from "./Content.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
+import Socials from "./Socials";
 
-export default function Content () {  
+export default function Content ({url}) {  
 
     const { scrollYProgress } = useViewportScroll();
     const opacityHeader = useTransform(scrollYProgress, [0, .15], [1, 0]);
@@ -238,14 +239,7 @@ export default function Content () {
         >
             <div className={styles.footer_cta}>
                 <h2 className={styles.footer_title}>Share with your friends</h2>
-                <div className={styles.footer_socials}>
-                    <Image 
-                        src="/assets/campagne/socials.png"
-                        alt="Social Media Logo"
-                        width={221}
-                        height={51}
-                        />
-                </div>
+                    <Socials url={url} />
             </div>
             <div className={styles.footer_link}>
                 <Link href="/start">

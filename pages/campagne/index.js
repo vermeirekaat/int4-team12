@@ -18,6 +18,9 @@ export default function Campagne () {
         }
     });
 
+    const shareUrl = `${process.env.NEXT_PUBLIC_URL}/start`;
+
+
     const content = {
         title: "Proficiat !", 
         partOne: "Je hebt je niet in de val laten lokken door een filter bubble. Het is duidelijk dat je zeer alert bent op het internet. Zeer goed van je!",
@@ -33,11 +36,11 @@ export default function Campagne () {
     return (
         <>
         <div className={styles.mobile}>
-            <Mobile/>
+            <Mobile url={shareUrl}/>
         </div>
 
         <div className={styles.desktop}>
-            <Content/>
+            <Content url={shareUrl}/>
         </div>
         
         </>

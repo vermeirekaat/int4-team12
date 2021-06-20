@@ -3,8 +3,9 @@ import styles from "./Mobile.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
+import Socials from "./Socials";
 
-export default function Mobile () {
+export default function Mobile ({url}) {
 
     const { scrollYProgress } = useViewportScroll();
     const opacityHeader = useTransform(scrollYProgress, [0, .1], [0, 1]);
@@ -20,7 +21,7 @@ export default function Mobile () {
     const positionThird = useTransform(scrollYProgress, [0, .95], [-500, 0]);
     const opacityFooter = useTransform(scrollYProgress, [0, 1], [0, 1]);
     const scaleFooter = useTransform(scrollYProgress, [0, 1], [.5, 1]);
-
+ 
     return (
         <>
         <Metadata/>
@@ -230,14 +231,7 @@ export default function Mobile () {
         >
             <div className={styles.footer_cta}>
                 <h2 className={styles.footer_title}>Share with your friends</h2>
-                <div className={styles.footer_socials}>
-                    <Image 
-                        src="/assets/campagne/socials.png"
-                        alt="Social Media Logo"
-                        width={221}
-                        height={51}
-                        />
-                </div>
+                    <Socials url={url} />
             </div>
             <div className={styles.footer_link}>
                 <Link href="/start">
