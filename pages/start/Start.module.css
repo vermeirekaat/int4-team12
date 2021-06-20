@@ -229,11 +229,21 @@
         font-family: 'Menlo';
         color: secondaryColor;
         font-size: subtitleFont;
-        padding: 1rem 1.5rem;
         background-color: white; 
         border-radius: 2rem;
-        place-self: center;
+        place-self: center; 
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
+
+    /* .backgroundbutton{
+        background-color: red;
+        padding: 2rem;
+        height: 3rem;
+    } */
+    
     .image_extra {
         display: flex; 
         background-image: url('../../public/assets/triple.png');
