@@ -59,7 +59,7 @@ export default function stemtest() {
     const handleChange = (e) => {
         if (e.currentTarget.value != '') {
             setTextArea(true);
-        } 
+        }
     }
 
     const handleBlur = (e) => {
@@ -67,7 +67,7 @@ export default function stemtest() {
             if (e.currentTarget.value == '') {
                 setValidation(true);
             }
-        } 
+        }
     }
 
     const handleNothing = () => {
@@ -117,7 +117,7 @@ export default function stemtest() {
             "height": 160,
             "button1": "Eens",
             "button2": "Oneens",
-            "buttons": <div className={styles.buttons}><Button classWord={ButtonStyles.button} replace={direction == 'right' ? true : false} Xposition={direction == 'right' ? Xposition : 'auto'} Yposition={direction == 'right' ? Yposition : 'auto'} question={question} text="Eens" onClicked={(e) => handleClick(e, "left")} /> <Button replace={direction == 'left' ? true : false} classWord={ButtonStyles.button} Xposition={direction == 'left' ? Xposition : 'auto'} Yposition={direction == 'left' ? Yposition : 'auto'} question={question} text="Oneens" onClicked={(e) => handleClick(e, "right")} /></div>,
+            "buttons": <div className={styles.buttons}><Button classWord={direction == 'right' ? ButtonStyles.display_none : ButtonStyles.button} replace={direction == 'right' ? true : false} Xposition={direction == 'right' ? Xposition : 'auto'} Yposition={direction == 'right' ? Yposition : 'auto'} question={question} text="Eens" onClicked={(e) => handleClick(e, "left")} /> <Button replace={direction == 'left' ? true : false} classWord={direction == 'left' ? ButtonStyles.display_none : ButtonStyles.button} Xposition={direction == 'left' ? Xposition : 'auto'} Yposition={direction == 'left' ? Yposition : 'auto'} question={question} text="Oneens" onClicked={(e) => handleClick(e, "right")} /></div>,
             "classContainer": styles.content_container_car,
             "text": <p className={styles.text}>De meest <span className={styles.highlight}>vervuilende auto's</span> moeten in verschillende steden en overal <span className={styles.highlight}>verboden</span> worden.</p>,
         },
@@ -203,6 +203,7 @@ export default function stemtest() {
         if (question == 1) {
             setisOpen(true);
         }
+
         setquestionSpecs(tmp);
         setValidation(false);
     }

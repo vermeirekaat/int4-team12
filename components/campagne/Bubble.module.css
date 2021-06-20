@@ -98,10 +98,6 @@
     padding: 2rem;
 }
 
-.share_image {
-    width: 10rem;
-    margin: 0 auto;
-}
 
 @media screen and (min-width: breakpoint) {
     .finish {

@@ -1,10 +1,12 @@
 import Metadata from "../Metadata";
 import styles from "./Bubble.module.css";
+import SocialsStyles from "./Socials.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Socials from "./Socials";
 
-export default function Bubble ({ input }) {
+export default function Bubble ({ input, url }) {
     
     return (
           <section className={styles.container}>
@@ -40,14 +42,7 @@ export default function Bubble ({ input }) {
                 transition={{ ease: "easeOut", duration: 2, delay: 1.25 }} */
               >
                   <p className={styles.share_tagline}>Share with your friends</p>
-                  <div className={styles.share_image}>
-                      <Image 
-                          src="/assets/campagne/socials.png"
-                          alt="Social Media Logo"
-                          width={221}
-                          height={51}
-                      />
-                  </div>
+                    <Socials className={SocialsStyles.share_image} url={url}/>
               </motion.div>
           </article>
       </section>

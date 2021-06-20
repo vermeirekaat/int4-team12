@@ -328,7 +328,6 @@
 .tips_grid {
     display: grid; 
     grid-template-columns: 20vw 40vw 10vw;
-    grid-template-rows: 25vh 20vh 10vh;
     margin: 2.5rem .5rem;
 }
 
@@ -343,6 +342,7 @@
 .tips_image {
     position: relative; 
     width: 40vw; 
+    height: 50vw;
     padding-top: calc(150%/4);
 }
 
@@ -409,6 +409,10 @@
     margin-bottom: .5rem;
 }
 
+.footer_socials {
+    cursor:pointer;
+    max-width: 10rem;
+}
 
 .footer_link {
     padding-bottom: 2rem;

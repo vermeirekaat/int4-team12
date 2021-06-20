@@ -409,6 +409,11 @@
     margin-bottom: .5rem;
 }
 
+.footer_socials {
+    cursor: pointer;
+    max-width: 10rem;
+}
+
 .footer_link {
     padding-bottom: 2rem;
 }
