@@ -2,6 +2,7 @@ import Metadata from "../../components/Metadata";
 import Bubble from "../../components/campagne/Bubble";
 // import Content from "../../components/campagne/Content";
 import Header from "../../components/campagne/Header";
+import Purple from "../../components/campagne/Purple";
 import styles from "./Campagne.module.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -41,6 +42,7 @@ export default function Campagne () {
             <h1 className={styles.hidden}>Filter Bubbles</h1>
 
             <Header/>
+            <Purple/>
         </article>
         /* <>
         <div className={styles.mobile}>

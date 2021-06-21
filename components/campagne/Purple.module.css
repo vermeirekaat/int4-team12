@@ -1,0 +1,96 @@
+@value values: "../../styles/vars.module.css";
+@value mainColor, secondaryColor, bodyFont, lineHeight, subtitleFont, subtitleFontBig, headlineFont, headlineFontBig, breakpoint, breakpointTwo from values;
+
+@font-face {
+    font-family: 'Menlo';
+    src: url('../../public/fonts/menlo-regular.ttf');
+}
+
+@font-face {
+    font-family: 'Akira';
+    src: url('../../public/fonts/akira-expanded.ttf');
+}
+
+.purple {
+    margin: 3rem 0rem;
+    background-color: mainColor;
+    z-index: 4;
+}
+
+.window_purple {
+    border-bottom: .05rem solid white;
+    background-image: url('../../public/assets/campagne/bollen.svg'); 
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    height: 5vh;
+}
+
+.purple_image {
+    display: none;
+}
+
+.content {
+    padding: 3rem 1rem;
+    max-width: 40rem;
+}
+
+.subtitle {
+    font-family: 'Akira';
+    font-size: subtitleFont; 
+    line-height: lineHeight;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    font-family: 'Akira';
+    font-size: bodyFont; 
+    color: secondaryColor;
+    margin-bottom: .5rem;
+}
+
+.paragraaf_white {
+    font-family: "Menlo";
+    font-size: bodyFont; 
+    line-height: lineHeight; 
+    color: white;
+}
+
+@media screen and (min-width: breakpoint) {
+    .purple_flex {
+        height: 80vh;
+        display: grid; 
+        grid-template-columns: 40vw 60vw; 
+    }
+    .content {
+        place-self: center;
+    }
+    .purple_image {
+        display: block;
+        place-self: center;
+        width: 40vw;
+        position: relative;
+        padding-top: calc(450%/4);
+    }
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .purple {
+        margin: 0;
+    }
+    .purple_flex {
+        grid-template-columns: repeat(4, 25vw);
+    }
+    .purple_image {
+        width: 25vw; 
+        padding-top: calc(250%/4);
+        grid-column: 1 / span 2;
+    }
+    .content {
+        align-self: center;
+        justify-self: flex-start;
+        width: 30rem;
+        grid-column: 3 / span 4;
+    }
+}
