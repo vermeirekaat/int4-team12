@@ -50,15 +50,6 @@
     position: absolute;
 }
 
-.arrow {
-    grid-row: 1; 
-    grid-column: 2; 
-    align-self: flex-end;
-    position: relative; 
-    width: 10vw; 
-    padding-top: calc(150%/4);
-}
-
 .introduction {
     margin-left: 2rem;
     margin-top: 1rem;

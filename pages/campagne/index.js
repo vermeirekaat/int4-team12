@@ -1,9 +1,11 @@
+import Metadata from "../../components/Metadata";
 import Bubble from "../../components/campagne/Bubble";
-import Content from "../../components/campagne/Content";
+// import Content from "../../components/campagne/Content";
+import Header from "../../components/campagne/Header";
 import styles from "./Campagne.module.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Mobile from "../../components/campagne/Mobile";
+// import Mobile from "../../components/campagne/Mobile";
 
 export default function Campagne () {
 
@@ -34,7 +36,13 @@ export default function Campagne () {
     }
 
     return (
-        <>
+        <article className={styles.container}>
+        <Metadata/>
+            <h1 className={styles.hidden}>Filter Bubbles</h1>
+
+            <Header/>
+        </article>
+        /* <>
         <div className={styles.mobile}>
             <Mobile url={shareUrl}/>
         </div>
@@ -43,6 +51,6 @@ export default function Campagne () {
             <Content url={shareUrl}/>
         </div>
         
-        </>
+        </> */
     )
 }
