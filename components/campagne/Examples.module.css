@@ -1,0 +1,163 @@
+@value values: "../../styles/vars.module.css";
+@value mainColor, secondaryColor, bodyFont, lineHeight, subtitleFont, subtitleFontBig, headlineFont, headlineFontBig, breakpoint, breakpointTwo from values;
+
+@font-face {
+    font-family: 'Menlo';
+    src: url('../../public/fonts/menlo-regular.ttf');
+}
+
+@font-face {
+    font-family: 'Akira';
+    src: url('../../public/fonts/akira-expanded.ttf');
+}
+
+.examples {
+    background-color: mainColor;
+}
+
+.scroll_wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden; 
+    display: inline-block; 
+    animation: marquee 10s linear infinite;
+}
+
+.marquee p {
+    display: inline-block;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.scroll {
+    font-family: 'Akira';
+    font-size: subtitleFont; 
+    line-height: lineHeight;
+    color: secondaryColor;
+    padding: 1rem .5rem;
+}
+
+.example_header {
+    display: grid; 
+    grid-template-columns: repeat(2, 8rem);
+    padding: 1rem 2rem;
+    align-self: center;
+}
+
+.trump_title {
+    font-family: 'Akira';
+    font-size: subtitleFontBig; 
+    line-height: lineHeight;
+    color: white;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 2;
+    z-index: 1;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.trump_image {
+    grid-row: 1; 
+    grid-column: 1;
+}
+
+.boris_title {
+    font-family: 'Akira';
+    font-size: subtitleFontBig; 
+    line-height: lineHeight;
+    color: white;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+.boris_image {
+    grid-row: 1; 
+    grid-column: 2;
+}
+
+.example_paragraaf {
+    font-family: 'Menlo';
+    font-size: bodyFont;
+    line-height: lineHeight;
+    color: white; 
+    padding: 1rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: breakpoint) {
+    .example_header {
+        grid-template-columns: repeat(2, 13rem);
+        margin: .5rem 10rem;
+    }
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .examples_flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 80vh;
+        margin-top: 3rem;
+    }
+    .example_header {
+        margin: 0;
+    }
+    .trump {
+        width: 40vw;
+        height: 40vh;
+        place-self: center;
+    }
+    /*.trump_content::before {
+        content: "Verkizeingen Trump 2016";
+        font-family: 'Akira';
+        font-size: subtitleFontBig; 
+        line-height: lineHeight;
+        color: secondaryColor;
+        text-align: center;
+    }
+    .trump_content {
+        display: none;
+    }
+    .example_header:hover + .trump_content {
+        display: inline-block;
+    }
+    .example_header:hover {
+        display: none;
+    }
+    .boris {
+        width: 40vw;
+        height: 40vh;
+        place-self: center;
+    }
+    .boris_content {
+        display: none;
+    }
+    .boris_content::before {
+        content: "Brexit Referendum 2016";
+        font-family: 'Akira';
+        font-size: subtitleFontBig; 
+        line-height: lineHeight;
+        color: secondaryColor;
+        text-align: center;
+    }
+    .example_header:hover + .boris_content {
+        display: inline-block;
+    } */
+}
