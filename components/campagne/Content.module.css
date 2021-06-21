@@ -394,19 +394,22 @@
 
 .footer {
     background-color: secondaryColor; 
-    padding: 1rem;
+    padding: 0 3rem;
     width: 100vw;
+    padding-bottom: 6rem;
+    margin-top: 5rem;
 }
 
 .footer_cta {
     padding-bottom: 2rem;
+    align-items: center;
 }
 
 .footer_title {
     font-family: 'Akira';
     font-size: subtitleFontBig; 
     color: white;
-    margin-bottom: .5rem;
+    margin-top: 5rem;
 }
 
 .footer_socials {
@@ -416,13 +419,16 @@
 
 .footer_link {
     padding-bottom: 2rem;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    font-family: 'Menlo';
 }
 
 .link {
     font-family: 'Akira';
     font-size: bodyFont; 
     line-height: 2rem;
-    justify-self: center;
     color: mainColor; 
     background-color: white; 
     padding: .5rem;
@@ -430,13 +436,7 @@
 
 .footer_info {
     display: flex;
-    flex-direction: column; 
-    align-content: space-between;
-}
-
-.footer_image {
-    width: 40vw;
-    padding-bottom: 1rem;
+    justify-content: center;
 }
 
 .footer_names {
@@ -542,12 +542,13 @@
     }
     .footer_link {
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
     .footer_info {
         max-width: 50rem; 
         margin: 0 auto;
-        flex-direction: row;
-        justify-content: space-between;
     }
 }
 
