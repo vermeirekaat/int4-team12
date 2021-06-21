@@ -1,0 +1,91 @@
+@value values: "../../styles/vars.module.css";
+@value mainColor, secondaryColor, bodyFont, lineHeight, subtitleFont, subtitleFontBig, headlineFont, headlineFontBig, breakpoint, breakpointTwo from values;
+
+@font-face {
+    font-family: 'Menlo';
+    src: url('../../public/fonts/menlo-regular.ttf');
+}
+
+@font-face {
+    font-family: 'Akira';
+    src: url('../../public/fonts/akira-expanded.ttf');
+}
+
+.footer {
+    background-color: secondaryColor; 
+    padding: 1rem;
+    width: 100vw;
+}
+
+.footer_cta {
+    padding-bottom: 2rem;
+}
+
+.footer_title {
+    font-family: 'Akira';
+    font-size: subtitleFontBig; 
+    color: white;
+    margin-bottom: .5rem;
+}
+
+.footer_socials {
+    cursor: pointer;
+    max-width: 10rem;
+}
+
+.footer_link {
+    padding-bottom: 2rem;
+}
+
+.link {
+    font-family: 'Akira';
+    font-size: bodyFont; 
+    line-height: 2rem;
+    justify-self: center;
+    color: mainColor; 
+    background-color: white; 
+    padding: .5rem;
+}
+
+.footer_info {
+    display: flex;
+    flex-direction: column; 
+    align-content: space-between;
+}
+
+.footer_image {
+    width: 40vw;
+    padding-bottom: 1rem;
+}
+
+.footer_names {
+    font-family: "Menlo";
+    font-size: .7rem;
+    color: black;
+    line-height: lineHeight;
+}
+
+@media screen and (min-width: breakpoint) {
+    .footer_cta {
+        max-width: 70rem; 
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_link {
+        text-align: center;
+    }
+    .footer_info {
+        max-width: 50rem; 
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .footer_title {
+        font-size: headlineFont;
+    }
+}

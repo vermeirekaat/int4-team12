@@ -6,6 +6,7 @@ import Purple from "../../components/campagne/Purple";
 import Information from "../../components/campagne/Infomation";
 import Examples from "../../components/campagne/Examples";
 import Tips from "../../components/campagne/Tips";
+import Footer from "../../components/campagne/Footer";
 import styles from "./Campagne.module.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -49,6 +50,7 @@ export default function Campagne () {
             <Information/>
             <Examples/>
             <Tips/>
+            <Footer url={shareUrl}/>
         </article>
         /* <>
         <div className={styles.mobile}>
