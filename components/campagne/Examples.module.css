@@ -11,6 +11,10 @@
     src: url('../../public/fonts/akira-expanded.ttf');
 }
 
+.hidden {
+    display: none;
+}
+
 .examples {
     background-color: mainColor;
 }

@@ -11,47 +11,49 @@
     src: url('../../public/fonts/akira-expanded.ttf');
 }
 
+.hidden {
+    display: none;
+}
+
 .header {
     display: grid; 
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(3, calc(100%/3));
-    height: 110vh;
+    height: 60rem;
 }
 
-.headline {
+.header_title {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1 / span 2;
+    margin-top: 5rem;
     font-family: "Akira";
     font-size: headlineFont;
     line-height: 3.5rem;
+}
+
+.warning {
     color: secondaryColor;
-    padding: 2rem;
-    padding-bottom: 0rem;
-    grid-row: 1;
-    grid-column: 1 / span 2;
-    max-width: 60rem;
-    background-color: white;
-}
-
-.headline span {
     background-color: mainColor;
-    padding: .5rem; 
+    padding: .5rem 1rem;
 }
 
-.headline::after {
-    content:"";
-    background-image: url("../../public/assets/campagne/pijl.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4rem;
-    height: 4rem;
-    position: absolute;
+.headline {
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 3.5rem;
+    color: mainColor;
 }
 
 .introduction {
     margin-left: 2rem;
     margin-top: 1rem;
-    grid-row: 2; 
+    grid-row: 2 / span 3; 
     grid-column: 1 / span 2;
+    place-self: center;
     max-width: 25rem;
+    background-color: white;
 }
 
 .window_green {
@@ -61,6 +63,7 @@
     background-position-y: center;
     background-position-x: 1rem;
     height: 3vh;
+    border: .1rem solid secondaryColor;
 }
 
 .paragraaf {
@@ -68,8 +71,7 @@
     font-size: bodyFont;
     color: mainColor;
     line-height: lineHeight;
-    background-color: white;
-    border: .05rem solid secondaryColor;
+    border: .2rem solid secondaryColor;
     padding: 1rem;
 }
 
@@ -90,14 +92,13 @@
 }
 
 @media screen and (min-width: breakpoint) {
-    .headline {
+    .header_title {
         font-size: headlineFontBig;
-        line-height: calc(headlineFontBig * 1.2);
         grid-column: 1 / span 3;
+        padding: 0 3.5rem;
     }
-    .headline::after {
-        width: 8rem;
-        height: 8rem;
+    .headline {
+        line-height: 4rem;
     }
     .introduction {
         grid-row: 2 / span 3;
@@ -128,16 +129,43 @@
         grid-template-columns: repeat(3, calc(100%/3));
         margin: 0 auto;
     }
-    .headline {
-        margin-top: 5rem;
-        place-self: center;
+    .header_title {
+        grid-column: 1 / span 3; 
+        align-self: center;
+        padding: 0 5rem;
     }
     .introduction {
-        grid-row: 2;
-        grid-column: 1 / span 2;
-        max-width: 40rem;
+        grid-row: 2/ span 3;
+        grid-column: 1 / span 3;
+        max-width: 30rem;
         margin: 0;
-        place-self: flex-end;
+        place-self: center;
+    }
+    .rectOne {
+        width: 30rem; 
+        height: 20rem;
+        color: white;
+        border: .2rem solid secondaryColor; 
+        grid-row: 2/ span 3;
+        grid-column: 1 / span 3;
+        place-self: center;
+        position: relative; 
+        left: 1rem;
+        top: 1rem;
+        z-index: -2;
+    }
+    .rectTwo {
+        width: 30rem; 
+        height: 20rem;
+        color: white;
+        border: .2rem solid secondaryColor; 
+        grid-row: 2/ span 3;
+        grid-column: 1 / span 3;
+        place-self: center;
+        position: relative; 
+        left: 2rem;
+        top: 2rem;
+        z-index: -2;
     }
     .image_protest {
         grid-row: 3;
