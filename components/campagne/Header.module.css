@@ -18,7 +18,7 @@
 .header {
     display: grid; 
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(3, calc(100%/3));
+    grid-template-rows: 40% 30% 30%;
     height: 60rem;
 }
 
@@ -31,6 +31,7 @@
     font-family: "Akira";
     font-size: headlineFont;
     line-height: 3.5rem;
+    padding: 0 3.5rem;
 }
 
 .warning {
@@ -47,13 +48,14 @@
 }
 
 .introduction {
-    margin-left: 2rem;
-    margin-top: 1rem;
     grid-row: 2 / span 3; 
     grid-column: 1 / span 2;
     place-self: center;
+    width: 90vw;
     max-width: 25rem;
     background-color: white;
+    position: relative; 
+    top: 5rem;
 }
 
 .window_green {
@@ -70,56 +72,92 @@
     font-family: "Menlo";
     font-size: bodyFont;
     color: mainColor;
+    background-color: white;
     line-height: lineHeight;
     border: .2rem solid secondaryColor;
     padding: 1rem;
 }
 
 .image_protest {
-    display: none;
+    background-image: url("/assets/campagne/protest.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 90vw;
+    max-width: 25rem;
+    height: 20rem;
+    transform: scaleX(-1);
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    z-index: -4;
+    border: .25rem solid secondaryColor;
+    place-self: center;
+    position: relative; 
+    top: 5rem;
 }
 
 .image_phone {
-    grid-row: 3; 
-    grid-column: 2; 
-    place-self: flex-end;
-    margin-left: 2rem;
-    z-index: -1;
-
-    position: relative; 
-    width: 45vw;
-    padding-bottom: calc(400%/4);
+    display: none;
 }
 
 @media screen and (min-width: breakpoint) {
     .header_title {
         font-size: headlineFontBig;
         grid-column: 1 / span 3;
-        padding: 0 3.5rem;
     }
     .headline {
         line-height: 4rem;
     }
     .introduction {
-        grid-row: 2 / span 3;
+        width: 25rem;
+        height: 20rem;
+        top: 0;
+    }
+    .rectOne {
+        width: 25rem; 
+        height: 20rem;
+        background-color: white;
+        border: .2rem solid secondaryColor; 
+        grid-row: 2/ span 3;
+        grid-column: 1 / span 3;
+        place-self: center;
+        position: relative; 
+        left: 2rem;
+        top: 3rem;
+        z-index: -2;
+    }
+    .rectTwo {
+        width: 25rem; 
+        height: 20rem;
+        background-color: white;
+        border: .2rem solid secondaryColor; 
+        grid-row: 2/ span 3;
+        grid-column: 1 / span 3;
+        place-self: center;
+        position: relative; 
+        left: 1rem;
+        top: 2rem;
+        z-index: -2;
     }
     .image_protest {
-        display: flex;
         grid-column: 1;
         grid-row: 3;
-        place-self: flex-end;
-        border-top: 1.5rem solid secondaryColor;
-        z-index: -2;
-
-        position: relative; 
-        width: 25vw;
-        padding-top: calc(250%/4);
+        align-self: flex-end;
+        justify-self: center;
+        top: 0;
     }
     .image_phone {
+        display: block;
+        background-image: url("/assets/campagne/phone.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        grid-column: 2;
         grid-row: 2 / span 3;
-        width: 30vw; 
-        padding-bottom: calc(300%/4);
+        width: 40vw;
+        max-width: 20rem;
+        height: 30vw;
         place-self: center;
+        z-index: -4;
+        transform: scaleX(-1)
     }
 }
 
@@ -141,46 +179,14 @@
         margin: 0;
         place-self: center;
     }
-    .rectOne {
-        width: 30rem; 
-        height: 20rem;
-        color: white;
-        border: .2rem solid secondaryColor; 
-        grid-row: 2/ span 3;
-        grid-column: 1 / span 3;
-        place-self: center;
-        position: relative; 
-        left: 1rem;
-        top: 1rem;
-        z-index: -2;
-    }
-    .rectTwo {
-        width: 30rem; 
-        height: 20rem;
-        color: white;
-        border: .2rem solid secondaryColor; 
-        grid-row: 2/ span 3;
-        grid-column: 1 / span 3;
-        place-self: center;
-        position: relative; 
-        left: 2rem;
-        top: 2rem;
-        z-index: -2;
-    }
     .image_protest {
-        grid-row: 3;
-        grid-column: 2/ span 3;
-        place-self: flex-start;
-        width: 20vw; 
-        padding-top: calc(300%/10);
+        grid-column: 1 / span 2;
     }
     .image_phone {
-        grid-row: 2 / span 3;
-        grid-column: 3;
-        align-self: center;
-        justify-self: flex-start;
-        width: 20vw;
-        padding-bottom: calc(200%/4);
-        margin: 0;
+        grid-column: 2 / span 3;
+        place-self: center;
+        position: relative; 
+        left: 5rem;
+        top: -3rem;
     }
 }

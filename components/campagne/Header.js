@@ -20,21 +20,12 @@ export default function Footer () {
                     </div>
                     <div className={styles.rectOne}></div>
                     <div className={styles.rectTwo}></div>
-                    {/*<div className={styles.image_protest}>
-                        <Image
-                            src="/assets/campagne/protest.png"
-                            alt="Protest"
-                            layout="fill"
-                        />
-                    </div>
+                    
+                    <div className={styles.image_protest}></div>
+                    
                     <div className={styles.image_phone}>
                         <div className={styles.window_green}></div>
-                        <Image
-                            src="/assets/campagne/phone.png"
-                            alt="Phone with emoticons"
-                            layout="fill"
-                        />
-                    </div>*/}
+                    </div>
         </section>
     )
 }
