@@ -1,5 +1,4 @@
 import styles from "./Tips.module.css";
-import Image from "next/image";
 
 export default function Tips () {
 
@@ -14,13 +13,7 @@ export default function Tips () {
 
             <article className={styles.tips_grid}>
                 <div className={styles.tips_header}>
-                    <div className={styles.tips_image}>
-                        <Image
-                            src="/assets/campagne/ad-blocker.png"
-                            alt="Ad Blocker"
-                            layout="fill"
-                        />
-                    </div>
+                    <div className={styles.ad_image}></div>
                     <p className={styles.tips_number}>1</p>
                 </div>
                 <div className={styles.tips_content}>
@@ -33,13 +26,7 @@ export default function Tips () {
             <article className={styles.tips_grid}>
                 <div className={styles.tips_header}>
                     <p className={styles.tips_number}>2</p>
-                        <div className={styles.tips_image}>
-                            <Image
-                                src="/assets/campagne/anonymous.png"
-                                alt="Anonymous"
-                                layout="fill"
-                            />
-                        </div>
+                        <div className={styles.anonymous_image}></div>
                 </div>
                 <div className={styles.tips_contentSecond}>
                     <div className={styles.window_green}></div>
@@ -50,13 +37,7 @@ export default function Tips () {
 
             <article className={styles.tips_grid}>
                 <div className={styles.tips_header}>
-                    <div className={styles.tips_image}>
-                        <Image
-                            src="/assets/campagne/cookies.png"
-                            alt="Cookie Monster"
-                            layout="fill"
-                        />
-                    </div>
+                    <div className={styles.cookie_image}></div>
                     <p className={styles.tips_number}>3</p>
                 </div>
                 <div className={styles.tips_content}>

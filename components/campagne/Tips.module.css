@@ -21,9 +21,9 @@
 }
 
 .tips_subtitles {
-    margin: 2rem 1rem; 
+    margin: 5rem 1rem; 
     font-family: 'Akira';
-    font-size: subtitleFont; 
+    font-size: subtitleFontBig; 
 }
 
 .subtitle_green {
@@ -48,6 +48,30 @@
     display: flex; 
     flex-direction: row; 
     justify-content: space-between;
+}
+
+.ad_image {
+    background-image: url("/assets/campagne/ad-blocker.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20rem;
+    height: 15rem; 
+}
+
+.anonymous_image {
+    background-image: url("/assets/campagne/anonymous.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20rem;
+    height: 15rem; 
+}
+
+.cookie_image {
+    background-image: url("/assets/campagne/cookies.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20rem;
+    height: 15rem; 
 }
 
 .tips_image {
@@ -105,7 +129,7 @@
 @media screen and (min-width: breakpoint) {
     .tips_subtitles {
         font-size: headlineFont;
-        margin: 5rem 1rem;
+        margin: 10rem 1rem;
     }
     .tips_grid {
         grid-template-columns: 10rem 20rem 10rem;
@@ -114,9 +138,14 @@
         margin: 0 auto;
         padding: 3rem 0;
     }
-    .tips_image { 
-        width: 30vw; 
-        padding-top: calc(300%/4);
+    .ad_image {
+        height: 25rem;
+    }
+    .anonymous_image {
+        height: 25rem
+    }
+    .cookie_image {
+        height: 25rem;
     }
     .tips_contentSecond {
         grid-column: 1 / span 2;
@@ -131,6 +160,9 @@
 }
 
 @media screen and (min-width: breakpointTwo) {
+    .tips_subtitles {
+        font-size: headlineFontBig;
+    }
     .tips_image {
         width: 20vw; 
     }

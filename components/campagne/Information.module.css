@@ -132,10 +132,11 @@
     }
     .awareness_bg {
         background-image: none;
-        width: 40rem;
+        width: 70rem;
     }
     .awareness_subtitle {
         top: 0;
+        font-size: headlineFontBig;
     }
     .awareness_content {
         place-self: center;

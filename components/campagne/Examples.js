@@ -1,5 +1,4 @@
 import styles from "./Examples.module.css";
-import Image from "next/image";
 
 export default function Examples () {
 
@@ -37,6 +36,14 @@ export default function Examples () {
                     </div>
                 </article>
             </div>
+
+            <div className={styles.scroll_wrapper}>
+                <div className={styles.marquee}>
+                    <p className={styles.scroll}>Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong)</p>
+                    <p className={styles.scroll}>Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong) - Real Life Bubbles (gone wrong)</p>
+                </div>
+            </div>
+            
         </section>
     )
 }
