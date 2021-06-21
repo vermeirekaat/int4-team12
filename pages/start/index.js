@@ -20,45 +20,48 @@ export default function Stemtest() {
             <article className={styles.container}>
                 <div className={styles.title_container}>
                     <motion.p className={styles.title_stroke}
-                    initial={{ y: "-3rem", opacity: 0}}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ ease:"easeInOut", duration: .5}}
+                        initial={{ y: "-3rem", opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ ease: "easeInOut", duration: .5 }}
                     >Stemtest
                     </motion.p>
                     <motion.p className={styles.title_stroke}
-                    initial={{ y: "-3rem", opacity: 0}}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ ease:"easeInOut", duration: .5}}>Stemtest
+                        initial={{ y: "-3rem", opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ ease: "easeInOut", duration: .5 }}>Stemtest
                     </motion.p>
                     <motion.h1 className={styles.title_fill}
-                    initial={{ y: "-7rem", opacity: 0}}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ ease:"easeInOut", duration: .7 , delay: .2 }}>Stemtest
+                        initial={{ y: "-7rem", opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ ease: "easeInOut", duration: .7, delay: .2 }}>Stemtest
                     </motion.h1>
                 </div>
                 <p className={styles.intro_first}>In welke mate ben jij akkoord met bepaalde standpunten van politieke partijen?</p>
                 <p className={styles.intro_second}>Ben je zeker dat je alle correcte informatie hebt om kritische keuzes te maken?</p>
 
                 <motion.div className={styles.input_desktop}
-                    /* initial={{ y: "-.5rem", opacity: 0, scale: .8}}
-                    animate={{ y: 0, opacity: 1, scale: 1.2 }}
-                    transition={{ ease:"easeIn", duration: .5, delay: 1.5 }} */
+                /* initial={{ y: "-.5rem", opacity: 0, scale: .8}}
+                animate={{ y: 0, opacity: 1, scale: 1.2 }}
+                transition={{ ease:"easeIn", duration: .5, delay: 1.5 }} */
                 >
                     <Link href="/stemtest">
                         <a className={styles.button}> Click to get started</a>
                     </Link>
+                    {/* <a href="/stemtest" className={styles.backgroundbutton}>
+                        <p  className={styles.button}> Click to get started</p>
+                    </a> */}
                 </motion.div>
 
                 <div className={styles.images}>
                     <motion.div className={styles.image_left}
                         initial={{ x: "-20rem", opacity: 0 }}
-                        animate={{ x: 0, opacity: 1}}
+                        animate={{ x: 0, opacity: 1 }}
                         transition={{ ease: "easeIn", duration: .7, delay: .7 }}
                     >
                     </motion.div>
                     <motion.div className={styles.image_right}
                         initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1}}
+                        animate={{ scale: 1, opacity: 1 }}
                         transition={{ ease: "easeIn", duration: .7, delay: 1.5 }}>
                         <Image
                             src="/assets/circles.png"
@@ -78,12 +81,12 @@ export default function Stemtest() {
                     initial={{ x: "-1rem", y: "-1rem" }}
                     animate={{ x: 0, y: 0 }}
                     transition={{ ease: "easeOut", duration: .5, delay: .5 }}
-                    ></motion.div>
+                ></motion.div>
                 <motion.div className={styles.image_triple}
                     initial={{ x: "-2rem", y: "-2rem" }}
                     animate={{ x: 0, y: 0 }}
                     transition={{ ease: "easeOut", duration: .5, delay: .5 }}
-                    ></motion.div>
+                ></motion.div>
             </article>
         </>
     )
