@@ -1,0 +1,149 @@
+@value values: "../../styles/vars.module.css";
+@value mainColor, secondaryColor, bodyFont, lineHeight, subtitleFont, subtitleFontBig, headlineFont, headlineFontBig, breakpoint, breakpointTwo from values;
+
+@font-face {
+    font-family: 'Menlo';
+    src: url('../../public/fonts/menlo-regular.ttf');
+}
+
+@font-face {
+    font-family: 'Akira';
+    src: url('../../public/fonts/akira-expanded.ttf');
+}
+
+.information {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+
+.intermezzo_content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 3rem;
+}
+
+.search {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; 
+    border: .05rem solid mainColor;
+    border-radius: 5rem;
+    width: 70vw;
+}
+
+.search_title {
+    font-family: 'Akira';
+    font-size: subtitleFont;
+    color: secondaryColor;
+}
+
+.definition {
+    font-family: 'Menlo';
+    font-size: bodyFont;
+    line-height: lineHeight;
+    color: secondaryColor; 
+    text-align: center;
+    width: 80vw;
+    margin: 1rem 0;
+}
+
+.awareness_subtitle {
+    font-family: 'Akira';
+    font-size: subtitleFont; 
+    line-height: lineHeight;
+    color: mainColor;
+    text-align: center;
+    max-width: 20rem;
+    height: 10vh;
+    margin: 0 auto;
+
+    background-image: url("../../public/assets/campagne/bubble.svg");
+    background-size: cover;
+}
+
+.awareness_image {
+    display: flex; 
+    justify-content: center;
+}
+
+.awareness_content {
+    font-family: 'Menlo';
+    font-size: bodyFont;
+    line-height: lineHeight;
+    color: mainColor; 
+    padding: 1rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.awareness_image {
+    display: none;
+}
+
+@media screen and (min-width: breakpoint) {
+    .search {
+        width: 20rem;
+    }
+    .definition {
+        width: 30rem;
+    }
+    .awareness_subtitle {
+        font-size: headlineFont; 
+        line-height: 3.5rem; 
+        height: 15vh;
+        max-width: 30rem;
+    }
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .intermezzo {
+        display: grid; 
+        grid-template-columns: 25vw 50vw 25vw;
+    }
+    .intermezzo_content {
+        grid-column: 2;
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        position: relative; 
+        margin-top: 5rem;
+    }
+    .circles {
+        grid-column: 3;
+        background-image: url("../../public/assets/campagne/circles-green.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30rem; 
+        height: 30rem;
+        position: relative; 
+        place-self: flex-end;
+        top: -10rem;
+        z-index: -1;
+    }
+    .awareness_subtitle {
+        background-image: none;
+    }
+    .awareness_content {
+        place-self: center;
+        width: 30rem;
+        margin: 0;
+    }
+    .awareness_image {
+        display: flex;
+        align-self: center;
+        justify-self: flex-start;
+        position: relative;
+        width: 25vw; 
+        padding-top: calc(150%/4);
+    }
+    .awareness_flex {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-evenly;
+        width: 80vw;
+        margin: 0 10rem;
+    }
+}

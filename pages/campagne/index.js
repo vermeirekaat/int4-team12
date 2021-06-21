@@ -3,6 +3,7 @@ import Bubble from "../../components/campagne/Bubble";
 // import Content from "../../components/campagne/Content";
 import Header from "../../components/campagne/Header";
 import Purple from "../../components/campagne/Purple";
+import Information from "../../components/campagne/Infomation";
 import styles from "./Campagne.module.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -43,6 +44,7 @@ export default function Campagne () {
 
             <Header/>
             <Purple/>
+            <Information/>
         </article>
         /* <>
         <div className={styles.mobile}>
