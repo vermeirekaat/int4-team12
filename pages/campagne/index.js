@@ -123,7 +123,7 @@ export default function Campagne () {
             <Examples trumpAni={checkScreenWidth(animations.animateTrump)} borisAni={checkScreenWidth(animations.animateBoris)}/>
             <Tips scaleAni={checkScreenWidth(animations.scaleTips)} firstAni={checkScreenWidth(animations.positionFirst)} secondAni={checkScreenWidth(animations.positionSecond)}
             thirdAni={checkScreenWidth(animations.positionThird)}/>
-            <Footer url={shareUrl}/>
+            <Footer scaleAni={checkScreenWidth(animations.scaleFooter)}  opacityAni={checkScreenWidth(animations.opacityFooter)} url={shareUrl}/>
         </article>
     )
 }
