@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 export default function Socials({ url, className }) {
 
     const [isTooltipVisible, setTooltipVisibility] = useState(false);
-    const [ToolTip, setToolTip] = useState("kopiëer naar klipbord");
+    const [ToolTip, setToolTip] = useState("kopiëer naar plakbord");
 
     useEffect(() => {
         setTooltipVisibility(true);
@@ -14,7 +14,7 @@ export default function Socials({ url, className }) {
     const copyToClipboard = async (value) => {
         try {
             await navigator.clipboard.writeText(value);
-            setToolTip("gekopiëerd naar klipbord")   
+            setToolTip("gekopieerd naar plakbord")   
         } catch (err) {
             setToolTip("Niet gelukt")
            
@@ -27,7 +27,7 @@ export default function Socials({ url, className }) {
 
 
     return (
-        <div data-for='getContent' data-tip className={className} onClick={e => handleClicked(e)}>
+        <div data-for='getContent' onMouseLeave={() => setToolTip("kopiëer naar plakbord")} data-tip className={className} onClick={e => handleClicked(e)}>
             <Image
                 src="/assets/campagne/socials.png"
                 alt="Social Media Logo"
