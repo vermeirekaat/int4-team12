@@ -24,7 +24,9 @@ export default function Information () {
                     </div>
 
                     <div className={styles.awareness}>
-                        <h2 className={styles.awareness_subtitle}>Be aware of your bubble</h2>
+                        <div className={styles.awareness_bg}>
+                            <h2 className={styles.awareness_subtitle}>Be aware of your bubble</h2>
+                        </div>
 
                         <div className={styles.awareness_flex}>
                             <div className={styles.awareness_image}>

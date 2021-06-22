@@ -1,30 +1,40 @@
-import styles from "./Socials.module.css";
 import Image from "next/image";
+import ReactTooltip from 'react-tooltip';
+import { useState, useEffect } from "react";
 
-export default function Socials ({url, className}) {
-    
+export default function Socials({ url, className }) {
+
+    const [isTooltipVisible, setTooltipVisibility] = useState(false);
+    const [ToolTip, setToolTip] = useState("kopiëer naar plakbord");
+
+    useEffect(() => {
+        setTooltipVisibility(true);
+    }, []);
+
     const copyToClipboard = async (value) => {
         try {
             await navigator.clipboard.writeText(value);
-            alert('Text copied to clipboard');
+            setToolTip("gekopieerd naar plakbord")   
         } catch (err) {
-            alert('Copying failed: ', err);
+            setToolTip("Niet gelukt")
+           
         }
     }
 
-    const handleClicked = () => {
+    const handleClicked = (e) => {
         copyToClipboard(url);
     }
 
 
     return (
-        <div className={className} onClick={handleClicked}>
+        <div data-for='getContent' onMouseLeave={() => setToolTip("kopiëer naar plakbord")} data-tip className={className} onClick={e => handleClicked(e)}>
             <Image
                 src="/assets/campagne/socials.png"
                 alt="Social Media Logo"
                 width={221}
                 height={51}
             />
+            {isTooltipVisible && <ReactTooltip  id='getContent' getContent={() => ToolTip}/>}
         </div>
     )
 }

@@ -12,7 +12,7 @@
 }
 
 .information {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
 }
 
@@ -31,7 +31,8 @@
     padding: 1rem; 
     border: .05rem solid mainColor;
     border-radius: 5rem;
-    width: 70vw;
+    width: 90vw;
+    max-width: 20rem;
 }
 
 .search_title {
@@ -46,8 +47,21 @@
     line-height: lineHeight;
     color: secondaryColor; 
     text-align: center;
+    max-width: 30rem;
     width: 80vw;
     margin: 1rem 0;
+}
+
+.awareness {
+    margin-bottom: 5rem;
+}
+
+.awareness_bg {
+    position: relative;
+    height: 15vh;
+    background-image: url("../../public/assets/campagne/bubble.svg");
+    background-size: cover;
+    margin: 0 auto;
 }
 
 .awareness_subtitle {
@@ -56,12 +70,8 @@
     line-height: lineHeight;
     color: mainColor;
     text-align: center;
-    max-width: 20rem;
-    height: 10vh;
-    margin: 0 auto;
-
-    background-image: url("../../public/assets/campagne/bubble.svg");
-    background-size: cover;
+    position: relative; 
+    top: 7.5vh;
 }
 
 .awareness_image {
@@ -84,17 +94,14 @@
 }
 
 @media screen and (min-width: breakpoint) {
-    .search {
-        width: 20rem;
-    }
-    .definition {
-        width: 30rem;
+    .awareness_bg {
+        width: 25rem;
+        height: 10rem;
     }
     .awareness_subtitle {
         font-size: headlineFont; 
         line-height: 3.5rem; 
-        height: 15vh;
-        max-width: 30rem;
+        top: 2.5rem;
     }
 }
 
@@ -123,8 +130,13 @@
         top: -10rem;
         z-index: -1;
     }
-    .awareness_subtitle {
+    .awareness_bg {
         background-image: none;
+        width: 70rem;
+    }
+    .awareness_subtitle {
+        top: 0;
+        font-size: headlineFontBig;
     }
     .awareness_content {
         place-self: center;
