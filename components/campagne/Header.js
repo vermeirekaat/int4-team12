@@ -1,9 +1,12 @@
 import styles from "./Header.module.css";
+import { motion } from "framer-motion";
 
-export default function Footer () {
+export default function Header ({ opacityAni, positionAni }) {
 
     return (
-        <section className={styles.header}>
+        <motion.section className={styles.header}
+            style={{ y: positionAni, opacity: opacityAni}}
+        >
              <h2 className={styles.hidden}>Campagne - Filter Bubbles</h2>
                 <div className={styles.header_title}>
                     <p className={styles.warning}>Warning</p>
@@ -25,6 +28,6 @@ export default function Footer () {
                     <div className={styles.image_phone}>
                         <div className={styles.window_green}></div>
                     </div>
-        </section>
+        </motion.section>
     )
 }
