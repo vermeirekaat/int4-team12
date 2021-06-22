@@ -39,7 +39,7 @@
     display: grid; 
     grid-template-columns: 20vw 40vw 10vw;
     grid-template-rows: 25vh 20vh 10vh;
-    margin: 2.5rem .5rem;
+    margin: 5rem 2rem;
 }
 
 .tips_header {
@@ -54,7 +54,7 @@
     background-image: url("/assets/campagne/ad-blocker.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 20rem;
+    width: 10rem;
     height: 15rem; 
 }
 
@@ -62,7 +62,7 @@
     background-image: url("/assets/campagne/anonymous.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 20rem;
+    width: 10rem;
     height: 15rem; 
 }
 
@@ -70,7 +70,7 @@
     background-image: url("/assets/campagne/cookies.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 20rem;
+    width: 10rem;
     height: 15rem; 
 }
 
@@ -139,12 +139,15 @@
         padding: 3rem 0;
     }
     .ad_image {
+        width: 20rem;
         height: 25rem;
     }
     .anonymous_image {
+        width: 20rem;
         height: 25rem
     }
     .cookie_image {
+        width: 20rem;
         height: 25rem;
     }
     .tips_contentSecond {
