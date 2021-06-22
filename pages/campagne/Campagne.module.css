@@ -8,6 +8,10 @@
 
 .desktop {
     display: none;
+} 
+
+.hidden {
+    display: none;
 }
 
 @media screen and (min-width: breakpoint) {

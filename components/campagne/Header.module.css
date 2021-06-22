@@ -1,0 +1,158 @@
+@value values: "../../styles/vars.module.css";
+@value mainColor, secondaryColor, bodyFont, lineHeight, subtitleFont, subtitleFontBig, headlineFont, headlineFontBig, breakpoint, breakpointTwo from values;
+
+@font-face {
+    font-family: 'Menlo';
+    src: url('../../public/fonts/menlo-regular.ttf');
+}
+
+@font-face {
+    font-family: 'Akira';
+    src: url('../../public/fonts/akira-expanded.ttf');
+}
+
+.header {
+    display: grid; 
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, calc(100%/3));
+    height: 110vh;
+}
+
+.headline {
+    font-family: "Akira";
+    font-size: headlineFont;
+    line-height: 3.5rem;
+    color: secondaryColor;
+    padding: 2rem;
+    padding-bottom: 0rem;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    max-width: 60rem;
+    background-color: white;
+}
+
+.headline span {
+    background-color: mainColor;
+    padding: .5rem; 
+}
+
+.headline::after {
+    content:"";
+    background-image: url("../../public/assets/campagne/pijl.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+}
+
+.introduction {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    grid-row: 2; 
+    grid-column: 1 / span 2;
+    max-width: 25rem;
+}
+
+.window_green {
+    background-color: secondaryColor;
+    background-image: url('../../public/assets/campagne/bollen.svg'); 
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    height: 3vh;
+}
+
+.paragraaf {
+    font-family: "Menlo";
+    font-size: bodyFont;
+    color: mainColor;
+    line-height: lineHeight;
+    background-color: white;
+    border: .05rem solid secondaryColor;
+    padding: 1rem;
+}
+
+.image_protest {
+    display: none;
+}
+
+.image_phone {
+    grid-row: 3; 
+    grid-column: 2; 
+    place-self: flex-end;
+    margin-left: 2rem;
+    z-index: -1;
+
+    position: relative; 
+    width: 45vw;
+    padding-bottom: calc(400%/4);
+}
+
+@media screen and (min-width: breakpoint) {
+    .headline {
+        font-size: headlineFontBig;
+        line-height: calc(headlineFontBig * 1.2);
+        grid-column: 1 / span 3;
+    }
+    .headline::after {
+        width: 8rem;
+        height: 8rem;
+    }
+    .introduction {
+        grid-row: 2 / span 3;
+    }
+    .image_protest {
+        display: flex;
+        grid-column: 1;
+        grid-row: 3;
+        place-self: flex-end;
+        border-top: 1.5rem solid secondaryColor;
+        z-index: -2;
+
+        position: relative; 
+        width: 25vw;
+        padding-top: calc(250%/4);
+    }
+    .image_phone {
+        grid-row: 2 / span 3;
+        width: 30vw; 
+        padding-bottom: calc(300%/4);
+        place-self: center;
+    }
+}
+
+@media screen and (min-width: breakpointTwo) {
+    .header {
+        width: 100vw;
+        grid-template-columns: repeat(3, calc(100%/3));
+        margin: 0 auto;
+    }
+    .headline {
+        margin-top: 5rem;
+        place-self: center;
+    }
+    .introduction {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+        max-width: 40rem;
+        margin: 0;
+        place-self: flex-end;
+    }
+    .image_protest {
+        grid-row: 3;
+        grid-column: 2/ span 3;
+        place-self: flex-start;
+        width: 20vw; 
+        padding-top: calc(300%/10);
+    }
+    .image_phone {
+        grid-row: 2 / span 3;
+        grid-column: 3;
+        align-self: center;
+        justify-self: flex-start;
+        width: 20vw;
+        padding-bottom: calc(200%/4);
+        margin: 0;
+    }
+}
