@@ -16,6 +16,7 @@
     "react-native-animated-progress": "^1.0.1",
     "react-player": "^2.9.0",
     "react-router-dom": "^5.2.0",
+    "react-tooltip": "^4.2.21",
     "uuid": "^8.3.2"
   }
 }
