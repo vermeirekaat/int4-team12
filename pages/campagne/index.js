@@ -45,9 +45,9 @@ export default function Campagne () {
             desktop: useTransform(scrollYProgress, [0, .15], [0, -200]),
             mobile: useTransform(scrollYProgress, [0, .1], [0, 50])
         },
-        animatePurple: {
-            desktop: useTransform(scrollYProgress, [0, .2], [.5, 1]),
-            mobile: useTransform(scrollYProgress, [0, .15], [-50, 0])
+        scalePurple: {
+            desktop: useTransform(scrollYProgress, [0, .15], [.5, 1]),
+            mobile: useTransform(scrollYProgress, [0, .15], [.5, 1])
         },
         opacityInformation: {
             desktop: useTransform(scrollYProgress, [0, .4], [0, 1]),
@@ -118,7 +118,7 @@ export default function Campagne () {
             <h1 className={styles.hidden}>Filter Bubbles</h1>
 
             <Header opacityAni={checkScreenWidth(animations.opacityHeader)} positionAni={checkScreenWidth(animations.positionHeader)}/>
-            <Purple/>
+            <Purple scaleAni={checkScreenWidth(animations.scalePurple)}/>
             <Information/>
             <Examples/>
             <Tips/>

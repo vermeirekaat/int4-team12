@@ -1,10 +1,13 @@
 import styles from "./Purple.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-export default function Purple () {
+export default function Purple ({ scaleAni }) {
     return (
 
-        <section className={styles.purple}>
+        <motion.section className={styles.purple}
+            style={{ scale: scaleAni }}
+        >
             <div className={styles.window_purple}></div>
                     <div className={styles.purple_flex}>
                         <div className={styles.purple_image}>
@@ -22,6 +25,6 @@ export default function Purple () {
                             <p className={styles.highlight}>"You are what you click"</p>
                         </div>
                     </div>
-        </section>
+        </motion.section>
     )
 }
