@@ -66,12 +66,12 @@ export default function Campagne () {
             mobile: useTransform(scrollYProgress, [0, .55], [500, 0])
         },
         scaleTips: {
-            desktop: useTransform(scrollYProgress, [0, .75], [.5, 1]),
-            mobile: useTransform(scrollYProgress, [0, .75], [.5, 1])
+            desktop: useTransform(scrollYProgress, [0, .8], [.25, 1]),
+            mobile: useTransform(scrollYProgress, [0, .75], [.25, 1])
         },
         positionFirst: {
             desktop: useTransform(scrollYProgress, [0, .9], [-1000, 0]),
-            mobile: useTransform(scrollYProgress, [0, .8], [-500, 0])
+            mobile: useTransform(scrollYProgress, [0, .75], [-500, 0])
         },
         positionSecond: {
             desktop: useTransform(scrollYProgress, [0, .95], [1000, 0]), 
@@ -121,18 +121,9 @@ export default function Campagne () {
             <Purple scaleAni={checkScreenWidth(animations.scalePurple)}/>
             <Information opacityAni={checkScreenWidth(animations.opacityInformation)} positionAni={checkScreenWidth(animations.positionInformation)}/>
             <Examples trumpAni={checkScreenWidth(animations.animateTrump)} borisAni={checkScreenWidth(animations.animateBoris)}/>
-            <Tips/>
+            <Tips scaleAni={checkScreenWidth(animations.scaleTips)} firstAni={checkScreenWidth(animations.positionFirst)} secondAni={checkScreenWidth(animations.positionSecond)}
+            thirdAni={checkScreenWidth(animations.positionThird)}/>
             <Footer url={shareUrl}/>
         </article>
-        /* <>
-        <div className={styles.mobile}>
-            <Mobile url={shareUrl}/>
-        </div>
-
-        <div className={styles.desktop}>
-            <Content url={shareUrl}/>
-        </div>
-        
-        </> */
     )
 }
