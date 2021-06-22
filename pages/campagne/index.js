@@ -55,15 +55,15 @@ export default function Campagne () {
         },
         positionInformation: {
             desktop: useTransform(scrollYProgress, [0, .45], [-300, 0]),
-            mobile: useTransform(scrollYProgress, [0, .35], [-200, 0])
+            mobile: useTransform(scrollYProgress, [0, .35], [-150, 0])
         },
         animateTrump: {
-            desktop: useTransform(scrollYProgress, [0, .52], [5000, 0]),
-            mobile: useTransform(scrollYProgress, [0, .55], [0, 1])
+            desktop: useTransform(scrollYProgress, [0, .5], [-1000, 0]),
+            mobile: useTransform(scrollYProgress, [0, .45], [500, 0])
         }, 
         animateBoris: {
-            desktop: "",
-            mobile: useTransform(scrollYProgress, [0, .7], [0, 1])
+            desktop: useTransform(scrollYProgress, [0, .5], [1000, 0]),
+            mobile: useTransform(scrollYProgress, [0, .55], [500, 0])
         },
         scaleTips: {
             desktop: useTransform(scrollYProgress, [0, .75], [.5, 1]),
@@ -120,7 +120,7 @@ export default function Campagne () {
             <Header opacityAni={checkScreenWidth(animations.opacityHeader)} positionAni={checkScreenWidth(animations.positionHeader)}/>
             <Purple scaleAni={checkScreenWidth(animations.scalePurple)}/>
             <Information opacityAni={checkScreenWidth(animations.opacityInformation)} positionAni={checkScreenWidth(animations.positionInformation)}/>
-            <Examples/>
+            <Examples trumpAni={checkScreenWidth(animations.animateTrump)} borisAni={checkScreenWidth(animations.animateBoris)}/>
             <Tips/>
             <Footer url={shareUrl}/>
         </article>
