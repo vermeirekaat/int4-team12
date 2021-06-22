@@ -50,12 +50,12 @@ export default function Campagne () {
             mobile: useTransform(scrollYProgress, [0, .15], [.5, 1])
         },
         opacityInformation: {
-            desktop: useTransform(scrollYProgress, [0, .4], [0, 1]),
-            mobile: useTransform(scrollYProgress, [0, .4], [0, 1])
+            desktop: useTransform(scrollYProgress, [0, .45], [0, 1]),
+            mobile: useTransform(scrollYProgress, [0, .35], [0, 1])
         },
         positionInformation: {
             desktop: useTransform(scrollYProgress, [0, .45], [-300, 0]),
-            mobile: useTransform(scrollYProgress, [0, .45], [200, 0])
+            mobile: useTransform(scrollYProgress, [0, .35], [-200, 0])
         },
         animateTrump: {
             desktop: useTransform(scrollYProgress, [0, .52], [5000, 0]),
@@ -119,7 +119,7 @@ export default function Campagne () {
 
             <Header opacityAni={checkScreenWidth(animations.opacityHeader)} positionAni={checkScreenWidth(animations.positionHeader)}/>
             <Purple scaleAni={checkScreenWidth(animations.scalePurple)}/>
-            <Information/>
+            <Information opacityAni={checkScreenWidth(animations.opacityInformation)} positionAni={checkScreenWidth(animations.positionInformation)}/>
             <Examples/>
             <Tips/>
             <Footer url={shareUrl}/>

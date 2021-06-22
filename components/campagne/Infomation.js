@@ -1,7 +1,8 @@
 import styles from "./Information.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-export default function Information () {
+export default function Information ({ opacityAni, positionAni }) {
 
     return (
         <section className={styles.information}>
@@ -23,7 +24,9 @@ export default function Information () {
                         <div className={styles.circles}></div>
                     </div>
 
-                    <div className={styles.awareness}>
+                    <motion.div className={styles.awareness}
+                        style={{ y: positionAni, opacity: opacityAni }}
+                    >
                         <div className={styles.awareness_bg}>
                             <h2 className={styles.awareness_subtitle}>Be aware of your bubble</h2>
                         </div>
@@ -38,7 +41,7 @@ export default function Information () {
                             </div>
                             <p className={styles.awareness_content}>De filter bubble is te vergelijken met een spiegelpaleis. Je bent omringd door berichten en mensen die hetzelfde denken als jij. Maar dit zorgt ook voor "blind spots" aangezien je niet geconfronteerd wordt met tegenstrijdige ideeën. <br /> <br /> Je begeeft je in je eigen online wereld waar je geen controle hebt op de informatie die je krijgt. Dit zorgt ervoor dat je verschillende perspectieven mist en zelf niet kritisch omgaat met het raadplegen van nieuwsbronnen. <br /> Niemand is evenveel geïnformeerd waardoor er afwijkende ideeën ontstaan op vlak van politiek. De politieke wereld zal nog meer polariseren, een bedreiging voor de democratie.</p>
                         </div>
-                    </div>
+                    </motion.div>
                 </section>
     )
 }
