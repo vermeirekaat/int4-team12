@@ -39,7 +39,7 @@ export default function Campagne () {
     const animations = {
         opacityHeader: {
             desktop: useTransform(scrollYProgress, [0, .15], [1, 0]), 
-            mobile: useTransform(scrollYProgress, [0, .2], [1, 0])
+            mobile: useTransform(scrollYProgress, [0, .2], [1, 1])
         },
         positionHeader: {
             desktop: useTransform(scrollYProgress, [0, .15], [0, -200]),
