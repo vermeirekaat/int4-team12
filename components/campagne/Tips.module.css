@@ -11,6 +11,10 @@
     src: url('../../public/fonts/akira-expanded.ttf');
 }
 
+.tips {
+    overflow: hidden;
+}
+
 .window_green {
     background-color: secondaryColor;
     background-image: url('../../public/assets/campagne/bollen.svg'); 

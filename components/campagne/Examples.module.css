@@ -15,6 +15,10 @@
     display: none;
 }
 
+.examples {
+    overflow: hidden;
+}
+
 .scroll_wrapper {
     max-width: 100%;
     overflow: hidden;

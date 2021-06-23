@@ -3,11 +3,14 @@ import Socials from "./Socials";
 import SocialsStyles from "./Socials.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-export default function Footer ({ url }) {
+export default function Footer ({ scaleAni, opacityAni, url }) {
 
     return (
-        <footer className={styles.footer}>
+        <motion.footer className={styles.footer}
+            style={{ scale: scaleAni, opacity: opacityAni }}
+        >
            <div className={styles.footer_cta}>
                     <h2 className={styles.footer_title}>Share with your friends</h2>
                     <Socials className={SocialsStyles.footer_socials} url={url} />
@@ -32,6 +35,6 @@ export default function Footer ({ url }) {
                     </div>
                 </div> 
 
-        </footer>
+        </motion.footer>
     )
 }

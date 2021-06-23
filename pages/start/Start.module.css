@@ -232,10 +232,8 @@
         background-color: white; 
         border-radius: 2rem;
         place-self: center; 
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding: 1rem 2rem;
+        z-index: 2;
     }
     
     .image_extra {
