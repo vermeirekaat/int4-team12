@@ -4,6 +4,7 @@ export default function TextArea ({array, text, onchanged, onBlured}) {
     let counter = 0;
     let textMaker = '';
 
+    //change input to programmed input
     const handleInput = (e) => {
         if (counter < array.length) {
             textMaker = textMaker + array[counter];

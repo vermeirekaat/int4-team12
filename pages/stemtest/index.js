@@ -17,9 +17,14 @@ import Banner from '../../components/stemtest/Banner'
 
 
 export default function stemtest() {
+
+    //router for navigation
     const router = useRouter();
+
+    //start timer existing for the lifetime of the component 
     let timer = useRef(null); ``
 
+    //many different interactions and action for each question -> useStates
     const [questionSpecs, setquestionSpecs] = useState({ question: 0, direction: '' });
     const { question, direction } = questionSpecs;
     const [isOpen, setisOpen] = useState(false);
@@ -34,19 +39,23 @@ export default function stemtest() {
     const [textArea, setTextArea] = useState(false);
     const [validation, setValidation] = useState(false);
 
+    //array for disabled textArea
     const arrayRight = ['H', 'e', 't', ' ', 'i', 's', ' ', 'a', 'l', 'l', 'e', 'm', 'a', 'a', 'l', ' ', 'd', 'e', ' ', 's', 'c', 'h', 'u', 'l', 'd', ' ', 'v', 'a', 'n', ' ', 'd', 'e', ' ', 's', 'o', 's', 's', 'e', 'n', '!'];
     const arrayLeft = ['D', 'e', ' ', 'r', 'a', 'c', 'i', 's', 't', 'e', 'n', ' ', 'h', 'e', 'b', 'b', 'e', 'n', ' ', 'd', 'e', ' ', 'm', 'a', 'c', 'h', 't', ' ', 'i', 'n', ' ', 'o', 'n', 's', ' ', 'l', 'a', 'n', 'd', '.'];
 
+    //text for disabled textArea
     const textRight = "Het is allemaal de schuld van de sossen!";
     const textLeft = "De racisten hebben de macht in ons land.";
 
-
+    //text for popuptext
     const popupTextRight = 'U bent aangesloten aan de groep "Alle Vlamingen eerst"';
     const popupTextLeft = 'U bent aangesloten aan de groep "Alle bezittingen afschaffen"';
 
+    //text for popuptext last question
     const ComputerpopupTextLeft = 'U gaat niet akkoord met de stelling, volgens de computer.';
     const ComputerpopupTextRight = 'U gaat akkoord met de stelling, volgens de computer.';
 
+    //check if button is clicked and show the right trump image
     const handleClickTrump = () => {
         if (direction == "left") {
             setTrump(styles.trumpLeft);
@@ -56,12 +65,14 @@ export default function stemtest() {
 
     }
 
+    //check if user actually typed something -> yes, move on to next question
     const handleChange = (e) => {
         if (e.currentTarget.value != '') {
             setTextArea(true);
         }
     }
 
+    //Check if user actually typed something, when leaving the textArea (question 2) -> no, userfeedback
     const handleBlur = (e) => {
         if (question == 2) {
             if (e.currentTarget.value == '') {
@@ -70,10 +81,7 @@ export default function stemtest() {
         }
     }
 
-    const handleNothing = () => {
-        console.log("nothing")
-    }
-
+    //array of objects (= questions)
     const questions = [
         {
             "questionNumber": 1,
@@ -104,7 +112,7 @@ export default function stemtest() {
             "width": 366,
             "height": 267,
             "image_src": "/assets/maskers.gif",
-            "buttons": <div className={styles.buttons_text_three} ><TextArea onBlured={e => handleBlur(e)} onchanged={e => handleChange(e)} array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /><Button classWord={ButtonStyles.button_three} question={question} text="Dit is mijn mening" onClicked={textArea ? (e) => handleClick(e, direction) : handleNothing} /> </div>,
+            "buttons": <div className={styles.buttons_text_three} ><TextArea onBlured={e => handleBlur(e)} onchanged={e => handleChange(e)} array={direction === 'left' ? arrayLeft : arrayRight} text={direction === 'left' ? textLeft : textRight} /><Button classWord={ButtonStyles.button_three} question={question} text="Dit is mijn mening" onClicked={textArea ? (e) => handleClick(e, direction) : console.log("empty textarea")} /></div>,
             "classContainer": styles.content_containerTrump,
             "text": <p className={styles.text}>Noteer hoe je staat tegenover de <span className={styles.highlight}>Vlaamse politiek</span> de dag van vandaag.</p>
         },
@@ -135,7 +143,9 @@ export default function stemtest() {
 
     ]
 
+    //useEffect for setInterval 
     useEffect(() => {
+        //if question is 3, setInterval for random progressbar 
         if (question == 3) {
             const timer = setInterval(() => {
                 setProgress(Math.floor(Math.random() * 4) + 2)
@@ -143,6 +153,7 @@ export default function stemtest() {
             return () => clearInterval(timer);
         }
 
+        //if question is 4, setInterval for exponential glitch
         if (question == 4) {
             const timerTwo = setInterval(() => {
                 setglitch(styles.glitch);
@@ -161,7 +172,9 @@ export default function stemtest() {
         }
     });
 
+    //useEffect for setTimeout, execute if question changes
     useEffect(() => {
+        //if question is 2, make glitch
         if (question == 2) {
             timer.current = setTimeout(() => {
                 setisOpen(false)
@@ -176,6 +189,7 @@ export default function stemtest() {
             }, 5500);
         }
 
+        //if question is 4, show popup after 10sec navigate to finish
         if (question == 4) {
             timer.current = setTimeout(() => {
                 setisOpenTwo(true)
@@ -193,13 +207,14 @@ export default function stemtest() {
     }, [question]);
 
 
-
+    //change question & direction -> we know which question we have to render next
     const handleClick = (e, value) => {
         const tmp = { ...questionSpecs };
         tmp.direction = value
         if (question < 5) {
             tmp[question] = tmp.question++
         }
+        //show popup
         if (question == 1) {
             setisOpen(true);
         }
@@ -208,15 +223,17 @@ export default function stemtest() {
         setValidation(false);
     }
 
+    //show close popup
     const handleClickCross = () => {
         setClose(true);
     }
 
-
+    //close close popup
     const handleClickCrossClose = () => {
         setClose(false);
     }
 
+    //get mouseposition -> last question duplicating mouse
     const handleMouseMove = (e) => {
         setXposition(e.pageX);
         setYposition(e.pageY);
@@ -228,7 +245,7 @@ export default function stemtest() {
             {close && <ClosePopup onClicked={handleClickCrossClose} />}
             <Metadata />
             {question == 0 && <Banner />}
-            <section onMouseMove={question == 3 ? handleMouseMove : handleNothing} className={styles.container}>
+            <section onMouseMove={question == 3 ? handleMouseMove : console.log("not question 3")} className={styles.container}>
                 <div className={styles.background}></div>
                 <div className={glitch}><Image src="/assets/glitch.gif" alt="glitch" layout='fill' /> </div>
                 <Versiering />

@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 export default function ComputerPopup({ onClicked, text}) {
     const [mouses, setMouses] = useState([]);
 
+    //make new images (mouses), position = current mouse position
     const mouse = (e) => {
 
         const x = e.clientX - 420;
