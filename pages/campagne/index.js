@@ -1,6 +1,5 @@
 import Metadata from "../../components/Metadata";
 import Bubble from "../../components/campagne/Bubble";
-// import Content from "../../components/campagne/Content";
 import Header from "../../components/campagne/Header";
 import Purple from "../../components/campagne/Purple";
 import Information from "../../components/campagne/Infomation";
@@ -10,8 +9,7 @@ import Footer from "../../components/campagne/Footer";
 import styles from "./Campagne.module.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
-// import Mobile from "../../components/campagne/Mobile";
+import { useTransform, useViewportScroll } from "framer-motion";
 
 export default function Campagne () {
     
